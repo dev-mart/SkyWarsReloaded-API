@@ -56,10 +56,6 @@
                     <artifactId>bukkit</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>io.papermc</groupId>
-                    <artifactId>paperlib</artifactId>
-                </exclusion>
-                <exclusion>
                     <groupId>org.spigotmc</groupId>
                     <artifactId>spigot-api</artifactId>
                 </exclusion>
