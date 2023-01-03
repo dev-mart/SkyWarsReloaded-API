@@ -31,9 +31,9 @@ public interface SWMessage {
 
     void setTargetServer(String targetServerName);
 
-    int getReplyToId();
+    Integer getReplyToId();
 
-    void setReplyToId(int replyToId);
+    void setReplyToId(Integer replyToId);
 
     void send();
 

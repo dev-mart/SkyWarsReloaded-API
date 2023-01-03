@@ -15,7 +15,7 @@ public interface SWMessaging {
      * @param payload The payload of the message.
      * @return {@link SWMessage} an SWMessage
      */
-    SWMessage createMessage(String channel, JsonObject payload);
+    SWMessage createMessage(SWMessageCreator.MessageChannel channel, JsonObject payload);
 
     /**
      * Send a message over the messaging channel.
