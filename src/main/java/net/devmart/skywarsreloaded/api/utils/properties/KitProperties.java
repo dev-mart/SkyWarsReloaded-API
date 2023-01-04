@@ -4,7 +4,7 @@ public enum KitProperties {
 
     DISPLAY_NAME("display-name"),
     ICON("icon"),
-    UNAVAILABLE_ICON("unavailable_icon"),
+    UNAVAILABLE_ICON("unavailable-icon"),
     DESCRIPTION("description"),
     SLOT("slot"),
     LORE("lore"),
