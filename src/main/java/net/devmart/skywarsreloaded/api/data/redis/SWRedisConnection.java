@@ -24,4 +24,6 @@ public interface SWRedisConnection {
      * @return True if the connection pool is not closed AND at least one connection is open, otherwise false
      */
     boolean isConnected();
+
+    void cleanup();
 }
