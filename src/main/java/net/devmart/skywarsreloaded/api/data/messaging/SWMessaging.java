@@ -48,4 +48,8 @@ public interface SWMessaging {
      */
     void startCleaning();
 
+    enum Type {
+        LOCAL, MYSQL, REDIS
+    }
+
 }

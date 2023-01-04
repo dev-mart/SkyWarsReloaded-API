@@ -49,4 +49,8 @@ public interface SQLStorage extends Storage {
      */
     void addTable(SQLTable<?> table);
 
+    enum Type {
+        SQLITE, MYSQL
+    }
+
 }
