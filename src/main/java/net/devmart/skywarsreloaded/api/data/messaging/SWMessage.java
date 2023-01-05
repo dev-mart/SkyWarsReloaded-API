@@ -7,7 +7,7 @@ public interface SWMessage {
 
     int getId();
 
-    void setId(int id);
+    SWMessage setId(int id);
 
     /**
      * Gets the time at which the message was sent
@@ -19,22 +19,22 @@ public interface SWMessage {
     @NotNull
     String getChannel();
 
-    void setChannel(@NotNull String channel);
+    SWMessage setChannel(@NotNull String channel);
 
     JsonObject getPayload();
 
-    void setPayload(JsonObject payload);
+    SWMessage setPayload(JsonObject payload);
 
     String getOriginServer();
 
     String getTargetServer();
 
-    void setTargetServer(String targetServerName);
+    SWMessage setTargetServer(String targetServerName);
 
     Integer getReplyToId();
 
-    void setReplyToId(Integer replyToId);
+    SWMessage setReplyToId(Integer replyToId);
 
-    void send();
+    SWMessage send();
 
 }

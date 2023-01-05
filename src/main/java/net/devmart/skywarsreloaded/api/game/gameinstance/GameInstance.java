@@ -40,7 +40,7 @@ public interface GameInstance {
     GameState getState();
 
     /**
-     * Get is a player is allowed to join the game
+     * Get if a player is allowed to join the game
      *
      * @return True if a player can join, false otherwise
      */

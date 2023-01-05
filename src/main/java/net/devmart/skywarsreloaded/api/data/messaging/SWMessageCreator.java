@@ -3,6 +3,8 @@ package net.devmart.skywarsreloaded.api.data.messaging;
 import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
+import net.devmart.skywarsreloaded.api.game.gameinstance.RemoteGameInstance;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;
 
 public interface SWMessageCreator {
@@ -15,6 +17,10 @@ public interface SWMessageCreator {
 
     SWMessage createGameUpdatePing(LocalGameInstance game);
 
+    SWMessage createGameJoinReservationRequest(RemoteGameInstance instance, SWPlayer player);
+
+    SWMessage createGameJoinReservationResponse(SWMessage message, boolean accepted, Long expirationTime);
+
     SWMessage createServerUpdatePing();
 
     enum MessageChannel {
@@ -22,7 +28,9 @@ public interface SWMessageCreator {
         GAME_CREATION_RESPONSE("gamecreated"),
         GAME_DELETION_REQUEST("deletegame"),
         GAME_UPDATE_PING("gameupdate"),
-        SERVER_UPDATE_PING("serverupdate");
+        SERVER_UPDATE_PING("serverupdate"),
+        GAME_JOIN_RESERVATION_REQUEST("reservejoin"),
+        GAME_JOIN_RESERVATION_RESPONSE("joinreserved");
 
         private final String id;
 
