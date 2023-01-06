@@ -9,7 +9,8 @@ public interface SWPlayerStats {
                   int solo_games,
                   int team_wins,
                   int team_kills,
-                  int team_games);
+                  int team_games,
+                  int experience);
 
     int getSoloWins();
 
@@ -42,5 +43,11 @@ public interface SWPlayerStats {
     int getTotalKills();
 
     int getStat(PlayerStat stat);
+
+    int getExperience();
+
+    void setExperience(int amount);
+
+    int getLevel();
 
 }
