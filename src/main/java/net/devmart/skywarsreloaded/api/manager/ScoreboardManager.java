@@ -1,17 +1,21 @@
 package net.devmart.skywarsreloaded.api.manager;
 
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
+import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import net.devmart.skywarsreloaded.api.utils.scoreboards.SWBoard;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public interface ScoreboardManager {
 
     void updatePlayer(SWPlayer player);
 
     void updateAllPlayers(LocalGameInstance gameWorld);
+
+    void updateLobbyPlayers();
 
     /**
      * Determine what scoreboard format to apply to a player.
@@ -31,7 +35,7 @@ public interface ScoreboardManager {
      */
     String prepareLine(SWPlayer player, String line, @Nullable LocalGameInstance gameWorld);
 
-    SWBoard createScoreboard(SWPlayer player, int lineCount);
+    SWCompletableFuture<SWBoard> createScoreboard(SWPlayer player, int lineCount);
 
     SWBoard getScoreboard(SWPlayer player);
 

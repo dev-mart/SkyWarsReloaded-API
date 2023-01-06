@@ -50,7 +50,7 @@ public interface SWScheduler {
      * @param ticks    Delay in ticks
      * @param period   Period in ticks
      */
-    SWRunnable runSyncTimer(SWRunnable runnable, int ticks, int period);
+    SWRunnable runSyncTimer(Runnable runnable, int ticks, int period);
 
     /**
      * Schedule runnable to run asynchronously on a timer
@@ -59,7 +59,7 @@ public interface SWScheduler {
      * @param ticks    Delay in ticks
      * @param period   Period in ticks
      */
-    SWRunnable runAsyncTimer(SWRunnable runnable, int ticks, int period);
+    SWRunnable runAsyncTimer(Runnable runnable, int ticks, int period);
 
     SWRunnable createRunnable(Runnable runnable);
 
