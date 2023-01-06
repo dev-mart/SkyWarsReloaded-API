@@ -19,6 +19,10 @@ public enum ConfigProperties {
     STORAGE_MYSQL_TABLE_PREFIX("storage.mysql.table-prefix"),
     STORAGE_MYSQL_USE_SSL("storage.mysql.use-ssl"),
 
+    // General settings
+    GENERAL_LOBBY_SCOREBOARD_ENABLED("general.lobby-scoreboard.enable"),
+    GENERAL_LOBBY_SCOREBOARD_UPDATE_INTERVAL("general.lobby-scoreboard.update-interval"),
+
     // Messaging
 
     MESSAGING_TYPE("messaging.type"),
