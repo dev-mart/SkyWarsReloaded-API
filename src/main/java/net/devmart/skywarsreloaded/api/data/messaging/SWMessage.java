@@ -1,7 +1,10 @@
 package net.devmart.skywarsreloaded.api.data.messaging;
 
 import com.google.gson.JsonObject;
+import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Consumer;
 
 public interface SWMessage {
 
@@ -36,5 +39,9 @@ public interface SWMessage {
     SWMessage setReplyToId(Integer replyToId);
 
     SWMessage send();
+
+    SWCompletableFuture<SWMessage> waitForReply();
+
+    void waitForReplyMultiple(Consumer<SWMessage> consumer);
 
 }
