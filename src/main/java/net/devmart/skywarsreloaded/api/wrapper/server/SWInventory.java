@@ -25,4 +25,8 @@ public interface SWInventory {
 
     boolean isViewing(SWPlayer player);
 
+    void clearArmor();
+
+    void setItemInOffHand(Item item);
+
 }
