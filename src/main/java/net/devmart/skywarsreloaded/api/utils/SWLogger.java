@@ -6,32 +6,33 @@ package net.devmart.skywarsreloaded.api.utils;
 public interface SWLogger {
 
     /**
-     * Logs a debug message
+     * Logs a debug message with parsed arguments (String.format)
      *
      * @param message The message to log
+     * @param args    The arguments to parse
      */
-    void debug(String message);
+    void debug(String message, Object... args);
 
     /**
-     * Logs an info message
-     *
+     * Logs an info message with parsed arguments (String.format)
      * @param message The message to log
+     * @param args The arguments to parse
      */
-    void info(String message);
+    void info(String message, Object... args);
 
     /**
-     * Logs a warning message
-     *
+     * Logs a warning message with parsed arguments (String.format)
      * @param message The message to log
+     * @param args The arguments to parse
      */
-    void warn(String message);
+    void warn(String message, Object... args);
 
     /**
-     * Logs an error message
-     *
+     * Logs an error message with parsed arguments (String.format)
      * @param message The message to log
+     * @param args The arguments to parse
      */
-    void error(String message);
+    void error(String message, Object... args);
 
     /**
      * Report abnormal exception
