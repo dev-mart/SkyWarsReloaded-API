@@ -1,20 +1,11 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum FolderProperties {
+public class FolderProperties {
 
-    TEMPLATE_FOLDER("map_templates"),
-    WORLD_SCHEMATICS_FOLDER("map_schematics"),
-    PLAYERDATA_FOLDER("player_data"),
-    KITS_FOLDER("kits"),
-    CHEST_TYPES_FOLDER("chests");
+    public static final String TEMPLATE_FOLDER = "map_templates";
+    public static final String WORLD_SCHEMATICS_FOLDER = "map_schematics";
+    public static final String PLAYERDATA_FOLDER = "player_data";
+    public static final String KITS_FOLDER = "kits";
+    public static final String CHEST_TYPES_FOLDER = "chests";
 
-    private final String folderName;
-
-    FolderProperties(String folderNameIn) {
-        this.folderName = folderNameIn;
-    }
-
-    public String toString() {
-        return folderName;
-    }
 }

@@ -1,20 +1,9 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum ChestTierProperties {
+public class ChestTierProperties {
 
-    DISPLAY_NAME("display-name"),
-    CONTENTS("contents"),
-    TYPES("types");
-
-    private final String property;
-
-    ChestTierProperties(String property) {
-        this.property = property;
-    }
-
-    @Override
-    public String toString() {
-        return property;
-    }
+    public static final String DISPLAY_NAME = "display-name";
+    public static final String CONTENTS = "contents";
+    public static final String TYPES = "types";
 
 }

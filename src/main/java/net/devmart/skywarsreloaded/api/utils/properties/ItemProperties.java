@@ -1,25 +1,14 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum ItemProperties {
+public class ItemProperties {
 
-    GENERAL_CLOSE("items.general.close"),
-    GENERAL_CONFIRM("items.general.confirm"),
-    GENERAL_DENY("items.general.deny"),
+    public static final String GENERAL_CLOSE = "items.general.close";
+    public static final String GENERAL_CONFIRM = "items.general.confirm";
+    public static final String GENERAL_DENY = "items.general.deny";
 
-    GAME_KIT_SELECTOR("items.game.kit-selector"),
-    GAME_GAME_LEAVE("items.game.leave"),
+    public static final String GAME_KIT_SELECTOR = "items.game.kit-selector";
+    public static final String GAME_GAME_LEAVE = "items.game.leave";
 
-    KITS_DESELECT("items.kits.deselect");
-
-    private final String value;
-
-    ItemProperties(String valueIn) {
-        this.value = valueIn;
-    }
-
-    @Override
-    public String toString() {
-        return this.value;
-    }
+    public static final String KITS_DESELECT = "items.kits.deselect";
 
 }

@@ -1,19 +1,8 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum RuntimeDataProperties {
+public class RuntimeDataProperties {
 
-    LOBBY_SPAWN("lobby-spawn"),
-    ;
-
-    private final String value;
-
-    RuntimeDataProperties(String valueIn) {
-        this.value = valueIn;
-    }
-
-    @Override
-    public String toString() {
-        return this.value;
-    }
+    public static final String LOBBY_SPAWN = "lobby-spawn";
 
 }
+

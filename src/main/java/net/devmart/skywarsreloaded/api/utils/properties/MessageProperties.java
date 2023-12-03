@@ -1,159 +1,151 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum MessageProperties {
+public class MessageProperties {
 
-    CHAT_HEADER("chat.header"),
-    CHAT_LOBBY_SPAWN_SET("chat.lobby-spawn-set"),
+    public static final String CHAT_HEADER = "chat.header";
+    public static final String CHAT_LOBBY_SPAWN_SET = "chat.lobby-spawn-set";
 
-    ERROR_CANNOT_SET_LOBBYSPAWN_IN_GAMEWORLD("errors.cannot-set-lobbyspawn-in-gameworld"),
-    ERROR_WORLD_NOT_RECOGNIZED("errors.world-not-recognized"),
-    ERROR_MUST_HOLD_ITEM("errors.must-hold-item"),
-    ERROR_LOBBY_SPAWN_NOT_SET("errors.lobby-spawn-not-set"),
-    ERROR_NO_TEMPLATE_WORLD_FOUND("errors.no-template-world-found"),
-    ERROR_ACTION_NOT_FOR_LOBBY_SERVERS("errors.action-not-for-lobby-servers"),
-    ERROR_ACTION_NOT_FOR_GAME_SERVERS("errors.action-not-for-game-servers"),
+    public static final String ERROR_CANNOT_SET_LOBBYSPAWN_IN_GAMEWORLD = "errors.cannot-set-lobbyspawn-in-gameworld";
+    public static final String ERROR_WORLD_NOT_RECOGNIZED = "errors.world-not-recognized";
+    public static final String ERROR_MUST_HOLD_ITEM = "errors.must-hold-item";
+    public static final String ERROR_LOBBY_SPAWN_NOT_SET = "errors.lobby-spawn-not-set";
+    public static final String ERROR_NO_TEMPLATE_WORLD_FOUND = "errors.no-template-world-found";
+    public static final String ERROR_ACTION_NOT_FOR_LOBBY_SERVERS = "errors.action-not-for-lobby-servers";
+    public static final String ERROR_ACTION_NOT_FOR_GAME_SERVERS = "errors.action-not-for-game-servers";
 
-    MENUS_KITS_TITLE("menus.kits.title"),
-    MENUS_CONFIRM_PURCHASE_TITLE("menus.confirm-purchase.title"),
+    public static final String MENUS_KITS_TITLE = "menus.kits.title";
+    public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
 
-    ITEMS_GENERAL_CLOSE("items.general.close"),
-    ITEMS_KITS_DESELECT("items.kits.deselect"),
+    public static final String ITEMS_GENERAL_CLOSE = "items.general.close";
+    public static final String ITEMS_KITS_DESELECT = "items.kits.deselect";
 
-    ITEMS_KITS_STATUS_SELECTED("items.kits.status.selected"),
-    ITEMS_KITS_STATUS_UNLOCKED("items.kits.status.unlocked"),
-    ITEMS_KITS_STATUS_LOCKED("items.kits.status.locked"),
-    ITEMS_KITS_SELECTED("items.kits.selected"),
-    ITEMS_KITS_LOCKED("items.kits.locked"),
-    ITEMS_KITS_UNLOCKED("items.kits.unlocked"),
-    ITEMS_KITS_CONFIRM_PURCHASE("items.kits.confirm-purchase"),
-    ITEMS_KITS_DENY_PURCHASE("items.kits.deny-purchase"),
+    public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
+    public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
+    public static final String ITEMS_KITS_STATUS_LOCKED = "items.kits.status.locked";
+    public static final String ITEMS_KITS_SELECTED = "items.kits.selected";
+    public static final String ITEMS_KITS_LOCKED = "items.kits.locked";
+    public static final String ITEMS_KITS_UNLOCKED = "items.kits.unlocked";
+    public static final String ITEMS_KITS_CONFIRM_PURCHASE = "items.kits.confirm-purchase";
+    public static final String ITEMS_KITS_DENY_PURCHASE = "items.kits.deny-purchase";
 
-    KITS_SELECTED("kits.selected"),
-    KITS_CANNOT_AFFORD("kits.cannot-afford"),
-    KITS_PURCHASED("kits.purchased"),
-    KITS_DESELECT("kits.deselect"),
-    KITS_ENTER_NAME("kits.enter-name"),
-    KITS_ENTER_DESCRIPTION("kits.enter-description"),
-    KITS_ENTER_DISPLAYNAME("kits.enter-displayname"),
-    KITS_ENTER_LORE_ACTION("kits.enter-lore-action"),
-    KITS_ENTER_LORE_LINE("kits.enter-lore-line"),
-    KITS_ENTER_SLOT("kits.enter-slot"),
-    KITS_ENTER_SLOT_NUMBER("kits.enter-slot-number"),
-    KITS_ENTER_SLOT_GREATER("kits.enter-slot-greater"),
-    KITS_ENTER_LORE_INDEX_NUMBER("kits.enter-lore-index-number"),
-    KITS_ENTER_LORE_INDEX_GREATER("kits.enter-lore-index-greater"),
-    KITS_ENTER_LORE_INDEX_INVALID("kits.enter-lore-index-invalid"),
-    KITS_ENTER_KIT_REQUIREMENT("kits.enter-kit-requirement"),
-    KITS_ENTER_KIT_REQUIREMENT_VALUE("kits.enter-kit-requirement-value"),
-    KITS_ENTER_KIT_REQUIREMENT_VALUE_BOOLEAN("kits.enter-kit-requirement-value-boolean"),
-    KITS_ENTER_KIT_STAT_REQUIREMENT("kits.enter-kit-stat-requirement"),
-    KITS_ENTER_KIT_REQUIREMENT_VALUE_NUMBER("kits.enter-kit-requirement-value-number"),
-    KITS_ENTER_KIT_REQUIREMENT_VALUE_GREATER("kits.enter-kit-requirement-value-greater"),
-    KITS_ALREADY_EXISTS("kits.already-exists"),
-    KITS_CREATED("kits.created"),
-    KITS_DOESNT_EXIST("kits.doesnt-exist"),
-    KITS_PREVIEWED("kits.previewed"),
-    KITS_SET_CONTENTS("kits.set-contents"),
-    KITS_SET_DESCRIPTION("kits.set-description"),
-    KITS_SET_DISPLAYNAME("kits.set-displayname"),
-    KITS_SET_ICON("kits.set-icon"),
-    KITS_SET_SLOT("kits.set-slot"),
-    KITS_SET_UNAVAILABLE_ICON("kits.set-unavailable-icon"),
-    KITS_SET_REQUIREMENT("kits.set-requirement"),
-    KITS_ADDED_LORE_LINE("kits.added-lore-line"),
-    KITS_REMOVED_LORE_LINE("kits.removed-lore-line"),
-    KITS_CLEARED_LORE("kits.cleared-lore"),
-    KITS_PREVIEW_LORE_HEADER("kits.preview-lore-header"),
-    KITS_PREVIEW_LORE_NO_LINES("kits.preview-lore-no-lines"),
-    KITS_PREVIEW_LORE_LINE("kits.preview-lore-line"),
+    public static final String KITS_SELECTED = "kits.selected";
+    public static final String KITS_CANNOT_AFFORD = "kits.cannot-afford";
+    public static final String KITS_PURCHASED = "kits.purchased";
+    public static final String KITS_DESELECT = "kits.deselect";
+    public static final String KITS_ENTER_NAME = "kits.enter-name";
+    public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";
+    public static final String KITS_ENTER_DISPLAYNAME = "kits.enter-displayname";
+    public static final String KITS_ENTER_LORE_ACTION = "kits.enter-lore-action";
+    public static final String KITS_ENTER_LORE_LINE = "kits.enter-lore-line";
+    public static final String KITS_ENTER_SLOT = "kits.enter-slot";
+    public static final String KITS_ENTER_SLOT_NUMBER = "kits.enter-slot-number";
+    public static final String KITS_ENTER_SLOT_GREATER = "kits.enter-slot-greater";
+    public static final String KITS_ENTER_LORE_INDEX_NUMBER = "kits.enter-lore-index-number";
+    public static final String KITS_ENTER_LORE_INDEX_GREATER = "kits.enter-lore-index-greater";
+    public static final String KITS_ENTER_LORE_INDEX_INVALID = "kits.enter-lore-index-invalid";
+    public static final String KITS_ENTER_KIT_REQUIREMENT = "kits.enter-kit-requirement";
+    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE = "kits.enter-kit-requirement-value";
+    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_BOOLEAN = "kits.enter-kit-requirement-value-boolean";
+    public static final String KITS_ENTER_KIT_STAT_REQUIREMENT = "kits.enter-kit-stat-requirement";
+    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_NUMBER = "kits.enter-kit-requirement-value-number";
+    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_GREATER = "kits.enter-kit-requirement-value-greater";
+    public static final String KITS_ALREADY_EXISTS = "kits.already-exists";
+    public static final String KITS_CREATED = "kits.created";
+    public static final String KITS_DOESNT_EXIST = "kits.doesnt-exist";
+    public static final String KITS_PREVIEWED = "kits.previewed";
+    public static final String KITS_SET_CONTENTS = "kits.set-contents";
+    public static final String KITS_SET_DESCRIPTION = "kits.set-description";
+    public static final String KITS_SET_DISPLAYNAME = "kits.set-displayname";
+    public static final String KITS_SET_ICON = "kits.set-icon";
+    public static final String KITS_SET_SLOT = "kits.set-slot";
+    public static final String KITS_SET_UNAVAILABLE_ICON = "kits.set-unavailable-icon";
+    public static final String KITS_SET_REQUIREMENT = "kits.set-requirement";
+    public static final String KITS_ADDED_LORE_LINE = "kits.added-lore-line";
+    public static final String KITS_REMOVED_LORE_LINE = "kits.removed-lore-line";
+    public static final String KITS_CLEARED_LORE = "kits.cleared-lore";
+    public static final String KITS_PREVIEW_LORE_HEADER = "kits.preview-lore-header";
+    public static final String KITS_PREVIEW_LORE_NO_LINES = "kits.preview-lore-no-lines";
+    public static final String KITS_PREVIEW_LORE_LINE = "kits.preview-lore-line";
 
-    MAPS_ENTER_NAME("maps.enter-name"),
-    MAPS_ENTER_CREATOR("maps.enter-creator"),
-    MAPS_ENTER_TEAM_SIZE("maps.enter-team-size"),
-    MAPS_ENTER_TEAM_SIZE_NUMBER("maps.enter-team-size-number"),
-    MAPS_ENTER_TEAM_SIZE_GREATER("maps.enter-team-size-greater"),
-    MAPS_ENTER_SPAWN_TYPE("maps.enter-spawn-type"),
-    MAPS_ENTER_TEAM_NUMBER("maps.enter-team-number"),
-    MAPS_ENTER_TEAM_NUMBER_NUMBER("maps.enter-team-number-number"),
-    MAPS_ENTER_WORLD_SIZE("maps.enter-world-size"),
-    MAPS_ENTER_WORLD_SIZE_NUMBER("maps.enter-world-size-number"),
-    MAPS_ENTER_WORLD_SIZE_GREATER("maps.enter-world-size-greater"),
-    MAPS_DOESNT_EXIST("maps.doesnt-exist"),
-    MAPS_ALREADY_EXIST("maps.already-exists"),
-    MAPS_GENERATING_WORLD("maps.generating-world"),
-    MAPS_GENERATING_WORLD_FAIL("maps.generating-world-fail"),
-    MAPS_GENERATING_WORLD_STAGE2("maps.generating-world-stage2"),
-    MAPS_GENERATED_WORLD("maps.generated-world"),
-    MAPS_TEMPLATE_CREATED("maps.template-created"),
-    MAPS_ALREADY_DISABLED("maps.already-disabled"),
-    MAPS_DISABLED("maps.disabled"),
-    MAPS_ALREADY_ENABLED("maps.already-enabled"),
-    MAPS_ENABLED("maps.enabled"),
-    MAPS_NOT_ENABLED("maps.not-enabled"),
-    MAPS_EDIT_EXISTING_WORLD("maps.edit-existing-world"),
-    MAPS_CANNOT_EDIT_GAME_RUNNING("maps.cannot-edit-game-running"),
-    MAPS_CANNOT_ENABLE_INCOMPLETE_SETUP("maps.cannot-enable-incomplete-setup"),
-    MAPS_LIST_HEADER("maps.maps-list-header"),
-    MAPS_LIST_LINE("maps.maps-list-line"),
-    MAPS_LIST_EMPTY("maps.maps-list-empty"),
-    MAPS_WORLD_SAVED("maps.world-saved"),
-    MAPS_WORLD_SAVED_FAIL("maps.saved-fail"),
-    MAPS_SAVING_START("maps.saving-start"),
-    MAPS_SAVED("maps.saved"),
-    MAPS_SET_CREATOR("maps.set-creator"),
-    MAPS_SET_TEAM_SIZE("maps.set-team-size"),
-    MAPS_NO_TEAM_GAME("maps.no-team-game"),
-    MAPS_SET_SPAWN_LOBBY("maps.set-spawn-lobby"),
-    MAPS_SET_SPAWN_SPECTATE("maps.set-spawn-spectate"),
-    MAPS_SET_SPAWN_PLAYER_SINGLES("maps.set-spawn-player-singles"),
-    MAPS_SET_SPAWN_PLAYER_TEAM("maps.set-spawn-player-team"),
-    MAPS_SET_SPAWN_PLAYER_TEAM_FINAL("maps.set-spawn-player-team-final"),
-    MAPS_SET_SPAWN_PLAYER_TEAM_UPDATED("maps.set-spawn-player-team-updated"),
-    MAPS_SET_SPAWN_PLAYER_TEAM_MAX("maps.set-spawn-player-team-max"),
-    MAPS_SPAWN_ALREADY_EXISTS("maps.spawn-already-exists"),
-    MAPS_SPAWN_INDEX_LOW("maps.spawn-index-low"),
-    MAPS_SPAWN_INDEX_HIGH("maps.spawn-index.high"),
-    MAPS_SET_WORLD_SIZE("maps.set-world-size"),
-    MAPS_ALL_SET_UP("maps.all-set-up"),
-    MAPS_HOSTED("maps.hosted"),
+    public static final String MAPS_ENTER_NAME = "maps.enter-name";
+    public static final String MAPS_ENTER_CREATOR = "maps.enter-creator";
+    public static final String MAPS_ENTER_TEAM_SIZE = "maps.enter-team-size";
+    public static final String MAPS_ENTER_TEAM_SIZE_NUMBER = "maps.enter-team-size-number";
+    public static final String MAPS_ENTER_TEAM_SIZE_GREATER = "maps.enter-team-size-greater";
+    public static final String MAPS_ENTER_SPAWN_TYPE = "maps.enter-spawn-type";
+    public static final String MAPS_ENTER_TEAM_NUMBER = "maps.enter-team-number";
+    public static final String MAPS_ENTER_TEAM_NUMBER_NUMBER = "maps.enter-team-number-number";
+    public static final String MAPS_ENTER_TEAM_NUMBER_GREATER = "maps.enter-team-number-greater";
+    public static final String MAPS_ENTER_WORLD_SIZE = "maps.enter-world-size";
+    public static final String MAPS_ENTER_WORLD_SIZE_NUMBER = "maps.enter-world-size-number";
+    public static final String MAPS_ENTER_WORLD_SIZE_GREATER = "maps.enter-world-size-greater";
+    public static final String MAPS_DOESNT_EXIST = "maps.doesnt-exist";
+    public static final String MAPS_ALREADY_EXIST = "maps.already-exists";
+    public static final String MAPS_GENERATING_WORLD = "maps.generating-world";
+    public static final String MAPS_GENERATING_WORLD_FAIL = "maps.generating-world-fail";
+    public static final String MAPS_GENERATING_WORLD_STAGE2 = "maps.generating-world-stage2";
+    public static final String MAPS_GENERATED_WORLD = "maps.generated-world";
+    public static final String MAPS_TEMPLATE_CREATED = "maps.template-created";
+    public static final String MAPS_ALREADY_DISABLED = "maps.already-disabled";
+    public static final String MAPS_DISABLED = "maps.disabled";
+    public static final String MAPS_ALREADY_ENABLED = "maps.already-enabled";
+    public static final String MAPS_ENABLED = "maps.enabled";
+    public static final String MAPS_NOT_ENABLED = "maps.not-enabled";
+    public static final String MAPS_EDIT_EXISTING_WORLD = "maps.edit-existing-world";
+    public static final String MAPS_CANNOT_EDIT_GAME_RUNNING = "maps.cannot-edit-game-running";
+    public static final String MAPS_CANNOT_ENABLE_INCOMPLETE_SETUP = "maps.cannot-enable-incomplete-setup";
+    public static final String MAPS_LIST_HEADER = "maps.maps-list-header";
+    public static final String MAPS_LIST_LINE = "maps.maps-list-line";
+    public static final String MAPS_LIST_EMPTY = "maps.maps-list-empty";
+    public static final String MAPS_WORLD_SAVED = "maps.world-saved";
+    public static final String MAPS_WORLD_SAVED_FAIL = "maps.saved-fail";
+    public static final String MAPS_SAVING_START = "maps.saving-start";
+    public static final String MAPS_SAVED = "maps.saved";
+    public static final String MAPS_SET_CREATOR = "maps.set-creator";
+    public static final String MAPS_SET_TEAM_SIZE = "maps.set-team-size";
+    public static final String MAPS_NO_TEAM_GAME = "maps.no-team-game";
+    public static final String MAPS_SET_SPAWN_LOBBY = "maps.set-spawn-lobby";
+    public static final String MAPS_SET_SPAWN_SPECTATE = "maps.set-spawn-spectate";
+    public static final String MAPS_SET_SPAWN_PLAYER_SINGLES = "maps.set-spawn-player-singles";
+    public static final String MAPS_SET_SPAWN_PLAYER_TEAM = "maps.set-spawn-player-team";
+    public static final String MAPS_SET_SPAWN_PLAYER_TEAM_FINAL = "maps.set-spawn-player-team-final";
+    public static final String MAPS_SET_SPAWN_PLAYER_TEAM_UPDATED = "maps.set-spawn-player-team-updated";
+    public static final String MAPS_SET_SPAWN_PLAYER_TEAM_MAX = "maps.set-spawn-player-team-max";
+    public static final String MAPS_SPAWN_ALREADY_EXISTS = "maps.spawn-already-exists";
+    public static final String MAPS_SPAWN_INDEX_LOW = "maps.spawn-index-low";
+    public static final String MAPS_SPAWN_INDEX_HIGH = "maps.spawn-index-high";
+    public static final String MAPS_SET_WORLD_SIZE = "maps.set-world-size";
+    public static final String MAPS_ALL_SET_UP = "maps.all-set-up";
+    public static final String MAPS_HOSTED = "maps.hosted";
 
-    GAMES_NONE_AVAILABLE("games.none-available"),
-    GAMES_PLAYER_JOINED("games.player-joined"),
-    GAMES_PLAYER_LEFT("games.player-left"),
-    GAMES_JOIN_FAILED("games.join-failed"),
+    public static final String GAMES_NONE_AVAILABLE = "games.none-available";
+    public static final String GAMES_PLAYER_JOINED = "games.player-joined";
+    public static final String GAMES_PLAYER_LEFT = "games.player-left";
+    public static final String GAMES_JOIN_FAILED = "games.join-failed";
 
-    GAMES_SUMMARY("games.summary"),
-    GAMES_TEAM_SUMMARY("games.team-summary"),
+    public static final String GAMES_SUMMARY = "games.summary";
+    public static final String GAMES_TEAM_SUMMARY = "games.team-summary";
 
-    TITLES_MAPS_GENERATING_WORLD("titles.maps.generating-world"),
-    TITLES_MAPS_GENERATED_WORLD("titles.maps.generated-world"),
-    TITLES_MAPS_NO_TEAM_GAME("titles.maps.no-team-game"),
-    TITLES_MAPS_SET_SPAWN_LOBBY("titles.maps.set-spawn-lobby"),
-    TITLES_MAPS_SET_SPAWN_SPECTATE("titles.maps.set-spawn-spectate"),
-    TITLES_MAPS_SET_SPAWN_PLAYER("titles.maps.set-spawn-player"),
-    TITLES_MAPS_SET_SPAWN_PLAYER_FAIL("titles.maps.set-spawn-player-fail"),
+    public static final String TITLES_MAPS_GENERATING_WORLD = "titles.maps.generating-world";
+    public static final String TITLES_MAPS_GENERATED_WORLD = "titles.maps.generated-world";
+    public static final String TITLES_MAPS_NO_TEAM_GAME = "titles.maps.no-team-game";
+    public static final String TITLES_MAPS_SET_SPAWN_LOBBY = "titles.maps.set-spawn-lobby";
+    public static final String TITLES_MAPS_SET_SPAWN_SPECTATE = "titles.maps.set-spawn-spectate";
+    public static final String TITLES_MAPS_SET_SPAWN_PLAYER = "titles.maps.set-spawn-player";
+    public static final String TITLES_MAPS_SET_SPAWN_PLAYER_FAIL = "titles.maps.set-spawn-player-fail";
 
-    TITLES_GAMES_WON("titles.games.won"),
-    TITLES_GAMES_LOST("titles.games.lost"),
+    public static final String TITLES_GAMES_WON = "titles.games.won";
+    public static final String TITLES_GAMES_LOST = "titles.games.lost";
 
-    SCOREBOARDS_LOBBY("scoreboards.lobby"),
-    SCOREBOARDS_WAITING("scoreboards.waiting"),
-    SCOREBOARDS_STARTING_SOON("scoreboards.starting-soon"),
-    SCOREBOARDS_PLAYING("scoreboards.playing"),
-    SCOREBOARDS_PLAYING_EVENT_SOON("scoreboards.playing-event-soon"),
-    SCOREBOARDS_PLAYING_EVENT("scoreboards.playing-event"),
-    SCOREBOARDS_ENDING("scoreboards.ending"),
-    SCOREBOARDS_WINNER_LINE("scoreboards.winner-line"),
-    SCOREBOARDS_WINNERS_LEFT_LINE("scoreboards.winners-left-line"),
-    ;
+    public static final String SCOREBOARDS_LOBBY = "scoreboards.lobby";
+    public static final String SCOREBOARDS_WAITING = "scoreboards.waiting";
+    public static final String SCOREBOARDS_STARTING_SOON = "scoreboards.starting-soon";
+    public static final String SCOREBOARDS_PLAYING = "scoreboards.playing";
+    public static final String SCOREBOARDS_PLAYING_EVENT_SOON = "scoreboards.playing-event-soon";
+    public static final String SCOREBOARDS_PLAYING_EVENT = "scoreboards.playing-event";
+    public static final String SCOREBOARDS_ENDING = "scoreboards.ending";
+    public static final String SCOREBOARDS_WINNER_LINE = "scoreboards.winner-line";
+    public static final String SCOREBOARDS_WINNERS_LEFT_LINE = "scoreboards.winners-left-line";
 
-    private final String value;
-
-    MessageProperties(String valueIn) {
-        this.value = valueIn;
-    }
-
-    public String toString() {
-        return value;
-    }
 }
+

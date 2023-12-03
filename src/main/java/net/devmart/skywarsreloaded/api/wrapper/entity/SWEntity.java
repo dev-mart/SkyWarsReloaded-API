@@ -2,7 +2,6 @@ package net.devmart.skywarsreloaded.api.wrapper.entity;
 
 import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
-import org.bukkit.potion.PotionEffectType;
 
 import java.util.UUID;
 

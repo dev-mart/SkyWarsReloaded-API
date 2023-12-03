@@ -1,87 +1,75 @@
 package net.devmart.skywarsreloaded.api.utils.properties;
 
-public enum ConfigProperties {
+public class ConfigProperties {
 
     // Server info
-    PROXY_ENABLED("proxy.enabled"),
-    PROXY_SERVER_NAME("proxy.server-name"),
-    PROXY_SERVER_TYPE("proxy.server-type"),
-    PROXY_SERVERS("proxy.servers"),
-    PROXY_SERVERS_MAX_GAMES(".max-games"), // sub property
+    public static final String PROXY_ENABLED = "proxy.enabled";
+    public static final String PROXY_SERVER_NAME = "proxy.server-name";
+    public static final String PROXY_SERVER_TYPE = "proxy.server-type";
+    public static final String PROXY_SERVERS = "proxy.servers";
+    public static final String PROXY_SERVERS_MAX_GAMES = "proxy.servers.max-games"; // sub property
 
     // Storage database implementation & auth
-    STORAGE_TYPE("storage.type"),
-    STORAGE_MYSQL_HOSTNAME("storage.mysql.hostname"),
-    STORAGE_MYSQL_PORT("storage.mysql.port"),
-    STORAGE_MYSQL_USERNAME("storage.mysql.username"),
-    STORAGE_MYSQL_PASSWORD("storage.mysql.password"),
-    STORAGE_MYSQL_DATABASE("storage.mysql.database"),
-    STORAGE_MYSQL_TABLE_PREFIX("storage.mysql.table-prefix"),
-    STORAGE_MYSQL_USE_SSL("storage.mysql.use-ssl"),
+    public static final String STORAGE_TYPE = "storage.type";
+    public static final String STORAGE_MYSQL_HOSTNAME = "storage.mysql.hostname";
+    public static final String STORAGE_MYSQL_PORT = "storage.mysql.port";
+    public static final String STORAGE_MYSQL_USERNAME = "storage.mysql.username";
+    public static final String STORAGE_MYSQL_PASSWORD = "storage.mysql.password";
+    public static final String STORAGE_MYSQL_DATABASE = "storage.mysql.database";
+    public static final String STORAGE_MYSQL_TABLE_PREFIX = "storage.mysql.table-prefix";
+    public static final String STORAGE_MYSQL_USE_SSL = "storage.mysql.use-ssl";
 
     // General settings
-    GENERAL_LOBBY_SCOREBOARD_ENABLED("general.lobby-scoreboard.enable"),
-    GENERAL_LOBBY_SCOREBOARD_UPDATE_INTERVAL("general.lobby-scoreboard.update-interval"),
+    public static final String GENERAL_LOBBY_SCOREBOARD_ENABLED = "general.lobby-scoreboard.enable";
+    public static final String GENERAL_LOBBY_SCOREBOARD_UPDATE_INTERVAL = "general.lobby-scoreboard.update-interval";
 
     // Messaging
-
-    MESSAGING_TYPE("messaging.type"),
-    MESSAGING_REDIS_HOSTNAME("messaging.redis.hostname"),
-    MESSAGING_REDIS_USERNAME("messaging.redis.username"),
-    MESSAGING_REDIS_PASSWORD("messaging.redis.password"),
-    MESSAGING_REDIS_PORT("messaging.redis.port"),
+    public static final String MESSAGING_TYPE = "messaging.type";
+    public static final String MESSAGING_REDIS_HOSTNAME = "messaging.redis.hostname";
+    public static final String MESSAGING_REDIS_USERNAME = "messaging.redis.username";
+    public static final String MESSAGING_REDIS_PASSWORD = "messaging.redis.password";
+    public static final String MESSAGING_REDIS_PORT = "messaging.redis.port";
 
     // menus
-    MENUS_KITS_LAYOUT("menus.kits.layout"),
-    MENUS_KITS_AUTO_LAYOUT("menus.kits.auto-layout"),
-    MENUS_KITS_ENCHANT_SELECTED_KIT("menus.kits.enchant-selected-kit"),
+    public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
+    public static final String MENUS_KITS_AUTO_LAYOUT = "menus.kits.auto-layout";
+    public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
 
     // items
-    ITEMS_GAME_KIT_SELECTOR_SLOT("items.game.kit-selector.slot"),
-    ITEMS_GAME_LEAVE_SLOT("items.game.leave.slot"),
+    public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
+    public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
     // todo: messaging impl & auth
 
     // Game instances
-    GAME_INSTANCES("game-instances"),
-    GAME_INSTANCES_MAX_INSTANCES("game-instances.max-instances"),
-    GAME_INSTANCES_LOCAL_MODE("game-instances.local-mode"),
-    GAME_INSTANCES_LOCAL_MODE_IDLE_INSTANCES("game-instances.local-mode.idle-instances"),
-    GAME_INSTANCES_PROXY_MODE("game-instances.proxy-mode"),
-    GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE("game-instances.proxy-mode.dynamic-mode"),
-    GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE_MIN_IDLE("game-instances.proxy-mode.dynamic-mode.min-idle"),
-    GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE_MAX_INSTANCES("game-instances.proxy-mode.dynamic-mode.max-instances"),
-    GAME_INSTANCES_PROXY_MODE_FIXED_TEMPLATES("game-instances.proxy-mode.fixed-templates"),
+    public static final String GAME_INSTANCES = "game-instances";
+    public static final String GAME_INSTANCES_MAX_INSTANCES = "game-instances.max-instances";
+    public static final String GAME_INSTANCES_LOCAL_MODE = "game-instances.local-mode";
+    public static final String GAME_INSTANCES_LOCAL_MODE_IDLE_INSTANCES = "game-instances.local-mode.idle-instances";
+    public static final String GAME_INSTANCES_PROXY_MODE = "game-instances.proxy-mode";
+    public static final String GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE = "game-instances.proxy-mode.dynamic-mode";
+    public static final String GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE_MIN_IDLE = "game-instances.proxy-mode.dynamic-mode.min-idle";
+    public static final String GAME_INSTANCES_PROXY_MODE_DYNAMIC_MODE_MAX_INSTANCES = "game-instances.proxy-mode.dynamic-mode.max-instances";
+    public static final String GAME_INSTANCES_PROXY_MODE_FIXED_TEMPLATES = "game-instances.proxy-mode.fixed-templates";
 
     // Game preferences
-    GAME_SOLO_WAITING_LOBBY("game.solo-waiting-lobby"),
-    CAGE_SEPARATE_CAGES("game.cages.separate-cages"),
+    public static final String GAME_SOLO_WAITING_LOBBY = "game.solo-waiting-lobby";
+    public static final String CAGE_SEPARATE_CAGES = "game.cages.separate-cages";
     // Game prefs - Timer
-    GAME_TIMER_WAITING_LOBBY("game.timers.waiting-lobby"),
-    GAME_TIMER_WAITING_LOBBY_FULL("game.timers.waiting-lobby-full"),
-    GAME_TIMER_WAITING_CAGES("game.timers.waiting-cages"),
-    GAME_TIMER_WAITING_CAGES_FULL("game.timers.waiting-cages-full"),
-    GAME_TIMER_ENDING("game.timers.ending"),
+    public static final String GAME_TIMER_WAITING_LOBBY = "game.timers.waiting-lobby";
+    public static final String GAME_TIMER_WAITING_LOBBY_FULL = "game.timers.waiting-lobby-full";
+    public static final String GAME_TIMER_WAITING_CAGES = "game.timers.waiting-cages";
+    public static final String GAME_TIMER_WAITING_CAGES_FULL = "game.timers.waiting-cages-full";
+    public static final String GAME_TIMER_ENDING = "game.timers.ending";
     // Game prefs - Chests
-    GAME_CHESTS_MAX_ITEMS("game.chests.max-items"),
-    GAME_CHESTS_MAX_ITEMS_DOUBLE("game.chests.max-items-double"),
+    public static final String GAME_CHESTS_MAX_ITEMS = "game.chests.max-items";
+    public static final String GAME_CHESTS_MAX_ITEMS_DOUBLE = "game.chests.max-items-double";
 
     // World loader
-    ENABLE_SLIME_WORLD_MANAGER("world-loader.enable-swm"),
-    WORLD_LOADER_ADDITIONAL_CLEAR_RADIUS("world-loader.additional-clear-radius"),
-    SLIME_WORLD_LOADER("world-loader.swm-loader"),
+    public static final String ENABLE_SLIME_WORLD_MANAGER = "world-loader.enable-swm";
+    public static final String WORLD_LOADER_ADDITIONAL_CLEAR_RADIUS = "world-loader.additional-clear-radius";
+    public static final String SLIME_WORLD_LOADER = "world-loader.swm-loader";
 
     // Parties
-    PARTIES_ALLOW_DISPERSED_PARTIES("parties.allow-dispersed-parties");
-
-    private final String value;
-
-    ConfigProperties(String valueIn) {
-        this.value = valueIn;
-    }
-
-    @Override
-    public String toString() {
-        return this.value;
-    }
+    public static final String PARTIES_ALLOW_DISPERSED_PARTIES = "parties.allow-dispersed-parties";
 
 }
