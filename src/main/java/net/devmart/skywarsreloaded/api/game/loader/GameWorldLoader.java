@@ -9,23 +9,23 @@ import java.util.concurrent.CompletableFuture;
 public interface GameWorldLoader {
 
     /**
-     * Create an instance of a minecraft world for the given game world based on the template associated
+     * Create an instance of a minecraft world for the given {@link GameInstance} based on the template associated
      *
      * @param gameWorld The {@link LocalGameInstance} used to determine data to be loaded
-     * @return true if the template data already exists given the template name
+     * @return {@link CompletableFuture<Boolean>} that yields true if the world was successfully generated, false otherwise
      */
     CompletableFuture<Boolean> generateWorldInstance(LocalGameInstance gameWorld) throws IllegalStateException, IllegalArgumentException;
 
     /**
-     * Create an empty world for the corresponding GameWorld.
+     * Create an empty world for the corresponding {@link GameInstance}.
      *
-     * @param gameWorld {@link LocalGameInstance} to create a void world for.
+     * @param gameInstance {@link LocalGameInstance} to create a void world for.
      * @return {@link CompletableFuture<Void>} which completes when the world is finished creating.
      */
-    CompletableFuture<Void> createEmptyWorld(LocalGameInstance gameWorld);
+    CompletableFuture<Void> createEmptyWorld(LocalGameInstance gameInstance);
 
     /**
-     * Delete the world instance for the {@link LocalGameInstance} provided
+     * Delete the world instance for the provided {@link LocalGameInstance}.
      *
      * @param gameWorld The {@link LocalGameInstance} to delete the world for
      */
@@ -41,20 +41,20 @@ public interface GameWorldLoader {
     /**
      * Create the base platform to spawn on when editing the map for the first time.
      *
-     * @param gameWorld The {@link LocalGameInstance} to create the platform in.
+     * @param gameInstance The {@link LocalGameInstance} to create the platform in.
      */
-    void createBasePlatform(LocalGameInstance gameWorld);
+    void createBasePlatform(LocalGameInstance gameInstance);
 
     /**
      * Update the World Border for the target {@link GameInstance}.
      *
-     * @param gameWorld {@link GameInstance} to update the border of.
+     * @param gameInstance {@link GameInstance} to update the border of.
      */
-    void updateWorldBorder(LocalGameInstance gameWorld);
+    void updateWorldBorder(LocalGameInstance gameInstance);
 
     /**
      * Save the current world to disk for future use when creating instances of the map.
      */
-    CompletableFuture<Boolean> save(LocalGameInstance gameWorld);
+    CompletableFuture<Boolean> save(LocalGameInstance gameInstance);
 
 }

@@ -25,14 +25,14 @@ public interface GameInstanceManager<G extends GameInstance> {
     GameTemplate getGameTemplateByName(String gameId);
 
     /**
-     * Get a list of all GameWorlds.
+     * Get a list of all game instances.
      *
-     * @return List of all GameWorlds.
+     * @return List of all game instances.
      */
     Collection<G> getGameInstancesList();
 
     /**
-     * Get a list of all GameWorlds that were created under a specified template.
+     * Get a list of all GameInstances that were created under a specified template.
      *
      * @param template The template to get the game instances of.
      * @return List of all {@link GameInstance}s made using the template.
@@ -76,17 +76,17 @@ public interface GameInstanceManager<G extends GameInstance> {
      * @param data GameTemplate to create a world from.
      * @return The newly created {@link GameInstance}.
      */
-    CompletableFuture<G> createGameWorld(GameTemplate data);
+    CompletableFuture<G> createGameInstance(GameTemplate data);
 
     /**
-     * Remove a game world from running.
+     * Remove a game instance from running.
      *
-     * @param instance GameWorld to remove.
+     * @param instance GameInstance to remove.
      */
     CompletableFuture<Void> deleteGameInstance(LocalGameInstance instance);
 
     /**
-     * Get a GameWorld by its assigned world name.
+     * Get a GameInstance by its assigned world name.
      *
      * @param worldName Name of the world to look up.
      * @return {@link GameInstance} if found, null otherwise.

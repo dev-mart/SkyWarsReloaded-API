@@ -16,6 +16,6 @@ public interface LocalGameInstanceManager extends GameInstanceManager<LocalGameI
      * @param swWorld The wrapped world object the game world is based on.
      * @return GameTemplate if found, null otherwise.
      */
-    GameInstance getGameInstanceBySWWorld(SWWorld swWorld);
+    LocalGameInstance getGameInstanceBySWWorld(SWWorld swWorld);
 
 }
