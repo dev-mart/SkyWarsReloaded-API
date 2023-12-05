@@ -28,4 +28,6 @@ public interface SWCommandManager {
 
     List<String> runTabCompletion(SWCommandSender sender, String name, String subCommand, String[] args);
 
+    void sendCommandsOverview(String command, SWCommandSender sender);
+
 }
