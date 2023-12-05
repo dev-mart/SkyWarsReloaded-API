@@ -9,7 +9,7 @@ public interface KitManager {
 
     void loadAllKits();
 
-    SWKit getKitByName(String kitId);
+    SWKit getKitById(String kitId);
 
     void deleteKit(String kitId);
 

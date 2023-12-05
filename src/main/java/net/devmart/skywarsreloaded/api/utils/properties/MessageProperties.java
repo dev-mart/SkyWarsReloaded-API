@@ -35,7 +35,7 @@ public class MessageProperties {
     public static final String KITS_ENTER_NAME = "kits.enter-name";
     public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";
     public static final String KITS_ENTER_DISPLAYNAME = "kits.enter-displayname";
-    public static final String KITS_ENTER_LORE_ACTION = "kits.enter-lore-action";
+    public static final String KITS_ENTER_VALID_LORE_ACTION = "kits.enter-valid-lore-action";
     public static final String KITS_ENTER_LORE_LINE = "kits.enter-lore-line";
     public static final String KITS_ENTER_SLOT = "kits.enter-slot";
     public static final String KITS_ENTER_SLOT_NUMBER = "kits.enter-slot-number";
