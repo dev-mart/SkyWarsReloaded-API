@@ -45,7 +45,7 @@ public interface GameTeam {
      *
      * @param player Player to remove
      */
-    void removePlayer(SWPlayer player);
+    void removePlayer(GamePlayer player);
 
     /**
      * Put a player back into the game after they left.
@@ -74,13 +74,6 @@ public interface GameTeam {
      * @return Alive players.
      */
     List<GamePlayer> getAlivePlayers();
-
-    /**
-     * Eliminate a player from the team.
-     *
-     * @param player Player to eliminate
-     */
-    void eliminatePlayer(GamePlayer player);
 
     /**
      * Get the Game that this team belongs to.

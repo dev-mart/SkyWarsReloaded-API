@@ -1,5 +1,7 @@
 package net.devmart.skywarsreloaded.api.game.gameinstance;
 
+import net.devmart.skywarsreloaded.api.enums.DeathCause;
+import net.devmart.skywarsreloaded.api.enums.GameLeaveReason;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
@@ -184,9 +186,11 @@ public interface LocalGameInstance extends GameInstance {
     /**
      * Remove a player from the game.
      *
-     * @param player Player to remove
+     * @param player      Player to remove
+     * @param deathCause
+     * @param leaveReason
      */
-    void removePlayer(GamePlayer player);
+    void removePlayer(GamePlayer player, DeathCause deathCause, GameLeaveReason leaveReason);
 
     /**
      * Prepare the player for the state of the game.
@@ -290,4 +294,7 @@ public interface LocalGameInstance extends GameInstance {
      * Determine which team has won the game.
      */
     void determineWinner();
+
+    void handlePlayerDeath(GamePlayer player, DeathCause reason);
+
 }

@@ -121,6 +121,7 @@ public class MessageProperties {
     public static final String GAMES_NONE_AVAILABLE = "games.none-available";
     public static final String GAMES_PLAYER_JOINED = "games.player-joined";
     public static final String GAMES_PLAYER_LEFT = "games.player-left";
+    public static final String GAMES_PLAYER_LEAVE = "games.player-leave";
     public static final String GAMES_JOIN_FAILED = "games.join-failed";
 
     public static final String GAMES_SUMMARY = "games.summary";
@@ -134,6 +135,7 @@ public class MessageProperties {
     public static final String TITLES_MAPS_SET_SPAWN_PLAYER = "titles.maps.set-spawn-player";
     public static final String TITLES_MAPS_SET_SPAWN_PLAYER_FAIL = "titles.maps.set-spawn-player-fail";
 
+    public static final String TITLES_GAME_PLAYER_LEFT = "titles.games.player-left";
     public static final String TITLES_GAMES_WON = "titles.games.won";
     public static final String TITLES_GAMES_LOST = "titles.games.lost";
 

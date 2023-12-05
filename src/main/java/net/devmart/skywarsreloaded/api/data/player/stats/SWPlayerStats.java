@@ -7,9 +7,11 @@ public interface SWPlayerStats {
     void initData(int solo_wins,
                   int solo_kills,
                   int solo_games,
+                  int solo_deaths,
                   int team_wins,
                   int team_kills,
                   int team_games,
+                  int team_deaths,
                   int experience);
 
     int getSoloWins();
@@ -31,6 +33,14 @@ public interface SWPlayerStats {
     int getTeamKills();
 
     void setTeamKills(int amount);
+
+    int getSoloDeaths();
+
+    void setSoloDeaths(int amount);
+
+    int getTeamDeaths();
+
+    void setTeamDeaths(int amount);
 
     int getTeamGamesPlayed();
 

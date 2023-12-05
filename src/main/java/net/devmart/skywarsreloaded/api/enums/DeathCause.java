@@ -5,7 +5,7 @@ import com.google.common.collect.Lists;
 import java.util.ArrayList;
 import java.util.List;
 
-public enum DeathReason {
+public enum DeathCause {
 
     DROWNING("drowning"),
     DROWNING_KILL("drowning-kill", true),
@@ -41,26 +41,26 @@ public enum DeathReason {
     private final boolean kill;
     private final List<String> aliases;
 
-    DeathReason(String property) {
+    DeathCause(String property) {
         this(property, false);
     }
 
-    DeathReason(String property, boolean kill) {
+    DeathCause(String property, boolean kill) {
         this(property, kill, new ArrayList<>());
     }
 
-    DeathReason(String property, List<String> aliases) {
+    DeathCause(String property, List<String> aliases) {
         this(property, false, aliases);
     }
 
-    DeathReason(String property, boolean kill, List<String> aliases) {
+    DeathCause(String property, boolean kill, List<String> aliases) {
         this.property = property;
         this.kill = kill;
         this.aliases = aliases;
     }
 
-    public static DeathReason fromString(String input) {
-        for (DeathReason value : values()) {
+    public static DeathCause fromString(String input) {
+        for (DeathCause value : values()) {
             if (value.name().equalsIgnoreCase(input) || value.getProperty().equalsIgnoreCase(input) || value.getAliases().contains(input)) {
                 return value;
             }

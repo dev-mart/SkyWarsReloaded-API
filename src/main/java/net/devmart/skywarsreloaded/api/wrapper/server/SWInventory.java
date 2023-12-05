@@ -29,4 +29,6 @@ public interface SWInventory {
 
     void setItemInOffHand(Item item);
 
+    int getHeldItemSlot();
+
 }
