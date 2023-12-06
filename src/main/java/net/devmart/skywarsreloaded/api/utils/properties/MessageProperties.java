@@ -16,6 +16,7 @@ public class MessageProperties {
     public static final String ERROR_NUMBER_MUST_BE_LESS = "errors.number-must-be-less";
     public static final String ERROR_NUMBER_MUST_BE_BETWEEN = "errors.number-must-be-between";
     public static final String ERROR_INVALID_NUMBER = "errors.invalid-number";
+    public static final String ERROR_INVALID_BOOLEAN = "errors.invalid-boolean";
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
@@ -42,17 +43,9 @@ public class MessageProperties {
     public static final String KITS_ENTER_VALID_LORE_ACTION = "kits.enter-valid-lore-action";
     public static final String KITS_ENTER_LORE_LINE = "kits.enter-lore-line";
     public static final String KITS_ENTER_SLOT = "kits.enter-slot";
-    public static final String KITS_ENTER_SLOT_NUMBER = "kits.enter-slot-number";
-    public static final String KITS_ENTER_SLOT_GREATER = "kits.enter-slot-greater";
-    public static final String KITS_ENTER_LORE_INDEX_NUMBER = "kits.enter-lore-index-number";
-    public static final String KITS_ENTER_LORE_INDEX_GREATER = "kits.enter-lore-index-greater";
-    public static final String KITS_ENTER_LORE_INDEX_INVALID = "kits.enter-lore-index-invalid";
     public static final String KITS_ENTER_KIT_REQUIREMENT = "kits.enter-kit-requirement";
     public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE = "kits.enter-kit-requirement-value";
-    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_BOOLEAN = "kits.enter-kit-requirement-value-boolean";
     public static final String KITS_ENTER_KIT_STAT_REQUIREMENT = "kits.enter-kit-stat-requirement";
-    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_NUMBER = "kits.enter-kit-requirement-value-number";
-    public static final String KITS_ENTER_KIT_REQUIREMENT_VALUE_GREATER = "kits.enter-kit-requirement-value-greater";
     public static final String KITS_ALREADY_EXISTS = "kits.already-exists";
     public static final String KITS_CREATED = "kits.created";
     public static final String KITS_DOESNT_EXIST = "kits.doesnt-exist";
@@ -75,15 +68,11 @@ public class MessageProperties {
     public static final String MAPS_ENTER_CREATOR = "maps.enter-creator";
     public static final String MAPS_ENTER_TEAM_SIZE = "maps.enter-team-size";
     public static final String MAPS_ENTER_MIN_PLAYERS = "maps.enter-min-players";
-    public static final String MAPS_ENTER_TEAM_SIZE_NUMBER = "maps.enter-team-size-number";
-    public static final String MAPS_ENTER_TEAM_SIZE_GREATER = "maps.enter-team-size-greater";
     public static final String MAPS_ENTER_SPAWN_TYPE = "maps.enter-spawn-type";
     public static final String MAPS_ENTER_TEAM_NUMBER = "maps.enter-team-number";
     public static final String MAPS_ENTER_TEAM_NUMBER_NUMBER = "maps.enter-team-number-number";
     public static final String MAPS_ENTER_TEAM_NUMBER_GREATER = "maps.enter-team-number-greater";
     public static final String MAPS_ENTER_WORLD_SIZE = "maps.enter-world-size";
-    public static final String MAPS_ENTER_WORLD_SIZE_NUMBER = "maps.enter-world-size-number";
-    public static final String MAPS_ENTER_WORLD_SIZE_GREATER = "maps.enter-world-size-greater";
     public static final String MAPS_DOESNT_EXIST = "maps.doesnt-exist";
     public static final String MAPS_ALREADY_EXIST = "maps.already-exists";
     public static final String MAPS_GENERATING_WORLD = "maps.generating-world";
