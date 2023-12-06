@@ -12,6 +12,10 @@ public class MessageProperties {
     public static final String ERROR_NO_TEMPLATE_WORLD_FOUND = "errors.no-template-world-found";
     public static final String ERROR_ACTION_NOT_FOR_LOBBY_SERVERS = "errors.action-not-for-lobby-servers";
     public static final String ERROR_ACTION_NOT_FOR_GAME_SERVERS = "errors.action-not-for-game-servers";
+    public static final String ERROR_NUMBER_MUST_BE_GREATER = "errors.number-must-be-greater";
+    public static final String ERROR_NUMBER_MUST_BE_LESS = "errors.number-must-be-less";
+    public static final String ERROR_NUMBER_MUST_BE_BETWEEN = "errors.number-must-be-between";
+    public static final String ERROR_INVALID_NUMBER = "errors.invalid-number";
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
@@ -70,6 +74,7 @@ public class MessageProperties {
     public static final String MAPS_ENTER_NAME = "maps.enter-name";
     public static final String MAPS_ENTER_CREATOR = "maps.enter-creator";
     public static final String MAPS_ENTER_TEAM_SIZE = "maps.enter-team-size";
+    public static final String MAPS_ENTER_MIN_PLAYERS = "maps.enter-min-players";
     public static final String MAPS_ENTER_TEAM_SIZE_NUMBER = "maps.enter-team-size-number";
     public static final String MAPS_ENTER_TEAM_SIZE_GREATER = "maps.enter-team-size-greater";
     public static final String MAPS_ENTER_SPAWN_TYPE = "maps.enter-spawn-type";
@@ -115,6 +120,7 @@ public class MessageProperties {
     public static final String MAPS_SPAWN_INDEX_LOW = "maps.spawn-index-low";
     public static final String MAPS_SPAWN_INDEX_HIGH = "maps.spawn-index-high";
     public static final String MAPS_SET_WORLD_SIZE = "maps.set-world-size";
+    public static final String MAPS_SET_MIN_PLAYERS = "maps.set-min-players";
     public static final String MAPS_ALL_SET_UP = "maps.all-set-up";
     public static final String MAPS_HOSTED = "maps.hosted";
 

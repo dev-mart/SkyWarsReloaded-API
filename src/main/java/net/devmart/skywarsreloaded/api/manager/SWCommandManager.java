@@ -1,5 +1,6 @@
 package net.devmart.skywarsreloaded.api.manager;
 
+import net.devmart.skywarsreloaded.api.command.CommandArgumentValidator;
 import net.devmart.skywarsreloaded.api.command.SWCommand;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 
@@ -29,5 +30,7 @@ public interface SWCommandManager {
     List<String> runTabCompletion(SWCommandSender sender, String name, String subCommand, String[] args);
 
     void sendCommandsOverview(String command, SWCommandSender sender);
+
+    CommandArgumentValidator createArgumentValidator(SWCommandSender sender);
 
 }
