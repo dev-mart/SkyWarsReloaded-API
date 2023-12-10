@@ -19,4 +19,7 @@ public interface SWPlayerManager {
     void removePlayer(SWPlayer player);
 
     void initAllPlayers();
+
+    void prepareForLobby(SWPlayer player);
+
 }

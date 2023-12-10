@@ -69,6 +69,14 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
 
     int getFoodLevel();
 
+    void setSaturation(float saturation);
+
+    float getSaturation();
+
+    void resetPlayerTime();
+
+    void resetPlayerWeather();
+
     void clearBodyArrows();
 
     /**

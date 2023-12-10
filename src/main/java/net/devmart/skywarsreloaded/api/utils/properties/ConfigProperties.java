@@ -20,8 +20,15 @@ public class ConfigProperties {
     public static final String STORAGE_MYSQL_USE_SSL = "storage.mysql.use-ssl";
 
     // General settings
-    public static final String GENERAL_LOBBY_SCOREBOARD_ENABLED = "general.lobby-scoreboard.enable";
-    public static final String GENERAL_LOBBY_SCOREBOARD_UPDATE_INTERVAL = "general.lobby-scoreboard.update-interval";
+    public static final String GENERAL_LOBBY_CLEAR_INVENTORY_ON_ENTRY = "general.lobby.clear-inventory-on-entry";
+    public static final String GENERAL_LOBBY_TELEPORT_ON_WORLD_ENTRY = "general.lobby.teleport-on-world-entry";
+    public static final String GENERAL_LOBBY_TELEPORT_ON_SERVER_JOIN = "general.lobby.teleport-on-server-join";
+    public static final String GENERAL_LOBBY_HEAL_ON_ENTRY = "general.lobby.heal-on-entry";
+    public static final String GENERAL_LOBBY_PROTECT_WORLD = "general.lobby.protect-world";
+    public static final String GENERAL_LOBBY_ITEMS_GIVE_JOIN_ITEM = "general.lobby.items.give-join-menu-item";
+    public static final String GENERAL_LOBBY_ITEMS_GIVE_OPTIONS_ITEM = "general.lobby.items.give-options-menu-item";
+    public static final String GENERAL_LOBBY_SCOREBOARD_ENABLED = "general.lobby.scoreboard.enable";
+    public static final String GENERAL_LOBBY_SCOREBOARD_UPDATE_INTERVAL = "general.lobby.scoreboard.update-interval";
 
     // Messaging
     public static final String MESSAGING_TYPE = "messaging.type";
@@ -38,6 +45,8 @@ public class ConfigProperties {
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
+    public static final String ITEMS_LOBBY_JOIN_SLOT = "items.lobby.join.slot";
+    public static final String ITEMS_LOBBY_OPTIONS_SLOT = "items.lobby.options.slot";
     // todo: messaging impl & auth
 
     // Game instances
