@@ -56,4 +56,6 @@ public interface Item extends Cloneable {
 
     Item clone();
 
+    boolean isSimilar(Item item);
+
 }

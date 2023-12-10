@@ -31,4 +31,6 @@ public interface SWInventory {
 
     int getHeldItemSlot();
 
+    int first(Item item);
+
 }

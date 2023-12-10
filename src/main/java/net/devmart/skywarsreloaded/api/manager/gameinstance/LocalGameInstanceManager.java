@@ -1,7 +1,6 @@
 package net.devmart.skywarsreloaded.api.manager.gameinstance;
 
 import net.devmart.skywarsreloaded.api.game.GameTemplate;
-import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 

@@ -14,6 +14,7 @@ public interface SWRedisConnection {
 
     /**
      * Get Jedis connection from the connection pool
+     *
      * @return {@link redis.clients.jedis.Connection}
      */
     Jedis getConnection();

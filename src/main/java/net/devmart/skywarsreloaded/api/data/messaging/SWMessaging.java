@@ -54,6 +54,7 @@ public interface SWMessaging {
     /**
      * Completes when reply is received for the message supplied.
      * The message supplied must be sent previously.
+     *
      * @param message The message that was sent and for which we are waiting for a reply
      * @return CompletableFuture with the received SWMessage (the reply to the ones sent)
      */
@@ -65,7 +66,7 @@ public interface SWMessaging {
      * The returned consumer can be executed multiple times until this messaging implementation
      * is told to stop handling replies to this message.
      *
-     * @param message The message that was sent and for which we are waiting for replies
+     * @param message       The message that was sent and for which we are waiting for replies
      * @param replyConsumer The consumer that is executed for every reply received
      */
     void waitForMultipleReplies(SWMessage message, Consumer<SWMessage> replyConsumer);

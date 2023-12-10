@@ -98,10 +98,10 @@ public interface CommandArgumentValidator {
     /**
      * Returns the enum value if it exists, otherwise sends an error message to the sender.
      *
-     * @param input                The input string to parse
-     * @param enumFunction         The function to parse the string into an enum value
-     * @param message              The message to send if the value is invalid
-     * @param <T>                  The enum type
+     * @param input        The input string to parse
+     * @param enumFunction The function to parse the string into an enum value
+     * @param message      The message to send if the value is invalid
+     * @param <T>          The enum type
      * @return The enum value if it exists, otherwise null
      */
     <T extends Enum<T>> T enumValue(String input, Function<String, T> enumFunction, Message message);

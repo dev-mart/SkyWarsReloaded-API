@@ -15,22 +15,25 @@ public interface SWLogger {
 
     /**
      * Logs an info message with parsed arguments (String.format)
+     *
      * @param message The message to log
-     * @param args The arguments to parse
+     * @param args    The arguments to parse
      */
     void info(String message, Object... args);
 
     /**
      * Logs a warning message with parsed arguments (String.format)
+     *
      * @param message The message to log
-     * @param args The arguments to parse
+     * @param args    The arguments to parse
      */
     void warn(String message, Object... args);
 
     /**
      * Logs an error message with parsed arguments (String.format)
+     *
      * @param message The message to log
-     * @param args The arguments to parse
+     * @param args    The arguments to parse
      */
     void error(String message, Object... args);
 
