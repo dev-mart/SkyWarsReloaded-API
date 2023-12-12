@@ -22,4 +22,5 @@ public interface SWPlayerManager {
 
     void prepareForLobby(SWPlayer player);
 
+    void giveLobbyItems(SWPlayer player);
 }
