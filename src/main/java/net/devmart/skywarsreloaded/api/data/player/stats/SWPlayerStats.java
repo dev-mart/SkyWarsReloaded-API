@@ -18,33 +18,66 @@ public interface SWPlayerStats {
 
     void setSoloWins(int amount);
 
+    void addSoloWins(int delta);
+
+    int getDeltaSoloWins();
+
+
     int getSoloKills();
 
     void setSoloKills(int amount);
+
+    void addSoloKills(int delta);
+
+    int getDeltaSoloKills();
 
     int getSoloGamesPlayed();
 
     void setSoloGamesPlayed(int amount);
 
+    void addSoloGamesPlayed(int delta);
+
+    int getDeltaSoloGamesPlayed();
+
     int getTeamWins();
 
     void setTeamWins(int amount);
+
+    void addTeamWins(int delta);
+
+    int getDeltaTeamWins();
 
     int getTeamKills();
 
     void setTeamKills(int amount);
 
+    void addTeamKills(int delta);
+
+    int getDeltaTeamKills();
+
     int getSoloDeaths();
 
     void setSoloDeaths(int amount);
+
+    void addSoloDeaths(int delta);
+
+    int getDeltaSoloDeaths();
 
     int getTeamDeaths();
 
     void setTeamDeaths(int amount);
 
+    void addTeamDeaths(int delta);
+
+    int getDeltaTeamDeaths();
+
     int getTeamGamesPlayed();
 
     void setTeamGamesPlayed(int amount);
+
+    void addTeamGamesPlayed(int delta);
+
+    int getDeltaTeamGamesPlayed();
 
     int getTotalGamesPlayed();
 
@@ -58,6 +91,12 @@ public interface SWPlayerStats {
 
     void setExperience(int amount);
 
+    void addExperience(int delta);
+
+    int getDeltaExperience();
+
     int getLevel();
+
+    void resetDeltas();
 
 }
