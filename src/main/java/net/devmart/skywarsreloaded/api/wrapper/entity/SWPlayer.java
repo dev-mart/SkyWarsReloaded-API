@@ -1,6 +1,5 @@
 package net.devmart.skywarsreloaded.api.wrapper.entity;
 
-import net.devmart.skywarsreloaded.api.SkyWarsReloaded;
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerData;
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.party.SWParty;
@@ -19,7 +18,7 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
 
     void setPlayerData(SWPlayerData playerData);
 
-    GameInstance getGameWorld();
+    GameInstance getGameInstance();
 
     void setGameWorld(GameInstance world);
 
@@ -134,9 +133,14 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
 
     void closeInventory();
 
-    SkyWarsReloaded getPlugin();
-
     void clearArmor();
 
     void removePotionEffect(String value);
+
+    boolean hasBalance(int amount);
+
+    boolean depositBalance(int amount);
+
+    boolean withdrawBalance(int amount);
+
 }
