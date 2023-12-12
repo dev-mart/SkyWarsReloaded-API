@@ -2,7 +2,6 @@ package net.devmart.skywarsreloaded.api.manager.gameinstance;
 
 import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
-import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 
 import java.util.Collection;
 import java.util.List;
@@ -83,7 +82,7 @@ public interface GameInstanceManager<G extends GameInstance> {
      *
      * @param instance GameInstance to remove.
      */
-    CompletableFuture<Void> deleteGameInstance(LocalGameInstance instance);
+    CompletableFuture<Void> deleteGameInstance(G instance);
 
     /**
      * Get a GameInstance by its assigned world name.
@@ -91,7 +90,7 @@ public interface GameInstanceManager<G extends GameInstance> {
      * @param worldName Name of the world to look up.
      * @return {@link GameInstance} if found, null otherwise.
      */
-    G getGameInstanceByName(String worldName);
+    G getGameInstanceByWorldName(String worldName);
 
 
     /**
