@@ -31,6 +31,6 @@ public interface SWCommandManager {
 
     void sendCommandsOverview(String command, SWCommandSender sender);
 
-    CommandArgumentValidator createArgumentValidator(SWCommandSender sender);
+    CommandArgumentValidator createArgumentValidator();
 
 }

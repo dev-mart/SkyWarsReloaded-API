@@ -20,4 +20,6 @@ public interface SWCommand {
 
     String[] getAliases();
 
+    CommandArgumentValidator getArgumentValidator();
+
 }
