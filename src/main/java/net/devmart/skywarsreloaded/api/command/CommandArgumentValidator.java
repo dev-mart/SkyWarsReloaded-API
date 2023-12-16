@@ -5,6 +5,7 @@ import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.game.kits.SWKit;
 import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.Message;
+import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 
 import java.util.function.Function;
 
@@ -21,7 +22,7 @@ public interface CommandArgumentValidator {
      * @param max   The maximum value
      * @return True if the value is between the min and max values, otherwise false
      */
-    boolean between(int value, int min, int max);
+    boolean between(SWCommandSender sender, int value, int min, int max);
 
     /**
      * Checks if the value is less than the max value, otherwise sends an error message to the sender.
@@ -30,7 +31,7 @@ public interface CommandArgumentValidator {
      * @param max   The maximum value
      * @return True if the value is less than the max value, otherwise false
      */
-    boolean lessThan(int value, int max);
+    boolean lessThan(SWCommandSender sender, int value, int max);
 
     /**
      * Checks if the value is greater than the min value, otherwise sends an error message to the sender.
@@ -39,7 +40,7 @@ public interface CommandArgumentValidator {
      * @param min   The minimum value
      * @return True if the value is greater than the min value, otherwise false
      */
-    boolean greaterThan(int value, int min);
+    boolean greaterThan(SWCommandSender sender, int value, int min);
 
     /**
      * Returns the integer value if it is a valid integer, otherwise sends an error message to the sender.
@@ -47,7 +48,7 @@ public interface CommandArgumentValidator {
      * @param value The string to parse
      * @return The integer value if it is a valid integer, otherwise null
      */
-    Integer isInteger(String value);
+    Integer isInteger(SWCommandSender sender, String value);
 
     /**
      * Returns the boolean value if it is a valid boolean, otherwise sends an error message to the sender.
@@ -55,7 +56,7 @@ public interface CommandArgumentValidator {
      * @param value The string to parse
      * @return The boolean value if it is a valid boolean, otherwise null
      */
-    Boolean isBoolean(String value);
+    Boolean isBoolean(SWCommandSender sender, String value);
 
     /**
      * Returns the game template if it exists, otherwise sends an error message to the sender.
@@ -63,7 +64,7 @@ public interface CommandArgumentValidator {
      * @param templateName The name of the template
      * @return The game template if it exists, otherwise null
      */
-    GameTemplate gameTemplateExists(String templateName);
+    GameTemplate gameTemplateExists(SWCommandSender sender, String templateName);
 
     /**
      * Returns the game instance of the world the player is in, if it is being edited,
@@ -72,7 +73,7 @@ public interface CommandArgumentValidator {
      * @param worldName The name of the world
      * @return The game instance if the sender is editing it, otherwise null
      */
-    GameInstance gameInstanceInEditMode(String worldName);
+    GameInstance gameInstanceInEditMode(SWCommandSender sender, String worldName);
 
     /**
      * Returns the kit if it exists, otherwise sends an error message to the sender.
@@ -80,9 +81,9 @@ public interface CommandArgumentValidator {
      * @param kitName The name of the kit
      * @return The kit if it exists, otherwise null
      */
-    SWKit kitExists(String kitName);
+    SWKit kitExists(SWCommandSender sender, String kitName);
 
-    Item holdsItem();
+    Item holdsItem(SWCommandSender sender);
 
     /**
      * Returns the enum value if it exists, otherwise sends an error message to the sender.
@@ -93,7 +94,7 @@ public interface CommandArgumentValidator {
      * @param <T>                  The enum type
      * @return The enum value if it exists, otherwise null
      */
-    <T extends Enum<T>> T enumValue(String input, Function<String, T> enumFunction, String errorMessageProperty);
+    <T extends Enum<T>> T enumValue(SWCommandSender sender, String input, Function<String, T> enumFunction, String errorMessageProperty);
 
     /**
      * Returns the enum value if it exists, otherwise sends an error message to the sender.
@@ -104,6 +105,6 @@ public interface CommandArgumentValidator {
      * @param <T>          The enum type
      * @return The enum value if it exists, otherwise null
      */
-    <T extends Enum<T>> T enumValue(String input, Function<String, T> enumFunction, Message message);
+    <T extends Enum<T>> T enumValue(SWCommandSender sender, String input, Function<String, T> enumFunction, Message message);
 
 }
