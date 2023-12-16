@@ -11,6 +11,6 @@ public interface GameStateHandler {
 
     LocalGameInstance getGameInstance();
 
-    SkyWarsReloaded getPlugin();
+    SkyWarsReloaded getSkywars();
 
 }

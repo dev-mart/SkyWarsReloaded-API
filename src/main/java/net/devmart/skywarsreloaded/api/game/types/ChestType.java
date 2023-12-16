@@ -17,8 +17,8 @@ public class ChestType {
     // Instance
     private final String id;
 
-    private ChestType(String idIn) {
-        this.id = idIn;
+    private ChestType(String id) {
+        this.id = id;
         if (!chestTypes.containsKey(this.id)) chestTypes.put(this.id, this);
     }
 

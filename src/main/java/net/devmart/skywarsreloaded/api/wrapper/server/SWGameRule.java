@@ -41,9 +41,9 @@ public enum SWGameRule {
     private final String id;
     private final Class<?> valueType;
 
-    SWGameRule(String idIn, Class<?> valueTypeIn) {
-        this.id = idIn;
-        this.valueType = valueTypeIn;
+    SWGameRule(String id, Class<?> valueType) {
+        this.id = id;
+        this.valueType = valueType;
     }
 
     public String getMinecraftId() {

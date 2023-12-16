@@ -39,7 +39,7 @@ public interface SQLStorage extends Storage {
      *
      * @return The main class instance.
      */
-    SkyWarsReloaded getPlugin();
+    SkyWarsReloaded getSkywars();
 
     /**
      * Add a {@link SQLTable} to the data structure of the database.
