@@ -4,10 +4,10 @@ import net.devmart.skywarsreloaded.api.SkyWarsReloaded;
 
 public abstract class AbstractSWServer implements SWServer {
 
-    protected final SkyWarsReloaded plugin;
+    protected final SkyWarsReloaded skywars;
 
-    public AbstractSWServer(SkyWarsReloaded pluginIn) {
-        this.plugin = pluginIn;
+    public AbstractSWServer(SkyWarsReloaded skywars) {
+        this.skywars = skywars;
     }
 
 
