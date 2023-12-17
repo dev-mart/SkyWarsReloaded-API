@@ -24,6 +24,9 @@ public class MessageProperties {
     public static final String ITEMS_GENERAL_CLOSE = "items.general.close";
     public static final String ITEMS_KITS_DESELECT = "items.kits.deselect";
 
+    public static final String ITEMS_MENU_JOIN_GAMES_AVAILABLE = "items.menu.join.games-available";
+    public static final String ITEMS_MENU_JOIN_NO_GAMES_AVAILABLE = "items.menu.join.no-games-available";
+
     public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
     public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
     public static final String ITEMS_KITS_STATUS_LOCKED = "items.kits.status.locked";
