@@ -10,6 +10,8 @@ public interface Message {
 
     Message replace(String search, String replace);
 
+    Message withExternalPlaceholders(boolean withExternalPlaceholders);
+
     void send(SWCommandSender... senders);
 
     void sendCentered(SWCommandSender... senders);

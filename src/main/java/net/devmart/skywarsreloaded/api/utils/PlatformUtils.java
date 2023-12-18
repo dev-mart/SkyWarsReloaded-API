@@ -1,6 +1,7 @@
 package net.devmart.skywarsreloaded.api.utils;
 
 import com.sk89q.worldedit.world.World;
+import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
 import java.util.Map;
@@ -23,6 +24,10 @@ public interface PlatformUtils {
     UUID getUUIDFromString(String uuidString);
 
     String colorize(String text);
+
+    String formatMessage(String message, Map<String, String> replacements, boolean colorize);
+
+    String parsePlaceholders(String message, SWCommandSender sender);
 
     /**
      * Get the major sub-version-number of the current server's implementing minecraft release.
