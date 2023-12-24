@@ -62,6 +62,10 @@ public interface SWGui {
      */
     SWGui addButton(int slot, Item item, SWGuiClickHandler handler);
 
+    SWGui addCloseButton(int slot);
+
+    void handleCloseButtonClick(SWGui gui, int slot, SWGuiClickHandler.ClickType clickType, boolean isShiftClick);
+
     void updateButton(int slot, Item item);
 
     void removeButton(int slot);

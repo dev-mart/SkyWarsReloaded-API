@@ -42,6 +42,9 @@ public class ConfigProperties {
     public static final String MENUS_KITS_AUTO_LAYOUT = "menus.kits.auto-layout";
     public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
 
+    public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
+    public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
+
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
