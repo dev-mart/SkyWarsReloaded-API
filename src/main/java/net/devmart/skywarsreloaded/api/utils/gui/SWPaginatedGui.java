@@ -109,20 +109,6 @@ public interface SWPaginatedGui<T> extends SWGui {
     List<T> getPaginatedItems(int page);
 
     /**
-     * Get whether the GUI should automatically shrink and grow to fit the items.
-     *
-     * @return True if the GUI should automatically resize to fit the items, false otherwise
-     */
-    boolean isFitToItems();
-
-    /**
-     * Set whether the GUI should automatically shrink and grow to fit the items.
-     *
-     * @param fitToItems True if the GUI should automatically resize to fit the items, false otherwise
-     */
-    void setFitToItems(boolean fitToItems);
-
-    /**
      * Get the size of the GUI for a given page.
      *
      * @param page The page number

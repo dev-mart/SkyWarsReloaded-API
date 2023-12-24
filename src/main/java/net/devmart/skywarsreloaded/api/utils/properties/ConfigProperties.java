@@ -47,6 +47,7 @@ public class ConfigProperties {
 
     public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
     public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
+    public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
 
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
