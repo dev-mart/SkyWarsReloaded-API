@@ -38,6 +38,9 @@ public class ConfigProperties {
     public static final String MESSAGING_REDIS_PORT = "messaging.redis.port";
 
     // menus
+    public static final String MENUS_PAGINATION_SHRINK_TO_FIT = "menus.pagination.shrink-to-fit";
+    public static final String MENUS_PAGINATION_ONLY_SHRINK_SINGLE_PAGE = "menus.pagination.only-shrink-single-page";
+
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
     public static final String MENUS_KITS_AUTO_LAYOUT = "menus.kits.auto-layout";
     public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";

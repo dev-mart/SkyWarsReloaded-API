@@ -5,6 +5,8 @@ public class ItemProperties {
     public static final String GENERAL_CLOSE = "items.general.close";
     public static final String GENERAL_CONFIRM = "items.general.confirm";
     public static final String GENERAL_DENY = "items.general.deny";
+    public static final String GENERAL_PREVIOUS_PAGE = "items.general.previous-page";
+    public static final String GENERAL_NEXT_PAGE = "items.general.next-page";
 
     public static final String LOBBY_JOIN = "items.lobby.join";
     public static final String LOBBY_OPTIONS = "items.lobby.options";

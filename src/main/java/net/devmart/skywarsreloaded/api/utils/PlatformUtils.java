@@ -1,6 +1,7 @@
 package net.devmart.skywarsreloaded.api.utils;
 
 import com.sk89q.worldedit.world.World;
+import net.devmart.skywarsreloaded.api.utils.properties.options.GuiLayoutOptions;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
@@ -46,5 +47,12 @@ public interface PlatformUtils {
     String centerMessage(String message);
 
     Item getItemFromMap(Map<String, Object> map);
+
+    /**
+     * Get the available slots for a given layout option.
+     * @param layoutOption {@link GuiLayoutOptions} layout style
+     * @return array of slots
+     */
+    int[] getLayoutSlots(String layoutOption, boolean withFooter);
 
 }
