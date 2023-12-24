@@ -62,10 +62,10 @@ public interface GameInstanceManager<G extends GameInstance> {
     List<GameTemplate> getGameTemplatesCopy();
 
     /**
-     * Create a new {@link GameTemplate} with the id/name specified
+     * Create a new {@link GameTemplate} with the id/name specified if it doesn't already exist.
      *
      * @param gameId The name of the game template
-     * @return The created {@link GameTemplate}
+     * @return The created {@link GameTemplate} or null when a template with that name already exists
      */
     GameTemplate createGameTemplate(String gameId);
 
