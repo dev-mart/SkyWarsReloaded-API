@@ -64,13 +64,6 @@ public interface SWPaginatedGui<T> extends SWGui {
     int getItemsPerPage();
 
     /**
-     * Set the number of items per page
-     *
-     * @param itemsPerPage The number of items per page
-     */
-    void setItemsPerPage(int itemsPerPage);
-
-    /**
      * Get all items to be displayed in the GUI.
      * This includes all items, not just the items on the current page.
      *
