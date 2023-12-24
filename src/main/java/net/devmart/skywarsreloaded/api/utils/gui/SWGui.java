@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.utils.gui;
 
 import net.devmart.skywarsreloaded.api.manager.ItemManager;
 import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.utils.gui.handlers.SWGuiClickHandler;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
 
