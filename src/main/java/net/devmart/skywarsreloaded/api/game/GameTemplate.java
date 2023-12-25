@@ -269,4 +269,10 @@ public interface GameTemplate {
     @Nullable
     Item getIcon();
 
+    /**
+     * Set the template icon item.
+     * @param item the new template icon item
+     */
+    void setIcon(Item item);
+
 }

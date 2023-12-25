@@ -110,6 +110,7 @@ public class MessageProperties {
     public static final String MAPS_SET_MIN_PLAYERS = "maps.set-min-players";
     public static final String MAPS_ALL_SET_UP = "maps.all-set-up";
     public static final String MAPS_HOSTED = "maps.hosted";
+    public static final String MAPS_SET_ICON = "maps.set-icon";
 
     public static final String GAMES_NONE_AVAILABLE = "games.none-available";
     public static final String GAMES_PLAYER_JOINED = "games.player-joined";
