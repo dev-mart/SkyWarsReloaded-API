@@ -3,10 +3,12 @@ package net.devmart.skywarsreloaded.api.game;
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
+import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnAddResult;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnRemoveResult;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
@@ -162,9 +164,9 @@ public interface GameTemplate {
     boolean removeChest(SWCoord loc);
 
     /**
-     * Get a list of all registered chest locations.
+     * Get a map of all registered chest locations and their selected {@link ChestType}.
      *
-     * @return List of chest locations.
+     * @return Map of chest locations and their {@link ChestType}.
      */
     Map<SWCoord, ChestType> getChests();
 
@@ -258,4 +260,13 @@ public interface GameTemplate {
      * @return true if parties can be dispersed
      */
     boolean isAllowedDispersedParties();
+
+    /**
+     * Get the template icon item.
+     *
+     * @return the template icon item
+     */
+    @Nullable
+    Item getIcon();
+
 }

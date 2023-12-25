@@ -16,4 +16,7 @@ public class ItemProperties {
 
     public static final String KITS_DESELECT = "items.kits.deselect";
 
+    public static final String MENU_JOIN_GAMES_AVAILABLE = "items.join-menu.games-available";
+    public static final String MENU_JOIN_NO_GAMES_AVAILABLE = "items.join-menu.no-games-available";
+
 }

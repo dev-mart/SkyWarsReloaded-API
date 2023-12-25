@@ -20,12 +20,7 @@ public class MessageProperties {
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
-
-    public static final String ITEMS_GENERAL_CLOSE = "items.general.close";
-    public static final String ITEMS_KITS_DESELECT = "items.kits.deselect";
-
-    public static final String ITEMS_MENU_JOIN_GAMES_AVAILABLE = "items.menu.join.games-available";
-    public static final String ITEMS_MENU_JOIN_NO_GAMES_AVAILABLE = "items.menu.join.no-games-available";
+    public static final String MENUS_JOIN_TITLE = "menus.join.title";
 
     public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
     public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";

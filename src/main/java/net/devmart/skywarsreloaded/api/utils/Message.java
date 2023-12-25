@@ -22,4 +22,8 @@ public interface Message {
 
     List<String> getLines();
 
+    String toString();
+
+    String toString(SWCommandSender sender);
+
 }
