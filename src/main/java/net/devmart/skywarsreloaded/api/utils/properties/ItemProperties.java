@@ -18,5 +18,6 @@ public class ItemProperties {
 
     public static final String MENU_JOIN_GAMES_AVAILABLE = "items.join-menu.games-available";
     public static final String MENU_JOIN_NO_GAMES_AVAILABLE = "items.join-menu.no-games-available";
+    public static final String MENU_JOIN_RANDOM_GAME = "items.join-menu.random-game";
 
 }
