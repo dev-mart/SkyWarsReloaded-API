@@ -1,5 +1,6 @@
 package net.devmart.skywarsreloaded.api.utils;
 
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
@@ -9,50 +10,54 @@ public interface Item extends Cloneable {
 
     String getMaterial();
 
-    void setMaterial(String material);
+    Item setMaterial(String material);
 
     int getAmount();
 
-    void setAmount(int amount);
+    Item setAmount(int amount);
 
     List<String> getEnchantments();
 
-    void setEnchantments(List<String> enchs);
+    Item setEnchantments(List<String> enchantments);
 
     List<String> getLore();
 
-    void setLore(List<String> lore);
+    Item setLore(List<String> lore);
 
     String getDisplayName();
 
-    void setDisplayName(String display);
+    Item setDisplayName(String display);
 
     List<String> getItemFlags();
 
-    void setItemFlags(List<String> itemFlags);
+    Item setItemFlags(List<String> itemFlags);
 
-    void addItemFlag(String flag);
+    Item addItemFlag(String flag);
 
-    void addAllItemFlags();
+    Item addAllItemFlags();
 
     short getDurability();
 
-    void setDurability(short durability);
+    Item setDurability(short durability);
 
     byte getDamage();
 
-    void setDamage(byte damage);
+    Item setDamage(byte damage);
 
     Color getColor();
 
-    void setColor(Color color);
+    Item setColor(Color color);
 
     @Nullable
     String getSkullOwner();
 
-    void setSkullOwner(String owner);
+    Item setSkullOwner(String owner);
 
     Item withMessages(Item item);
+
+    Item replace(String search, String replace);
+
+    Item withExternalPlaceholders(SWPlayer player);
 
     Item clone();
 

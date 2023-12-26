@@ -9,6 +9,7 @@ public class MapDataProperties {
     public static final String ENABLED = "enabled";
     public static final String BORDER_RADIUS = "border-radius";
     public static final String ENABLED_CHESTTIERS = "enabled-chesttiers";
+    public static final String ICON = "icon";
 
     public static final String IS_TEAMSIZE_SETUP = "checks.teamsize-setup";
 

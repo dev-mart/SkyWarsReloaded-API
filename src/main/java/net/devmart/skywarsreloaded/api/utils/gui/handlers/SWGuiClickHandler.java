@@ -1,4 +1,6 @@
-package net.devmart.skywarsreloaded.api.utils.gui;
+package net.devmart.skywarsreloaded.api.utils.gui.handlers;
+
+import net.devmart.skywarsreloaded.api.utils.gui.SWGui;
 
 @FunctionalInterface
 public interface SWGuiClickHandler {

@@ -10,6 +10,8 @@ public interface Message {
 
     Message replace(String search, String replace);
 
+    Message withExternalPlaceholders(boolean withExternalPlaceholders);
+
     void send(SWCommandSender... senders);
 
     void sendCentered(SWCommandSender... senders);
@@ -19,5 +21,9 @@ public interface Message {
     void sendTitle(int in, int stay, int out, SWCommandSender... senders);
 
     List<String> getLines();
+
+    String toString();
+
+    String toString(SWCommandSender sender);
 
 }

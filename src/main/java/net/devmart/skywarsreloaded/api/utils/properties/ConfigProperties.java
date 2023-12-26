@@ -38,9 +38,16 @@ public class ConfigProperties {
     public static final String MESSAGING_REDIS_PORT = "messaging.redis.port";
 
     // menus
+    public static final String MENUS_PAGINATION_SHRINK_TO_FIT = "menus.pagination.shrink-to-fit";
+    public static final String MENUS_PAGINATION_ONLY_SHRINK_SINGLE_PAGE = "menus.pagination.only-shrink-single-page";
+
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
     public static final String MENUS_KITS_AUTO_LAYOUT = "menus.kits.auto-layout";
     public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
+
+    public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
+    public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
+    public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
 
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";

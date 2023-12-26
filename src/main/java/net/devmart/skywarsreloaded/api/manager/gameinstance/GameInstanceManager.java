@@ -62,10 +62,10 @@ public interface GameInstanceManager<G extends GameInstance> {
     List<GameTemplate> getGameTemplatesCopy();
 
     /**
-     * Create a new {@link GameTemplate} with the id/name specified
+     * Create a new {@link GameTemplate} with the id/name specified if it doesn't already exist.
      *
      * @param gameId The name of the game template
-     * @return The created {@link GameTemplate}
+     * @return The created {@link GameTemplate} or null when a template with that name already exists
      */
     GameTemplate createGameTemplate(String gameId);
 
@@ -112,4 +112,22 @@ public interface GameInstanceManager<G extends GameInstance> {
     boolean isManagerRemote();
 
     G getGameInstanceById(UUID uuid);
+
+    /**
+     * Get a list of all game instances that are playable (not in progress, not full, etc).
+     *
+     * @param templates Optional templates to filter by. Leave empty to get all playable game instances.
+     * @return List of all playable game instances.
+     */
+    List<G> getPlayableGameInstances(GameTemplate... templates);
+
+    /**
+     * Get a list of all game instances that are playable (not in progress, not full, etc).
+     *
+     * @param sortByPlayerCount Whether to sort the list by player count (descending).
+     * @param templates         Optional templates to filter by. Leave empty to get all playable game instances.
+     * @return List of all playable game instances.
+     */
+    List<G> getPlayableGameInstances(boolean sortByPlayerCount, GameTemplate... templates);
+
 }

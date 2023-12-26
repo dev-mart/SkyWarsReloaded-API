@@ -20,6 +20,8 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
 
     GameInstance getGameInstance();
 
+    boolean canJoinGame();
+
     void setGameWorld(GameInstance world);
 
     Item getItemInHand(boolean offHand);

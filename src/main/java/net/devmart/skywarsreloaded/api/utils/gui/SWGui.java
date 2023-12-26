@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.utils.gui;
 
 import net.devmart.skywarsreloaded.api.manager.ItemManager;
 import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.utils.gui.handlers.SWGuiClickHandler;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
 
@@ -61,6 +62,10 @@ public interface SWGui {
      * @return The same
      */
     SWGui addButton(int slot, Item item, SWGuiClickHandler handler);
+
+    SWGui addCloseButton(int slot);
+
+    void handleCloseButtonClick(SWGui gui, int slot, SWGuiClickHandler.ClickType clickType, boolean isShiftClick);
 
     void updateButton(int slot, Item item);
 

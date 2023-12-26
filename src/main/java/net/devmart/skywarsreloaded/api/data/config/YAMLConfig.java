@@ -55,6 +55,10 @@ public interface YAMLConfig {
 
     List<Item> getItemList(Enum<?> property);
 
+    Map<String, Object> getValues(String property, boolean deep);
+
+    Map<String, Object> getValues(String property, boolean deep, Map<String, Object> defaultValue);
+
     List<String> getStringList(String property);
 
     List<String> getStringList(Enum<?> property);
