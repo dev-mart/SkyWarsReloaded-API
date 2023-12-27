@@ -79,6 +79,11 @@ public class ConfigProperties {
     // Game prefs - Chests
     public static final String GAME_CHESTS_MAX_ITEMS = "game.chests.max-items";
     public static final String GAME_CHESTS_MAX_ITEMS_DOUBLE = "game.chests.max-items-double";
+    public static final String GAME_QUICK_DEATH_ENABLED = "game.quick-death.enable";
+    public static final String GAME_QUICK_DEATH_Y_LEVEL = "game.quick-death.y-level";
+    public static final String GAME_PVP_TIMER_ENABLED = "game.pvp-timer.enable";
+    public static final String GAME_PVP_TIMER_TIME = "game.pvp-timer.time";
+    public static final String GAME_PVP_TIMER_ONLY_DISABLE_FALL_DAMAGE = "game.pvp-timer.only-disable-fall-damage";
 
     // World loader
     public static final String ENABLE_SLIME_WORLD_MANAGER = "world-loader.enable-swm";
