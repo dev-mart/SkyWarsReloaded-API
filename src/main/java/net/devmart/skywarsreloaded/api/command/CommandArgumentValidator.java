@@ -83,6 +83,16 @@ public interface CommandArgumentValidator {
      */
     SWKit kitExists(SWCommandSender sender, String kitName);
 
+    /**
+     * Returns the kit if it exists, otherwise sends an error message to the sender.
+     *
+     * @param sender    The sender
+     * @param kitName   The name of the kit
+     * @param sendError Whether to send an error message to the sender if the kit doesn't exist
+     * @return The kit if it exists, otherwise null
+     */
+    SWKit kitExists(SWCommandSender sender, String kitName, boolean sendError);
+
     Item holdsItem(SWCommandSender sender);
 
     /**

@@ -6,7 +6,6 @@ public class KitProperties {
     public static final String ICON = "icon";
     public static final String UNAVAILABLE_ICON = "unavailable-icon";
     public static final String DESCRIPTION = "description";
-    public static final String SLOT = "slot";
     public static final String LORE = "lore";
     public static final String EFFECTS = "effects";
 
