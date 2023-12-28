@@ -41,15 +41,6 @@ public interface KitManager {
     List<SWKit> getKits();
 
     /**
-     * Get a kit from its assigned slot.
-     *
-     * @param slot The slot of the kit
-     * @return The kit if it exists, otherwise null
-     */
-    @Nullable
-    SWKit getKitFromSlot(int slot);
-
-    /**
      * Creates a kit with the given id and icon.
      * If a kit with the given id already exists, this method will return null.
      *
@@ -68,10 +59,5 @@ public interface KitManager {
      * @return The kit
      */
     SWKit initKit(String id);
-
-    /**
-     * Fixes all duplicate kit menu slots and replaces duplicates with unique slots.
-     */
-    void fixKitSlots();
 
 }

@@ -64,20 +64,6 @@ public interface SWKit extends Unlockable {
     void setUnavailableIcon(@Nullable Item icon);
 
     /**
-     * Get the slot in the kit selection menu for the kit.
-     *
-     * @return The slot.
-     */
-    int getSlot();
-
-    /**
-     * Set the slot in the kit selection menu for the kit.
-     *
-     * @param slot The slot to set.
-     */
-    void setSlot(int slot);
-
-    /**
      * Get the description for the kit.
      *
      * @return The description.
