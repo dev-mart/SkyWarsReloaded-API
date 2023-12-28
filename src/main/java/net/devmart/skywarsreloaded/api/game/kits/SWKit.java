@@ -69,8 +69,10 @@ public interface SWKit extends Unlockable {
 
     void setEffects(List<String> effects);
 
-    void giveToPlayer(SWPlayer sp);
+    void giveToPlayer(SWPlayer player);
 
-    void updateItems();
+    void applyEffects(SWPlayer player);
+
+    void copyContentsFromPlayer(SWPlayer player);
 
 }
