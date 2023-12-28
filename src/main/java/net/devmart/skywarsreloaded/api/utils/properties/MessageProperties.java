@@ -117,6 +117,7 @@ public class MessageProperties {
     public static final String GAMES_PLAYER_LEFT = "games.player-left";
     public static final String GAMES_PLAYER_LEAVE = "games.player-leave";
     public static final String GAMES_JOIN_FAILED = "games.join-failed";
+    public static final String GAMES_PVP_TIMER_ENDED = "games.pvp-timer-ended";
 
     public static final String GAMES_SUMMARY = "games.summary";
     public static final String GAMES_TEAM_SUMMARY = "games.team-summary";
@@ -132,6 +133,7 @@ public class MessageProperties {
     public static final String TITLES_GAME_PLAYER_LEFT = "titles.games.player-left";
     public static final String TITLES_GAMES_WON = "titles.games.won";
     public static final String TITLES_GAMES_LOST = "titles.games.lost";
+    public static final String TITLES_GAMES_PVP_TIMER_ENDED = "titles.games.pvp-timer-ended";
 
     public static final String SCOREBOARDS_LOBBY = "scoreboards.lobby";
     public static final String SCOREBOARDS_WAITING = "scoreboards.waiting";
