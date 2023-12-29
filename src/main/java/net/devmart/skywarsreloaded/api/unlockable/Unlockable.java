@@ -10,24 +10,29 @@ public interface Unlockable {
 
     /**
      * Get the type of this unlockable.
+     *
      * @return The type.
      */
     UnlockableType getType();
 
     /**
      * Get the id of this unlockable.
+     *
      * @return The id.
      */
     String getId();
 
     /**
      * Get the prefix for the permission required to unlock this unlockable.
+     *
      * @return The permission prefix.
      */
     String getPermissionPrefix();
 
     /**
      * Get the permission required to unlock this unlockable.
+     * This is by default the {@link #getPermissionPrefix()} + {@link #getId()}.
+     *
      * @return The permission.
      */
     String getPermission();
@@ -48,6 +53,26 @@ public interface Unlockable {
      * @param require Whether the unlockable needs a permission to be unlocked.
      */
     void setNeedPermission(boolean require);
+
+    /**
+     * Get the position of the unlockable in the unlockables menu.
+     * This is a continuous number starting at 1.
+     * The position is used to determine the position of the unlockable in the menu
+     * and is a replacement for the previously used static page and slot.
+     *
+     * @return The menu position. 0 or lower if the unlockable should be dynamically placed.
+     */
+    int getMenuPosition();
+
+    /**
+     * Set the position of the unlockable in the unlockables menu.
+     * This is a continuous number starting at 1, or 0 or lower if the unlockable should be dynamically placed.
+     * <p>
+     * (See {@link #getMenuPosition()} for more information)
+     * </p>
+     * @param position The position to set.
+     */
+    void setMenuPosition(int position);
 
     /**
      * Get the balance cost of the unlockable.

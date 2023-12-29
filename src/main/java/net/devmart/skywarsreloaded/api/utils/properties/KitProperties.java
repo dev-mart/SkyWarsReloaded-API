@@ -9,10 +9,6 @@ public class KitProperties {
     public static final String LORE = "lore";
     public static final String EFFECTS = "effects";
 
-    public static final String REQUIREMENTS_PERMISSION = "requirements.permission";
-    public static final String REQUIREMENTS_COST = "requirements.cost";
-    public static final String REQUIREMENTS_STATS = "requirements.stats";
-
     public static final String CONTENTS = "contents";
     public static final String ARMOR_CONTENTS = "contents.armor";
     public static final String INVENTORY_CONTENTS = "contents.inventory";
