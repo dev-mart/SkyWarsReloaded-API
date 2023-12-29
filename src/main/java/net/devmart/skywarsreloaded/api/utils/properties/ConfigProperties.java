@@ -52,8 +52,18 @@ public class ConfigProperties {
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
+    public static final String ITEMS_GAME_OPTIONS_VOTING_SLOT = "items.game.options-voting.slot";
     public static final String ITEMS_LOBBY_JOIN_SLOT = "items.lobby.join.slot";
     public static final String ITEMS_LOBBY_OPTIONS_SLOT = "items.lobby.options.slot";
+
+    public static final String ITEMS_GAME_OPTIONS_MENU_CHEST_VOTING_SLOT = "items.game-options-menu.chest-voting.slot";
+    public static final String ITEMS_GAME_OPTIONS_MENU_HEALTH_VOTING_SLOT = "items.game-options-menu.health-voting.slot";
+    public static final String ITEMS_GAME_OPTIONS_MENU_TIME_VOTING_SLOT = "items.game-options-menu.time-voting.slot";
+    public static final String ITEMS_GAME_OPTIONS_MENU_WEATHER_VOTING_SLOT = "items.game-options-menu.weather-voting.slot";
+    public static final String ITEMS_GAME_OPTIONS_MENU_MODIFIER_VOTING_SLOT = "items.game-options-menu.modifier-voting.slot";
+    public static final String ITEMS_GAME_OPTIONS_MENU_PROJECTILE_VOTING_SLOT = "items.game-options-menu.projectile-voting.slot";
+
+
     // todo: messaging impl & auth
 
     // Game instances
@@ -84,6 +94,15 @@ public class ConfigProperties {
     public static final String GAME_PVP_TIMER_ENABLED = "game.pvp-timer.enable";
     public static final String GAME_PVP_TIMER_TIME = "game.pvp-timer.time";
     public static final String GAME_PVP_TIMER_ONLY_DISABLE_FALL_DAMAGE = "game.pvp-timer.only-disable-fall-damage";
+
+    public static final String GAME_OPTIONS_VOTING_ENABLED = "game.options-voting.enable";
+    public static final String GAME_OPTIONS_CHEST_VOTING_ENABLED = "game.options-voting.chest-voting.enable";
+    public static final String GAME_OPTIONS_HEALTH_VOTING_ENABLED = "game.options-voting.health-voting.enable";
+    public static final String GAME_OPTIONS_TIME_VOTING_ENABLED = "game.options-voting.time-voting.enable";
+    public static final String GAME_OPTIONS_WEATHER_VOTING_ENABLED = "game.options-voting.weather-voting.enable";
+    public static final String GAME_OPTIONS_MODIFIER_VOTING_ENABLED = "game.options-voting.modifier-voting.enable";
+    public static final String GAME_OPTIONS_PROJECTILE_VOTING_ENABLED = "game.options-voting.projectile-voting.enable";
+
 
     // World loader
     public static final String ENABLE_SLIME_WORLD_MANAGER = "world-loader.enable-swm";
