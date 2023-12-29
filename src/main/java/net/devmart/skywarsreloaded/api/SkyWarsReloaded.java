@@ -43,7 +43,7 @@ public interface SkyWarsReloaded {
      * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(SWHook)}
      * <br><br>
      * If you really need to register your own hooks into SkyWars that will run at enable time, we recommend
-     * overriding this method in your own SkyWars implementation and calling super.{@link #registerDefaultHooks()}
+     * overriding this method in your own SkyWars implementation and calling super.
      * before registering your own.
      */
     void registerDefaultHooks();
@@ -152,6 +152,10 @@ public interface SkyWarsReloaded {
     SWChestManager getChestManager();
 
     void setChestManager(SWChestManager chestManager);
+
+    VoteOptionManager getVoteOptionManager();
+
+    void setVoteOptionManager(VoteOptionManager voteOptionManager);
 
     SWMessaging getMessaging();
 

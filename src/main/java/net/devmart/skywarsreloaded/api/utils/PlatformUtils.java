@@ -44,6 +44,8 @@ public interface PlatformUtils {
 
     SWWorld getSWWorld(String worldName);
 
+    Effect getEffect(String effect);
+
     String centerMessage(String message);
 
     Item getItemFromMap(Map<String, Object> map);

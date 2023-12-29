@@ -26,4 +26,12 @@ public class GameVoteOptionsProperties {
 
     public static final String OPTION_HEALTH = "health";
 
+    // types
+
+    public static final String TYPE_CHEST = "chest";
+    public static final String TYPE_WEATHER = "weather";
+    public static final String TYPE_TIME = "time";
+    public static final String TYPE_MODIFIER = "modifier";
+    public static final String TYPE_HEALTH = "health";
+
 }
