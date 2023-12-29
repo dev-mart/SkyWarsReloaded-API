@@ -26,10 +26,22 @@ public interface VoteOption {
     int getSlot();
 
     /**
+     * Set the menu slot of the vote option.
+     * @param slot the menu slot
+     */
+    void setSlot(int slot);
+
+    /**
      * The menu icon of the vote option.
      *
      * @return the menu icon
      */
     Item getIcon();
+
+    /**
+     * Set the menu icon of the vote option.
+     * @param icon the menu icon
+     */
+    void setIcon(Item icon);
 
 }
