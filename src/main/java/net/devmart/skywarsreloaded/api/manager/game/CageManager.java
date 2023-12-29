@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.manager;
+package net.devmart.skywarsreloaded.api.manager.game;
 
 import com.sk89q.worldedit.EditSession;
 import net.devmart.skywarsreloaded.api.unlockable.cage.Cage;

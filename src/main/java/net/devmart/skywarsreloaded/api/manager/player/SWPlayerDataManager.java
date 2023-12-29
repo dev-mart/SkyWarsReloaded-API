@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.manager;
+package net.devmart.skywarsreloaded.api.manager.player;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerData;
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerStats;
@@ -14,4 +14,5 @@ public interface SWPlayerDataManager {
     SWPlayerUnlockables createSWPlayerUnlockablesInstance(SWPlayer player);
 
     void loadAllPlayerData();
+
 }

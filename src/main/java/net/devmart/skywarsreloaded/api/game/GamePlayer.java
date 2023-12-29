@@ -1,7 +1,10 @@
 package net.devmart.skywarsreloaded.api.game;
 
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
+
+import java.util.List;
 
 public interface GamePlayer {
 
@@ -95,10 +98,22 @@ public interface GamePlayer {
      */
     void addAssist();
 
+    /**
+     * Set the team that the player belongs to
+     * @param team the team that the player belongs to
+     */
     void setTeam(GameTeam team);
 
-    SWScoreboard getScoreboard();
+    /**
+     * Get the votes that the player has made
+     * @return the votes that the player has made
+     */
+    List<VoteOption> getVotes();
 
-    void setScoreboard(SWScoreboard scoreboard);
+    /**
+     * Set the votes that the player has made
+     * @param votes the votes that the player has made
+     */
+    void setVotes(List<VoteOption> votes);
 
 }

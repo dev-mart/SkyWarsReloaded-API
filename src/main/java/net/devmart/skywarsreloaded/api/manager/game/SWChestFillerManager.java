@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.manager;
+package net.devmart.skywarsreloaded.api.manager.game;
 
 import net.devmart.skywarsreloaded.api.game.chest.filler.SWChestFiller;
 

@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.manager;
+package net.devmart.skywarsreloaded.api.manager.game;
 
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.extent.clipboard.Clipboard;

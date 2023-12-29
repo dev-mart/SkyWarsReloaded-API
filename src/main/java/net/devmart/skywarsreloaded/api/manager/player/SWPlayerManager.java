@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.manager;
+package net.devmart.skywarsreloaded.api.manager.player;
 
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWEntity;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
