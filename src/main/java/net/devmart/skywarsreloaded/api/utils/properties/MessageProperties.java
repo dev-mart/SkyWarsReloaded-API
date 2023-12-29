@@ -21,6 +21,7 @@ public class MessageProperties {
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
+    public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
 
     public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
     public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";

@@ -49,6 +49,8 @@ public class ConfigProperties {
     public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
     public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
 
+    public static final String MENUS_GAME_OPTIONS_SIZE = "menus.game-options.size";
+
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
