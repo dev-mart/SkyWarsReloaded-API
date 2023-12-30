@@ -13,6 +13,7 @@ public class GameVoteOptionsProperties {
 
     public static final String OPTION_SLOT = "slot";
     public static final String OPTION_ICON = "icon";
+    public static final String OPTION_NO_PERMISSION = "no-permission";
 
     // special option properties
 

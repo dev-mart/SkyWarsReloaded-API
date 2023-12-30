@@ -31,6 +31,7 @@ public interface VoteOption {
 
     /**
      * Set the menu slot of the vote option.
+     *
      * @param slot the menu slot
      */
     void setSlot(int slot);
@@ -44,10 +45,24 @@ public interface VoteOption {
 
     /**
      * Set the menu icon of the vote option.
+     *
      * @param icon the menu icon
      */
     void setIcon(Item icon);
 
+    /**
+     * Apply the vote option to the game instance.
+     *
+     * @param gameInstance the game instance
+     */
     void apply(LocalGameInstance gameInstance);
+
+    /**
+     * Get the permission of the vote option.
+     * This follows the format of <b>{@code skywars.vote.<vote-type>.<vote-option>}</b> in lowercase.
+     *
+     * @return the permission
+     */
+    String getPermission();
 
 }

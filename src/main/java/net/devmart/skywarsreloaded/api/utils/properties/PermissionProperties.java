@@ -9,6 +9,7 @@ public class PermissionProperties {
     public static final String PREFIXES_COMMAND_MAP = PREFIXES_COMMAND + "map.";
     public static final String PREFIXES_COMMAND_KIT = PREFIXES_COMMAND + "kit.";
     public static final String PREFIXES_COMMAND_GENERAL = PREFIXES_COMMAND + "general.";
+    public static final String PREFIXES_VOTE = PREFIXES_GENERAL + "vote.";
 
     // general
 
