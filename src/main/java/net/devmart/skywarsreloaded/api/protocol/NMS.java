@@ -23,6 +23,8 @@ public interface NMS {
 
     SWChunkGenerator getChunkGenerator();
 
+    SWChunkGenerator getChunkGenerator(String biome);
+
     void addPluginChunkTicket(SWChunk chunk);
 
     String getVoidGeneratorSettings();

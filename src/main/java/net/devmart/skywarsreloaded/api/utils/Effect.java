@@ -8,11 +8,19 @@ public interface Effect {
 
     String getType();
 
+    void setType(String type);
+
     int getDuration();
+
+    void setDuration(int duration);
 
     int getStrength();
 
+    void setStrength(int strength);
+
     boolean showParticles();
+
+    void setShowParticles(boolean showParticles);
 
     void applyToPlayer(SWPlayer player);
 
