@@ -11,6 +11,8 @@ public interface VoteOptionManager {
 
     List<VoteType> getVoteTypes();
 
+    List<VoteType> getEnabledVoteTypes();
+
     List<VoteOption> getVoteOptions(VoteType type);
 
     List<VoteOption> getAllVoteOptions();

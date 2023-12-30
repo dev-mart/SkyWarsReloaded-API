@@ -1,6 +1,7 @@
 package net.devmart.skywarsreloaded.api.game.vote;
 
 import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.utils.Message;
 
 import java.util.List;
 
@@ -16,9 +17,9 @@ public interface VoteType {
 
     void setMenuSize(int size);
 
-    String getMenuTitle();
+    Message getMenuTitle();
 
-    void setMenuTitle(String title);
+    void setMenuTitle(Message title);
 
     int getSlot();
 

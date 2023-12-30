@@ -1,5 +1,7 @@
 package net.devmart.skywarsreloaded.api.manager;
 
+import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.gui.SWConfirmationGui;
 import net.devmart.skywarsreloaded.api.utils.gui.SWGui;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
@@ -11,9 +13,9 @@ public interface SWGuiManager {
 
     SWGui createJoinGameGui(SWPlayer player);
 
-    SWGui createOptionsGui(SWPlayer player);
+    SWGui createVotingOptionsGui(SWPlayer player, LocalGameInstance gameInstance, VoteType voteType);
 
-    SWGui createVotingGui(SWPlayer player);
+    SWGui createVotingGui(SWPlayer player, LocalGameInstance gameInstance);
 
     SWGui createKitGui(SWPlayer player);
 
