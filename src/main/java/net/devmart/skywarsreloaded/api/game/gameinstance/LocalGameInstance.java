@@ -5,12 +5,11 @@ import net.devmart.skywarsreloaded.api.enums.GameLeaveReason;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
-import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
 import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
-import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -91,6 +90,16 @@ public interface LocalGameInstance extends GameInstance {
     void startGame();
 
     /**
+     * Calculate the final votes for the game.
+     */
+    void calculateFinalVotes();
+
+    /**
+     * Apply the final votes to the game.
+     */
+    void applyFinalVotes();
+
+    /**
      * End the current game.
      */
     void endGame();
@@ -116,25 +125,11 @@ public interface LocalGameInstance extends GameInstance {
     GameScheduler getScheduler();
 
     /**
-     * Get the voted chest tiers per player.
-     *
-     * @return The voted chest tiers per player
-     */
-    Map<UUID, SWChestTier> getVotedChestTiers();
-
-    /**
      * Get the chest types that players are using during their edit session.
      *
      * @return The selected chest types per player.
      */
     Map<UUID, ChestType> getSelectedEditingChestTypes();
-
-    /**
-     * Get the voted chest tier of the game.
-     *
-     * @return The voted chest tier
-     */
-    SWChestTier getChestTier();
 
     /**
      * Announces a message to all players in the game.
@@ -167,14 +162,6 @@ public interface LocalGameInstance extends GameInstance {
      * @param fadeOut Fade out time in ticks.
      */
     void announceTitle(Message message, int fadeIn, int stay, int fadeOut);
-
-    /**
-     * Sets what chest tier the player is using for editing the game template.
-     *
-     * @param player The player that is editing.
-     * @param type   The chest tier to set.
-     */
-    void setChestTypeSelected(UUID player, SWChestTier type);
 
     /**
      * This method is to be run async since it could perform long operations

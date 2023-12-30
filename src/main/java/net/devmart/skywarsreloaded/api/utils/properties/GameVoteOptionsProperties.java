@@ -7,6 +7,7 @@ public class GameVoteOptionsProperties {
     public static final String MENU_TITLE = "menu-title";
     public static final String SLOT = "slot";
     public static final String ICON = "icon";
+    public static final String DEFAULT_OPTION = "default";
 
     public static final String OPTIONS = "options";
 

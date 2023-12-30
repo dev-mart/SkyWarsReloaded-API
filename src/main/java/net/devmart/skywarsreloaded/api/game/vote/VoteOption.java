@@ -1,5 +1,6 @@
 package net.devmart.skywarsreloaded.api.game.vote;
 
+import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 import net.devmart.skywarsreloaded.api.utils.Item;
 
 /**
@@ -46,5 +47,7 @@ public interface VoteOption {
      * @param icon the menu icon
      */
     void setIcon(Item icon);
+
+    void apply(LocalGameInstance gameInstance);
 
 }

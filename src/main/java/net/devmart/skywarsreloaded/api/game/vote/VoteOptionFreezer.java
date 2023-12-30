@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.game.vote;
 
 import net.devmart.skywarsreloaded.api.game.vote.options.*;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface VoteOptionFreezer {
@@ -99,5 +100,7 @@ public interface VoteOptionFreezer {
      * Get if the vote options are frozen.
      */
     boolean isFrozen();
+
+    List<VoteOption> getAllOptions();
 
 }
