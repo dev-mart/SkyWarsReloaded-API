@@ -7,6 +7,7 @@ import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -16,6 +17,13 @@ import java.util.Map;
 import java.util.UUID;
 
 public interface LocalGameInstance extends GameInstance {
+
+    /**
+     * Get the vote options for this game.
+     *
+     * @return The vote option freezer
+     */
+    VoteOptionFreezer getVoteOptionFreezer();
 
     /**
      * Get a list of all the teams in the game.
@@ -295,6 +303,12 @@ public interface LocalGameInstance extends GameInstance {
      */
     void determineWinner();
 
+    /**
+     * Handle the death of a player.
+     *
+     * @param player The player that died
+     * @param reason The reason of death
+     */
     void handlePlayerDeath(GamePlayer player, DeathCause reason);
 
 }
