@@ -29,8 +29,28 @@ public interface VoteType {
 
     void setIcon(Item icon);
 
+    /**
+     * Get the options for this vote type.
+     * @return
+     */
     List<VoteOption> getOptions();
 
+    /**
+     * Set the options for this vote type.
+     * @param options
+     */
     void setOptions(List<VoteOption> options);
+
+    /**
+     * Get the default option for this vote type.
+     * @return
+     */
+    VoteOption getDefaultOption();
+
+    /**
+     * Set the default option for this vote type.
+     * @param option
+     */
+    void setDefaultOption(VoteOption option);
 
 }

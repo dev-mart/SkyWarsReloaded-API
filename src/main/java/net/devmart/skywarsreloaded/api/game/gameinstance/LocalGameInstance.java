@@ -10,6 +10,7 @@ import net.devmart.skywarsreloaded.api.game.types.ChestType;
 import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
 import net.devmart.skywarsreloaded.api.game.vote.VoteType;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -19,6 +20,13 @@ import java.util.Map;
 import java.util.UUID;
 
 public interface LocalGameInstance extends GameInstance {
+
+    /**
+     * Get the vote options for this game.
+     *
+     * @return The vote option freezer
+     */
+    VoteOptionFreezer getVoteOptionFreezer();
 
     /**
      * Get a list of all the teams in the game.

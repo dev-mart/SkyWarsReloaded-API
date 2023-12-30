@@ -2,6 +2,9 @@ package net.devmart.skywarsreloaded.api.game.vote;
 
 import net.devmart.skywarsreloaded.api.utils.Item;
 
+/**
+ * Represents all the possible options that can be picked under a {@link VoteType}.
+ */
 public interface VoteOption {
 
     /**
