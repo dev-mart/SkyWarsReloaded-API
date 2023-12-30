@@ -7,6 +7,9 @@ import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
+import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -295,6 +298,36 @@ public interface LocalGameInstance extends GameInstance {
      */
     void determineWinner();
 
+    /**
+     * Handle the death of a player.
+     *
+     * @param player The player that died
+     * @param reason The reason of death
+     */
     void handlePlayerDeath(GamePlayer player, DeathCause reason);
+
+    /**
+     * Cast a vote for a vote option.
+     *
+     * @param player The player that is voting
+     * @param option The option that is being voted for
+     */
+    void addPlayerVote(GamePlayer player, VoteOption option);
+
+    /**
+     * Get the votes for a vote type.
+     *
+     * @param voteType The vote type to get the votes for
+     * @return A list of player votes
+     */
+    List<PlayerVote> getPlayerVotes(VoteType voteType);
+
+    /**
+     * Get the votes for a vote option.
+     *
+     * @param voteOption The vote option to get the votes for
+     * @return The number of votes for the vote option
+     */
+    int getPlayerVotesCount(VoteOption voteOption);
 
 }

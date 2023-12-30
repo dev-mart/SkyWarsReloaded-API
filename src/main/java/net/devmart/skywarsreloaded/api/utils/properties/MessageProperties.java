@@ -120,6 +120,9 @@ public class MessageProperties {
     public static final String GAMES_JOIN_FAILED = "games.join-failed";
     public static final String GAMES_PVP_TIMER_ENDED = "games.pvp-timer-ended";
 
+    public static final String GAMES_PLAYER_VOTED = "games.player-voted";
+    public static final String GAMES_PLAYER_VOTED_DEFAULT = "games.player-voted.default";
+
     public static final String GAMES_SUMMARY = "games.summary";
     public static final String GAMES_TEAM_SUMMARY = "games.team-summary";
 
