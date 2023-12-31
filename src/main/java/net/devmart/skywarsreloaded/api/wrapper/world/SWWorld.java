@@ -84,4 +84,47 @@ public interface SWWorld {
      * @param keepSpawnLoaded true if spawn chunk should always be loaded.
      */
     void setKeepSpawnLoaded(boolean keepSpawnLoaded);
+
+    /**
+     * Get the time of the world
+     *
+     * @return The time of the world
+     */
+    long getTime();
+
+    /**
+     * Set the time of the world
+     *
+     * @param time The time to set the world to
+     */
+    void setTime(long time);
+
+    /**
+     * Get whether it is currently raining in the world
+     *
+     * @return True if it is raining, false otherwise
+     */
+    boolean isRaining();
+
+    /**
+     * Set whether it is currently raining in the world
+     *
+     * @param raining True if it is raining, false otherwise
+     */
+    void setRaining(boolean raining);
+
+    /**
+     * Get whether it is currently thundering in the world
+     *
+     * @return True if it is thundering, false otherwise
+     */
+    boolean isThundering();
+
+    /**
+     * Set whether it is currently thundering in the world
+     *
+     * @param thunder True if it is thundering, false otherwise
+     */
+    void setThundering(boolean thunder);
+
 }

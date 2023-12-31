@@ -25,6 +25,10 @@ public interface SWEntity {
 
     void setHealth(double health);
 
+    double getMaxHealth();
+
+    void setMaxHealth(double maxHealth);
+
     void setFireTicks(int ticks);
 
     String getType();

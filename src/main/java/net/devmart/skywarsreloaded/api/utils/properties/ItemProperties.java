@@ -14,6 +14,15 @@ public class ItemProperties {
     public static final String GAME_KIT_SELECTOR = "items.game.kit-selector";
     public static final String GAME_GAME_LEAVE = "items.game.leave";
 
+    public static final String GAME_OPTIONS_VOTING = "items.game.options-voting";
+
+    public static final String GAME_OPTIONS_MENU_CHEST_VOTING = "items.game-options-menu.chest-voting";
+    public static final String GAME_OPTIONS_MENU_TIME_VOTING = "items.game-options-menu.time-voting";
+    public static final String GAME_OPTIONS_MENU_WEATHER_VOTING = "items.game-options-menu.weather-voting";
+    public static final String GAME_OPTIONS_MENU_MODIFIER_VOTING = "items.game-options-menu.modifier-voting";
+    public static final String GAME_OPTIONS_MENU_HEALTH_VOTING = "items.game-options-menu.health-voting";
+    public static final String GAME_OPTIONS_MENU_PROJECTILE_VOTING = "items.game-options-menu.projectile-voting";
+
     public static final String KITS_DESELECT = "items.kits.deselect";
 
     public static final String MENU_JOIN_GAMES_AVAILABLE = "items.join-menu.games-available";

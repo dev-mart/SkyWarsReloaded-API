@@ -271,8 +271,23 @@ public interface GameTemplate {
 
     /**
      * Set the template icon item.
+     *
      * @param item the new template icon item
      */
     void setIcon(Item item);
+
+    /**
+     * Get the world biome of the template.
+     *
+     * @return the world biome of the template
+     */
+    String getBiome();
+
+    /**
+     * Set the world biome of the template.
+     *
+     * @param biome the new world biome of the template
+     */
+    void setBiome(String biome);
 
 }

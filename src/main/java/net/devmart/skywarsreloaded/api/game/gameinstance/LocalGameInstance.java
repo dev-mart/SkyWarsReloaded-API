@@ -5,8 +5,11 @@ import net.devmart.skywarsreloaded.api.enums.GameLeaveReason;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
-import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
+import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -16,6 +19,13 @@ import java.util.Map;
 import java.util.UUID;
 
 public interface LocalGameInstance extends GameInstance {
+
+    /**
+     * Get the vote options for this game.
+     *
+     * @return The vote option freezer
+     */
+    VoteOptionFreezer getVoteOptionFreezer();
 
     /**
      * Get a list of all the teams in the game.
@@ -80,6 +90,16 @@ public interface LocalGameInstance extends GameInstance {
     void startGame();
 
     /**
+     * Calculate the final votes for the game.
+     */
+    void calculateFinalVotes();
+
+    /**
+     * Apply the final votes to the game.
+     */
+    void applyFinalVotes();
+
+    /**
      * End the current game.
      */
     void endGame();
@@ -105,25 +125,11 @@ public interface LocalGameInstance extends GameInstance {
     GameScheduler getScheduler();
 
     /**
-     * Get the voted chest tiers per player.
-     *
-     * @return The voted chest tiers per player
-     */
-    Map<UUID, SWChestTier> getVotedChestTiers();
-
-    /**
      * Get the chest types that players are using during their edit session.
      *
      * @return The selected chest types per player.
      */
     Map<UUID, ChestType> getSelectedEditingChestTypes();
-
-    /**
-     * Get the voted chest tier of the game.
-     *
-     * @return The voted chest tier
-     */
-    SWChestTier getChestTier();
 
     /**
      * Announces a message to all players in the game.
@@ -156,14 +162,6 @@ public interface LocalGameInstance extends GameInstance {
      * @param fadeOut Fade out time in ticks.
      */
     void announceTitle(Message message, int fadeIn, int stay, int fadeOut);
-
-    /**
-     * Sets what chest tier the player is using for editing the game template.
-     *
-     * @param player The player that is editing.
-     * @param type   The chest tier to set.
-     */
-    void setChestTypeSelected(UUID player, SWChestTier type);
 
     /**
      * This method is to be run async since it could perform long operations
@@ -295,6 +293,36 @@ public interface LocalGameInstance extends GameInstance {
      */
     void determineWinner();
 
+    /**
+     * Handle the death of a player.
+     *
+     * @param player The player that died
+     * @param reason The reason of death
+     */
     void handlePlayerDeath(GamePlayer player, DeathCause reason);
+
+    /**
+     * Cast a vote for a vote option.
+     *
+     * @param player The player that is voting
+     * @param option The option that is being voted for
+     */
+    void addPlayerVote(GamePlayer player, VoteOption option);
+
+    /**
+     * Get the votes for a vote type.
+     *
+     * @param voteType The vote type to get the votes for
+     * @return A list of player votes
+     */
+    List<PlayerVote> getPlayerVotes(VoteType voteType);
+
+    /**
+     * Get the votes for a vote option.
+     *
+     * @param voteOption The vote option to get the votes for
+     * @return The number of votes for the vote option
+     */
+    int getPlayerVotesCount(VoteOption voteOption);
 
 }

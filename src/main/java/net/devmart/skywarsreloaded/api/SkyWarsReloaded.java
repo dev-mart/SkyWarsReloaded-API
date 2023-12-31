@@ -12,7 +12,10 @@ import net.devmart.skywarsreloaded.api.game.loader.GameWorldLoader;
 import net.devmart.skywarsreloaded.api.hook.SWHook;
 import net.devmart.skywarsreloaded.api.listener.PlatformSWEventListener;
 import net.devmart.skywarsreloaded.api.manager.*;
-import net.devmart.skywarsreloaded.api.manager.gameinstance.GameInstanceManager;
+import net.devmart.skywarsreloaded.api.manager.game.*;
+import net.devmart.skywarsreloaded.api.manager.game.instance.GameInstanceManager;
+import net.devmart.skywarsreloaded.api.manager.player.SWPlayerDataManager;
+import net.devmart.skywarsreloaded.api.manager.player.SWPlayerManager;
 import net.devmart.skywarsreloaded.api.utils.PlatformUtils;
 import net.devmart.skywarsreloaded.api.utils.SWLogger;
 import net.devmart.skywarsreloaded.api.wrapper.scheduler.SWScheduler;
@@ -40,7 +43,7 @@ public interface SkyWarsReloaded {
      * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(SWHook)}
      * <br><br>
      * If you really need to register your own hooks into SkyWars that will run at enable time, we recommend
-     * overriding this method in your own SkyWars implementation and calling super.{@link #registerDefaultHooks()}
+     * overriding this method in your own SkyWars implementation and calling super.
      * before registering your own.
      */
     void registerDefaultHooks();
@@ -149,6 +152,10 @@ public interface SkyWarsReloaded {
     SWChestManager getChestManager();
 
     void setChestManager(SWChestManager chestManager);
+
+    VoteOptionManager getVoteOptionManager();
+
+    void setVoteOptionManager(VoteOptionManager voteOptionManager);
 
     SWMessaging getMessaging();
 

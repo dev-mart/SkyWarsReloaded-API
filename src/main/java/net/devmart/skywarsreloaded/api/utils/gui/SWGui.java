@@ -78,4 +78,7 @@ public interface SWGui {
     SWInventory getInventory();
 
     void handleClick(int slot, SWGuiClickHandler.ClickType clickType, boolean isShiftClick);
+
+    void refresh();
+
 }
