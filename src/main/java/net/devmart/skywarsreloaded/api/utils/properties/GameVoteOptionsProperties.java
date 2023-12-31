@@ -8,12 +8,14 @@ public class GameVoteOptionsProperties {
     public static final String SLOT = "slot";
     public static final String ICON = "icon";
     public static final String DEFAULT_OPTION = "default";
+    public static final String PLAYER_VOTED = "player-voted";
 
     public static final String OPTIONS = "options";
 
     public static final String OPTION_SLOT = "slot";
     public static final String OPTION_ICON = "icon";
     public static final String OPTION_NO_PERMISSION = "no-permission";
+    public static final String OPTION_DISPLAY_NAME = "display-name";
 
     // special option properties
 

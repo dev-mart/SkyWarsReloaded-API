@@ -125,6 +125,7 @@ public class MessageProperties {
 
     public static final String GAMES_PLAYER_VOTED_DEFAULT = "games.player-voted";
 
+    public static final String GAMES_START_MESSAGE = "games.start-message";
     public static final String GAMES_SUMMARY = "games.summary";
     public static final String GAMES_TEAM_SUMMARY = "games.team-summary";
 

@@ -101,6 +101,17 @@ public interface VoteOptionFreezer {
      */
     boolean isFrozen();
 
+    /**
+     * Get all options.
+     * @return the options
+     */
     List<VoteOption> getAllOptions();
+
+    /**
+     * Get an option by type.
+     * @param type the type of the option
+     * @return the option
+     */
+    VoteOption getOptionByType(VoteType type);
 
 }

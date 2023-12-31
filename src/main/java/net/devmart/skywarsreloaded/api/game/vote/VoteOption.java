@@ -16,6 +16,18 @@ public interface VoteOption {
     String getName();
 
     /**
+     * The display name of the vote option.
+     * @return the display name
+     */
+    String getDisplayName();
+
+    /**
+     * Set the display name of the vote option.
+     * @param displayName the display name
+     */
+    void setDisplayName(String displayName);
+
+    /**
      * The parent vote type.
      *
      * @return the parent vote type
