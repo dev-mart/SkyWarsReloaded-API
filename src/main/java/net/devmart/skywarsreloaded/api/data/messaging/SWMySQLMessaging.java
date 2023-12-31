@@ -1,6 +1,6 @@
 package net.devmart.skywarsreloaded.api.data.messaging;
 
-public interface SWMySQLMessaging extends SWMessaging {
+public interface SWMySQLMessaging extends SWMessagingManager {
 
     void initSQLMessagingStorage();
 

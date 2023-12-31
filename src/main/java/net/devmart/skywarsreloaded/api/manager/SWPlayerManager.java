@@ -1,10 +1,12 @@
 package net.devmart.skywarsreloaded.api.manager;
 
+import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWEntity;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface SWPlayerManager {
 
@@ -19,6 +21,8 @@ public interface SWPlayerManager {
     void removePlayer(SWPlayer player);
 
     void initAllPlayers();
+
+    CompletableFuture<Boolean> joinGameAsync(GameInstance game, SWPlayer player);
 
     void prepareForLobby(SWPlayer player);
 

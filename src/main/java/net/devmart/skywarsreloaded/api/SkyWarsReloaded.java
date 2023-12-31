@@ -3,7 +3,7 @@ package net.devmart.skywarsreloaded.api;
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
 import net.devmart.skywarsreloaded.api.data.games.GameInstanceStorage;
 import net.devmart.skywarsreloaded.api.data.messaging.SWMessageCreator;
-import net.devmart.skywarsreloaded.api.data.messaging.SWMessaging;
+import net.devmart.skywarsreloaded.api.data.messaging.SWMessagingManager;
 import net.devmart.skywarsreloaded.api.data.player.SWPlayerStorage;
 import net.devmart.skywarsreloaded.api.data.redis.SWRedisConnection;
 import net.devmart.skywarsreloaded.api.data.sql.SQLStorage;
@@ -15,6 +15,7 @@ import net.devmart.skywarsreloaded.api.manager.*;
 import net.devmart.skywarsreloaded.api.manager.gameinstance.GameInstanceManager;
 import net.devmart.skywarsreloaded.api.utils.PlatformUtils;
 import net.devmart.skywarsreloaded.api.utils.SWLogger;
+import net.devmart.skywarsreloaded.api.utils.proxy.PluginMessaging;
 import net.devmart.skywarsreloaded.api.wrapper.scheduler.SWScheduler;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWServer;
@@ -150,9 +151,9 @@ public interface SkyWarsReloaded {
 
     void setChestManager(SWChestManager chestManager);
 
-    SWMessaging getMessaging();
+    SWMessagingManager getMessaging();
 
-    void setMessaging(SWMessaging messaging);
+    void setMessaging(SWMessagingManager messaging);
 
     SWMessageCreator getMessageCreator();
 
@@ -186,6 +187,10 @@ public interface SkyWarsReloaded {
     void setGameInstanceStorage(GameInstanceStorage instanceStorage);
 
     // Events
+
+    PluginMessaging getPluginMessaging();
+
+    void setPluginMessaging(PluginMessaging pluginMessaging);
 
     void setEventManager(SWEventManager eventManager);
 

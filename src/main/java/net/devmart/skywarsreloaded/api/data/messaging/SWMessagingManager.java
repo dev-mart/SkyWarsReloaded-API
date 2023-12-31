@@ -2,12 +2,13 @@ package net.devmart.skywarsreloaded.api.data.messaging;
 
 import com.google.gson.JsonObject;
 import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
+import net.devmart.skywarsreloaded.api.utils.properties.MessageChannelProperty;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-public interface SWMessaging {
+public interface SWMessagingManager {
 
     /**
      * Set up the messaging environment.
@@ -15,10 +16,22 @@ public interface SWMessaging {
     void setup();
 
     /**
+     * Create a message to send over the messaging channel.
+     *
+     * @param channel The channel to send the message over.
      * @param payload The payload of the message.
-     * @return {@link SWMessage} an SWMessage
+     * @return {@link SWPacketMessage} an SWMessage
      */
-    SWMessage createMessage(SWMessageCreator.MessageChannel channel, JsonObject payload);
+    SWPacketMessage createMessage(MessageChannelProperty channel, JsonObject payload);
+
+    /**
+     * Create a message to send over the messaging channel.
+     *
+     * @param channel The channel to send the message over. See {@link MessageChannelProperty}
+     * @param payload The payload of the message.
+     * @return {@link SWPacketMessage} an SWMessage
+     */
+    SWPacketMessage createMessage(String channel, JsonObject payload);
 
     /**
      * Send a message over the messaging channel.
@@ -26,7 +39,7 @@ public interface SWMessaging {
      * @param message The message to send.
      * @return
      */
-    CompletableFuture<SWMessage> sendMessage(SWMessage message);
+    CompletableFuture<SWPacketMessage> sendMessage(SWPacketMessage message);
 
     /**
      * Reply to a received message.
@@ -34,7 +47,7 @@ public interface SWMessaging {
      * @param message The message to send.
      * @param replyTo The message to reply to.
      */
-    void replyMessage(SWMessage message, SWMessage replyTo);
+    void replyMessage(SWPacketMessage message, SWPacketMessage replyTo);
 
     /**
      * Start listening for incoming messages.
@@ -58,7 +71,7 @@ public interface SWMessaging {
      * @param message The message that was sent and for which we are waiting for a reply
      * @return CompletableFuture with the received SWMessage (the reply to the ones sent)
      */
-    SWCompletableFuture<SWMessage> waitForReply(SWMessage message);
+    SWCompletableFuture<SWPacketMessage> waitForReply(SWPacketMessage message);
 
     /**
      * Executes the consumer when a reply is received for the message parameter.
@@ -69,9 +82,9 @@ public interface SWMessaging {
      * @param message       The message that was sent and for which we are waiting for replies
      * @param replyConsumer The consumer that is executed for every reply received
      */
-    void waitForMultipleReplies(SWMessage message, Consumer<SWMessage> replyConsumer);
+    void waitForMultipleReplies(SWPacketMessage message, Consumer<SWPacketMessage> replyConsumer);
 
-    void handleIncomingMessage(List<SWMessage> messages);
+    void handleIncomingMessage(List<SWPacketMessage> messages);
 
     void cleanCache();
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface SWMySQLMessagingStorage {
 
-    int addMessage(SWMessage message);
+    int addMessage(SWPacketMessage message);
 
     /**
      * Delete a message from the database.
@@ -12,9 +12,9 @@ public interface SWMySQLMessagingStorage {
      * @param message     The message to delete.
      * @param withReplies Whether to delete any replies to the message.
      */
-    void removeMessage(SWMessage message, boolean withReplies);
+    void removeMessage(SWPacketMessage message, boolean withReplies);
 
-    List<SWMessage> getIncomingMessages();
+    List<SWPacketMessage> getIncomingMessages();
 
     void cleanupTable();
 

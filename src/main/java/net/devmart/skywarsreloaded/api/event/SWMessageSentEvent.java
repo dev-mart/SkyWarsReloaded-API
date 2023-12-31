@@ -1,9 +1,9 @@
 package net.devmart.skywarsreloaded.api.event;
 
-import net.devmart.skywarsreloaded.api.data.messaging.SWMessage;
+import net.devmart.skywarsreloaded.api.data.messaging.SWPacketMessage;
 
 public interface SWMessageSentEvent extends SWEvent {
 
-    SWMessage getMessage();
+    SWPacketMessage getMessage();
 
 }

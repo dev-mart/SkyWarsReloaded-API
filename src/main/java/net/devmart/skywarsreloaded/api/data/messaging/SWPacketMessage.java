@@ -6,11 +6,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public interface SWMessage {
+public interface SWPacketMessage {
 
     int getId();
 
-    SWMessage setId(int id);
+    SWPacketMessage setId(int id);
 
     /**
      * Gets the time at which the message was sent
@@ -22,26 +22,26 @@ public interface SWMessage {
     @NotNull
     String getChannel();
 
-    SWMessage setChannel(@NotNull String channel);
+    SWPacketMessage setChannel(@NotNull String channel);
 
     JsonObject getPayload();
 
-    SWMessage setPayload(JsonObject payload);
+    SWPacketMessage setPayload(JsonObject payload);
 
     String getOriginServer();
 
     String getTargetServer();
 
-    SWMessage setTargetServer(String targetServerName);
+    SWPacketMessage setTargetServer(String targetServerName);
 
     Integer getReplyToId();
 
-    SWMessage setReplyToId(Integer replyToId);
+    SWPacketMessage setReplyToId(Integer replyToId);
 
-    SWMessage send();
+    SWPacketMessage send();
 
-    SWCompletableFuture<SWMessage> waitForReply();
+    SWCompletableFuture<SWPacketMessage> waitForReply();
 
-    void waitForReplyMultiple(Consumer<SWMessage> consumer);
+    void waitForReplyMultiple(Consumer<SWPacketMessage> consumer);
 
 }
