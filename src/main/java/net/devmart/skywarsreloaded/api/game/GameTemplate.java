@@ -242,10 +242,10 @@ public interface GameTemplate {
      * Run a check through all possible things to set up for the arena to see if anything is left.
      * This method will send a message to the target player with the next thing to do on the list.
      *
-     * @param player Player to send the messages to.
+     * @param player Optional player to send the messages to. Set to {@link null} to not send any messages.
      * @return true if all checks passed, false if there's things left to set up.
      */
-    boolean checkToDoList(SWCommandSender player);
+    boolean checkToDoList(@Nullable SWCommandSender player);
 
     /**
      * Get the maximum amount of players that can join this game.

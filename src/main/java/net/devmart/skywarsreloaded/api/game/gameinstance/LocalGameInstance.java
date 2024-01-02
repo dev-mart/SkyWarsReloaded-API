@@ -101,8 +101,17 @@ public interface LocalGameInstance extends GameInstance {
 
     /**
      * End the current game.
+     * This will stop the scheduler and set the state to ENDING.
+     * If you want to delete the game instance, use {@link #delete()} instead.
      */
     void endGame();
+
+    /**
+     * Delete the current game instance and all associated data.
+     * This will remove the world from the server.
+     * If you want to end the game, use {@link #endGame()} instead.
+     */
+    void delete();
 
     /**
      * Turns the game into idle mode.
@@ -185,8 +194,9 @@ public interface LocalGameInstance extends GameInstance {
      * Remove a player from the game.
      *
      * @param player      Player to remove
-     * @param deathCause
-     * @param leaveReason
+     * @param deathCause  The cause of death (aka damage source)
+     * @param leaveReason The reason the player left the game. Set to something other than {@link GameLeaveReason#DEATH} to prevent the player from becoming a spectator.
+     *                    All {@link GameLeaveReason#isSelfInflicted()} reasons will cause the player's death stats to be incremented.
      */
     void removePlayer(GamePlayer player, DeathCause deathCause, GameLeaveReason leaveReason);
 
