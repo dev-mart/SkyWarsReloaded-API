@@ -80,7 +80,12 @@ public class ConfigProperties {
     public static final String GAME_INSTANCES_PROXY_MODE_FIXED_TEMPLATES = "game-instances.proxy-mode.fixed-templates";
 
     // Game preferences
-    public static final String GAME_SOLO_WAITING_LOBBY = "game.solo-waiting-lobby";
+    public static final String GAME_WAITING_LOBBY_SOLO_GAMES = "game.waiting-lobby.solo-games-lobby";
+    public static final String GAME_WAITING_LOBBY_SCHEMATIC_MODE = "game.waiting-lobby.schematic-mode";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_ENABLED = "game.waiting-lobby.teleport-when-below.enable";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_DISTANCE = "game.waiting-lobby.teleport-when-below.distance";
+
+
     public static final String CAGE_SEPARATE_CAGES = "game.cages.separate-cages";
     // Game prefs - Timer
     public static final String GAME_TIMER_WAITING_LOBBY = "game.timers.waiting-lobby";
