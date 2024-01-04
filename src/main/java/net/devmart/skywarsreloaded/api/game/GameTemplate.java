@@ -290,4 +290,32 @@ public interface GameTemplate {
      */
     void setBiome(String biome);
 
+    /**
+     * Get the schematic file name of the template.
+     *
+     * @return the schematic file name of the template
+     */
+    String getSchematic();
+
+    /**
+     * Set the schematic file name of the template.
+     *
+     * @param schematic the new schematic file name of the template (without the .schem extension)
+     */
+    void setSchematic(String schematic);
+
+    /**
+     * Get the schematic file name of the waiting lobby.
+     *
+     * @return the schematic file name of the waiting lobby
+     */
+    String getWaitingLobbySchematic();
+
+    /**
+     * Set the schematic file name of the waiting lobby.
+     *
+     * @param schematic the new schematic file name of the waiting lobby (without the .schem extension)
+     */
+    void setWaitingLobbySchematic(String schematic);
+
 }
