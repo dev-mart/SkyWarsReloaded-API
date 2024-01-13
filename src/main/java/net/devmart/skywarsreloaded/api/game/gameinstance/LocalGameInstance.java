@@ -5,12 +5,14 @@ import net.devmart.skywarsreloaded.api.enums.GameLeaveReason;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
+import net.devmart.skywarsreloaded.api.game.TeamSpawn;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
 import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
 import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.Message;
+import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
@@ -38,10 +40,51 @@ public interface LocalGameInstance extends GameInstance {
     /**
      * Get the team of the player.
      *
+     * @param gamePlayer The player to get the team of
+     * @return The team of the player when assigned, null otherwise
+     */
+    GameTeam getTeam(GamePlayer gamePlayer);
+
+    /**
+     * Get the team of the player.
+     *
      * @param player The player to get the team of
      * @return The team of the player when assigned, null otherwise
      */
-    GameTeam getTeam(GamePlayer player);
+    GameTeam getTeam(SWPlayer player);
+
+    /**
+     * Find the preferred team for the given player.
+     * This will take into account the player's party and the team sizes.
+     *
+     * @param player    The player to find the preferred team for
+     * @param gameTeams The teams to choose from (see {@link #getJoinableTeamsSortedByPlayerCount()})
+     * @return The preferred team for the player
+     */
+    GameTeam findPreferredTeam(SWPlayer player, List<GameTeam> gameTeams);
+
+    /**
+     * Get a list of all the teams in the game that are joinable, sorted by player count (descending).
+     *
+     * @return A list of all joinable teams, sorted by player count (descending).
+     */
+    List<GameTeam> getJoinableTeamsSortedByPlayerCount();
+
+    /**
+     * Teleport the player to the game. This will choose whether the player should be placed
+     * in the waiting lobby or directly in the cage automatically.
+     *
+     * @param swPlayer The player to teleport.
+     * @param spawn    The spawn to teleport the player to if the player shouldn't be sent to the map's lobby
+     */
+    SWCompletableFuture<Boolean> teleportPlayerToLobbyOrTeamSpawn(SWPlayer swPlayer, TeamSpawn spawn);
+
+    /**
+     * Prepare the waiting lobby for the cages stage.
+     * This will assign all players to a team and teleport them to their team spawn.
+     * This will also place all cages.
+     */
+    void prepareWaitingLobbyForCages();
 
     /**
      * Get the game player instance associated with the given player.

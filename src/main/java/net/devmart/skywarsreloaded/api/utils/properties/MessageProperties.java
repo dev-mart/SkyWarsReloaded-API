@@ -17,6 +17,7 @@ public class MessageProperties {
     public static final String ERROR_INVALID_NUMBER = "errors.invalid-number";
     public static final String ERROR_INVALID_BOOLEAN = "errors.invalid-boolean";
     public static final String ERROR_NO_PERMISSION = "errors.no-permission";
+    public static final String ERROR_GAME_KICK_UNKNOWN_REASON = "errors.game-kick-unknown-reason";
 
     public static final String GAMES_VOTE_OPTIONS = "games.vote-options";
 
