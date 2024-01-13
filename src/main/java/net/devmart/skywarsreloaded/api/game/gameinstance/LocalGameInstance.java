@@ -17,6 +17,7 @@ import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface LocalGameInstance extends GameInstance {
 
@@ -288,8 +289,10 @@ public interface LocalGameInstance extends GameInstance {
     /**
      * Make the game ready for players to join.
      * Starts the schedulers and sets the state to WAITING.
+     *
+     * @return A future that completes when the game is ready for players to join
      */
-    void makeReadyForGame();
+    CompletableFuture<Void> makeReadyForGame();
 
     /**
      * Get the winning team.
