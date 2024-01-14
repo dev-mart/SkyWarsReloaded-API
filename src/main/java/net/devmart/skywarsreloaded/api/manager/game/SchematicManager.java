@@ -15,6 +15,7 @@ public interface SchematicManager {
 
     /**
      * Get the schematic with the given name, located in the schematics folders.
+     *
      * @param schematicName The name of the schematic
      * @return The schematic, or null if not found
      */

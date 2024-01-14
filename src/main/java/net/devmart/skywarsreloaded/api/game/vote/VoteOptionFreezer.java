@@ -103,12 +103,14 @@ public interface VoteOptionFreezer {
 
     /**
      * Get all options.
+     *
      * @return the options
      */
     List<VoteOption> getAllOptions();
 
     /**
      * Get an option by type.
+     *
      * @param type the type of the option
      * @return the option
      */

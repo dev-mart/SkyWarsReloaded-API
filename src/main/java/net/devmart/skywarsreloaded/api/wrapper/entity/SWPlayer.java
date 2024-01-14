@@ -1,7 +1,6 @@
 package net.devmart.skywarsreloaded.api.wrapper.entity;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerData;
-import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.party.SWParty;
 import net.devmart.skywarsreloaded.api.utils.Effect;
 import net.devmart.skywarsreloaded.api.utils.Item;
@@ -20,12 +19,6 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
     SWPlayerData getPlayerData();
 
     void setPlayerData(SWPlayerData playerData);
-
-    GameInstance getGameInstance();
-
-    boolean canJoinGame();
-
-    void setGameWorld(GameInstance world);
 
     Item getItemInHand(boolean offHand);
 

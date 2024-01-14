@@ -17,12 +17,14 @@ public interface VoteOption {
 
     /**
      * The display name of the vote option.
+     *
      * @return the display name
      */
     String getDisplayName();
 
     /**
      * Set the display name of the vote option.
+     *
      * @param displayName the display name
      */
     void setDisplayName(String displayName);

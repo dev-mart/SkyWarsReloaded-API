@@ -52,6 +52,7 @@ public interface PlatformUtils {
 
     /**
      * Get the available slots for a given layout option.
+     *
      * @param layoutOption {@link GuiLayoutOptions} layout style
      * @return array of slots
      */
