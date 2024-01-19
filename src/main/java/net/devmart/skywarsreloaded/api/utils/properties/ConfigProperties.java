@@ -45,6 +45,9 @@ public class ConfigProperties {
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
     public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
 
+    public static final String MENUS_TEAM_SELECTOR_LAYOUT = "menus.team-selector.layout";
+    public static final String MENUS_TEAM_SELECTOR_ENCHANT_SELECTED_TEAM = "menus.team-selector.enchant-selected-team";
+
     public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
     public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
     public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";

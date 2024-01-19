@@ -24,6 +24,7 @@ public class MessageProperties {
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
+    public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
 
     public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
@@ -123,6 +124,7 @@ public class MessageProperties {
     public static final String GAMES_PLAYER_LEAVE = "games.player-leave";
     public static final String GAMES_JOIN_FAILED = "games.join-failed";
     public static final String GAMES_PVP_TIMER_ENDED = "games.pvp-timer-ended";
+    public static final String GAMES_TEAM_SELECTED = "games.team-selected";
 
     public static final String GAMES_PLAYER_VOTED_DEFAULT = "games.player-voted";
 

@@ -29,4 +29,7 @@ public class ItemProperties {
     public static final String MENU_JOIN_NO_GAMES_AVAILABLE = "items.join-menu.no-games-available";
     public static final String MENU_JOIN_RANDOM_GAME = "items.join-menu.random-game";
 
+    public static final String MENU_TEAM_SELECTOR_TEAM = "items.team-selector.team";
+    public static final String MENU_TEAM_SELECTOR_TEAM_FULL = "items.team-selector.team-full";
+
 }
