@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.utils;
 
 import com.sk89q.worldedit.world.World;
 import net.devmart.skywarsreloaded.api.utils.properties.options.GuiLayoutOptions;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
@@ -57,5 +58,12 @@ public interface PlatformUtils {
      * @return array of slots
      */
     int[] getLayoutSlots(String layoutOption, boolean withFooter);
+
+    /**
+     * Play an unformatted sound to a player (with volume and pitch).
+     * @param player player to play sound to
+     * @param rawSound raw sound string
+     */
+    void playSound(SWPlayer player, String rawSound);
 
 }

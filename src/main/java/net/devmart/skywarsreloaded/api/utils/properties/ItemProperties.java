@@ -13,8 +13,8 @@ public class ItemProperties {
 
     public static final String GAME_KIT_SELECTOR = "items.game.kit-selector";
     public static final String GAME_GAME_LEAVE = "items.game.leave";
-
     public static final String GAME_OPTIONS_VOTING = "items.game.options-voting";
+    public static final String GAME_TEAM_SELECTOR = "items.game.team-selector";
 
     public static final String GAME_OPTIONS_MENU_CHEST_VOTING = "items.game-options-menu.chest-voting";
     public static final String GAME_OPTIONS_MENU_TIME_VOTING = "items.game-options-menu.time-voting";

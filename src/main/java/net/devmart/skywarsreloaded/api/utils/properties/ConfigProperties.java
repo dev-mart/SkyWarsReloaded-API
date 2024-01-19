@@ -58,8 +58,13 @@ public class ConfigProperties {
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
     public static final String ITEMS_GAME_OPTIONS_VOTING_SLOT = "items.game.options-voting.slot";
+    public static final String ITEMS_GAME_TEAM_SELECTOR_SLOT = "items.game.team-selector.slot";
     public static final String ITEMS_LOBBY_JOIN_SLOT = "items.lobby.join.slot";
     public static final String ITEMS_LOBBY_OPTIONS_SLOT = "items.lobby.options.slot";
+
+    // sounds
+    public static final String SOUNDS_GENERAL_ACTION_FORBIDDEN = "sounds.general.action-forbidden";
+    public static final String SOUNDS_GAME_SELECT_TEAM = "sounds.game.select-team";
 
     public static final String ITEMS_GAME_OPTIONS_MENU_CHEST_VOTING_SLOT = "items.game-options-menu.chest-voting.slot";
     public static final String ITEMS_GAME_OPTIONS_MENU_HEALTH_VOTING_SLOT = "items.game-options-menu.health-voting.slot";
