@@ -7,6 +7,7 @@ public interface ChestVoteOption extends VoteOption {
 
     /**
      * Get the chest tier associated with this vote option.
+     *
      * @return the chest tier
      */
     SWChestTier getChestTier();

@@ -11,6 +11,8 @@ public class MapDataProperties {
     public static final String ENABLED_CHESTTIERS = "enabled-chesttiers";
     public static final String ICON = "icon";
     public static final String BIOME = "biome";
+    public static final String SCHEMATIC = "schematic";
+    public static final String WAITING_LOBBY_SCHEMATIC = "waiting-lobby-schematic";
 
     public static final String IS_TEAMSIZE_SETUP = "checks.teamsize-setup";
 

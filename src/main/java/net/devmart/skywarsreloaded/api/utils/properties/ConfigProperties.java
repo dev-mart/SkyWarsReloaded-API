@@ -45,6 +45,9 @@ public class ConfigProperties {
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
     public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
 
+    public static final String MENUS_TEAM_SELECTOR_LAYOUT = "menus.team-selector.layout";
+    public static final String MENUS_TEAM_SELECTOR_ENCHANT_SELECTED_TEAM = "menus.team-selector.enchant-selected-team";
+
     public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
     public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
     public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
@@ -55,8 +58,13 @@ public class ConfigProperties {
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
     public static final String ITEMS_GAME_OPTIONS_VOTING_SLOT = "items.game.options-voting.slot";
+    public static final String ITEMS_GAME_TEAM_SELECTOR_SLOT = "items.game.team-selector.slot";
     public static final String ITEMS_LOBBY_JOIN_SLOT = "items.lobby.join.slot";
     public static final String ITEMS_LOBBY_OPTIONS_SLOT = "items.lobby.options.slot";
+
+    // sounds
+    public static final String SOUNDS_GENERAL_ACTION_FORBIDDEN = "sounds.general.action-forbidden";
+    public static final String SOUNDS_GAME_SELECT_TEAM = "sounds.game.select-team";
 
     public static final String ITEMS_GAME_OPTIONS_MENU_CHEST_VOTING_SLOT = "items.game-options-menu.chest-voting.slot";
     public static final String ITEMS_GAME_OPTIONS_MENU_HEALTH_VOTING_SLOT = "items.game-options-menu.health-voting.slot";
@@ -80,7 +88,12 @@ public class ConfigProperties {
     public static final String GAME_INSTANCES_PROXY_MODE_FIXED_TEMPLATES = "game-instances.proxy-mode.fixed-templates";
 
     // Game preferences
-    public static final String GAME_SOLO_WAITING_LOBBY = "game.solo-waiting-lobby";
+    public static final String GAME_WAITING_LOBBY_SOLO_GAMES = "game.waiting-lobby.solo-games-lobby";
+    public static final String GAME_WAITING_LOBBY_SCHEMATIC_MODE = "game.waiting-lobby.schematic-mode";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_ENABLED = "game.waiting-lobby.teleport-when-below.enable";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_DISTANCE = "game.waiting-lobby.teleport-when-below.distance";
+
+
     public static final String CAGE_SEPARATE_CAGES = "game.cages.separate-cages";
     // Game prefs - Timer
     public static final String GAME_TIMER_WAITING_LOBBY = "game.timers.waiting-lobby";

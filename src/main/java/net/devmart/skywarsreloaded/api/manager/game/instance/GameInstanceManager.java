@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.manager.game.instance;
 
 import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 
 import java.util.Collection;
 import java.util.List;
@@ -129,5 +130,21 @@ public interface GameInstanceManager<G extends GameInstance> {
      * @return List of all playable game instances.
      */
     List<G> getPlayableGameInstances(boolean sortByPlayerCount, GameTemplate... templates);
+
+    /**
+     * Get the game instance that the player is currently in.
+     *
+     * @param player The player to get the game instance of.
+     * @return The game instance that the player is currently in.
+     */
+    G getGameInstanceOfPlayer(SWPlayer player);
+
+    /**
+     * Get whether the player can join a game.
+     *
+     * @param player The player to check.
+     * @return True if the player can join a game, false otherwise.
+     */
+    boolean canPlayerJoinGame(SWPlayer player);
 
 }

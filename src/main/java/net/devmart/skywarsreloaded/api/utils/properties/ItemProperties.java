@@ -13,8 +13,8 @@ public class ItemProperties {
 
     public static final String GAME_KIT_SELECTOR = "items.game.kit-selector";
     public static final String GAME_GAME_LEAVE = "items.game.leave";
-
     public static final String GAME_OPTIONS_VOTING = "items.game.options-voting";
+    public static final String GAME_TEAM_SELECTOR = "items.game.team-selector";
 
     public static final String GAME_OPTIONS_MENU_CHEST_VOTING = "items.game-options-menu.chest-voting";
     public static final String GAME_OPTIONS_MENU_TIME_VOTING = "items.game-options-menu.time-voting";
@@ -28,5 +28,8 @@ public class ItemProperties {
     public static final String MENU_JOIN_GAMES_AVAILABLE = "items.join-menu.games-available";
     public static final String MENU_JOIN_NO_GAMES_AVAILABLE = "items.join-menu.no-games-available";
     public static final String MENU_JOIN_RANDOM_GAME = "items.join-menu.random-game";
+
+    public static final String MENU_TEAM_SELECTOR_TEAM = "items.team-selector.team";
+    public static final String MENU_TEAM_SELECTOR_TEAM_FULL = "items.team-selector.team-full";
 
 }

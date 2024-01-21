@@ -70,6 +70,7 @@ public interface Unlockable {
      * <p>
      * (See {@link #getMenuPosition()} for more information)
      * </p>
+     *
      * @param position The position to set.
      */
     void setMenuPosition(int position);

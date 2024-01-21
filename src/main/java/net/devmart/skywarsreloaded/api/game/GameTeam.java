@@ -97,6 +97,13 @@ public interface GameTeam {
     int getAliveSize();
 
     /**
+     * Get the maximum number of players that can be assigned to a single spawn point (cage).
+     *
+     * @return Maximum number of players per spawn.
+     */
+    int getMaxPlayersPerSpawn();
+
+    /**
      * Get whether the entire team is eliminated yet.
      *
      * @return if the team is eliminated.

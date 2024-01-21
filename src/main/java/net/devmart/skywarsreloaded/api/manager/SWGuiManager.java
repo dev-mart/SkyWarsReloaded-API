@@ -20,6 +20,8 @@ public interface SWGuiManager {
 
     SWGui createVotingGui(GamePlayer gamePlayer, LocalGameInstance gameInstance);
 
+    SWGui createTeamSelectorGui(GamePlayer gamePlayer, LocalGameInstance gameInstance);
+
     SWGui createKitGui(SWPlayer player);
 
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
