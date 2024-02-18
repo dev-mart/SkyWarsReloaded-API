@@ -32,14 +32,14 @@ public interface DatabaseVersionManager {
      *
      * @return The current version of the database schema. See {@link SQLDatabaseVersion#getVersion()} for more info.
      */
-    long getCurrentVersion();
+    Long getCurrentVersion();
 
     /**
      * Gets the latest version of the database schema.
      *
      * @return The latest version of the database schema
      */
-    long getLatestVersion();
+    Long getLatestVersion();
 
     /**
      * Adds a version to the database version manager.

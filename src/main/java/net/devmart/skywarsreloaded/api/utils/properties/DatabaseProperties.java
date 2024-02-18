@@ -2,15 +2,19 @@ package net.devmart.skywarsreloaded.api.utils.properties;
 
 public class DatabaseProperties {
 
+    // table names
+    public static String TABLE_PLAYER_DATA = "sw_player_data";
+    public static String TABLE_PLAYER_STATS = "sw_player_stats";
+    public static String TABLE_PLAYER_UNLOCKABLES = "sw_player_unlockables";
+    public static String TABLE_GAME_INSTANCES = "sw_game_instances";
+    public static String TABLE_MESSAGING = "sw_messaging";
+    public static String TABLE_DATABASE_VERSIONS = "sw_database_versions";
+
+
+    // general column names
     public static String UUID = "uuid";
     public static String ID = "id";
     public static String TIMESTAMP = "timestamp";
-
-    public static String TABLE_PLAYER_DATA = "player_data";
-    public static String TABLE_PLAYER_STATS = "player_stats";
-    public static String TABLE_PLAYER_UNLOCKABLES = "player_unlockables";
-    public static String TABLE_GAME_INSTANCES = "game_instances";
-    public static String TABLE_MESSAGING = "messaging";
 
 
     // player data
@@ -52,5 +56,8 @@ public class DatabaseProperties {
     public static String MESSAGING_ORIGIN_SERVER = "origin_server";
     public static String MESSAGING_TARGET_SERVER = "target_server";
     public static String MESSAGING_REPLY_TO_ID = "reply_to_id";
+
+    // database versions
+    public static String DATABASE_VERSIONS_VERSION = "version";
 
 }
