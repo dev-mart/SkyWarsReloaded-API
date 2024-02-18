@@ -157,6 +157,10 @@ public interface SkyWarsReloaded {
 
     void setVoteOptionManager(VoteOptionManager voteOptionManager);
 
+    DatabaseVersionManager getDatabaseVersionManager();
+
+    void setDatabaseVersionManager(DatabaseVersionManager databaseVersionManager);
+
     SWMessaging getMessaging();
 
     void setMessaging(SWMessaging messaging);
