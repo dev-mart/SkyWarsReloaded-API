@@ -1,7 +1,7 @@
-package net.devmart.skywarsreloaded.api.utils.gui;
+package net.devmart.skywarsreloaded.api.gui;
 
+import net.devmart.skywarsreloaded.api.gui.handlers.SWGuiClickHandler;
 import net.devmart.skywarsreloaded.api.utils.Item;
-import net.devmart.skywarsreloaded.api.utils.gui.handlers.SWGuiClickHandler;
 
 import java.util.List;
 
