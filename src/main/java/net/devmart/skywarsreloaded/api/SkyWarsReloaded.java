@@ -31,7 +31,7 @@ public interface SkyWarsReloaded {
 
     // Plugin
 
-    void onEnable();
+    void onEnable() throws ClassNotFoundException;
 
     void onDisable();
 
@@ -156,6 +156,10 @@ public interface SkyWarsReloaded {
     VoteOptionManager getVoteOptionManager();
 
     void setVoteOptionManager(VoteOptionManager voteOptionManager);
+
+    DatabaseVersionManager getDatabaseVersionManager();
+
+    void setDatabaseVersionManager(DatabaseVersionManager databaseVersionManager);
 
     SWMessaging getMessaging();
 
