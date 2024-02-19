@@ -16,7 +16,6 @@ public class ConfigProperties {
     public static final String STORAGE_MYSQL_USERNAME = "storage.mysql.username";
     public static final String STORAGE_MYSQL_PASSWORD = "storage.mysql.password";
     public static final String STORAGE_MYSQL_DATABASE = "storage.mysql.database";
-    public static final String STORAGE_MYSQL_TABLE_PREFIX = "storage.mysql.table-prefix";
     public static final String STORAGE_MYSQL_USE_SSL = "storage.mysql.use-ssl";
 
     // General settings
