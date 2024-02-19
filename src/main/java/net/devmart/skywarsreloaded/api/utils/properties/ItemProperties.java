@@ -32,4 +32,13 @@ public class ItemProperties {
     public static final String MENU_TEAM_SELECTOR_TEAM = "items.team-selector.team";
     public static final String MENU_TEAM_SELECTOR_TEAM_FULL = "items.team-selector.team-full";
 
+    public static final String KITS_STATUS_SELECTED = "items.kits.status.selected";
+    public static final String KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
+    public static final String KITS_STATUS_LOCKED = "items.kits.status.locked";
+    public static final String KITS_SELECTED = "items.kits.selected";
+    public static final String KITS_LOCKED = "items.kits.locked";
+    public static final String KITS_UNLOCKED = "items.kits.unlocked";
+    public static final String KITS_CONFIRM_PURCHASE = "items.kits.confirm-purchase";
+    public static final String KITS_DENY_PURCHASE = "items.kits.deny-purchase";
+
 }

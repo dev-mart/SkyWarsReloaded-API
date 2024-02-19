@@ -77,9 +77,17 @@ public interface SkyWarsReloaded {
 
     void setDataConfig(YAMLConfig data);
 
-    YAMLConfig getMessages();
+    YAMLConfig getGeneralMessages();
 
-    void setMessages(YAMLConfig config);
+    void setGeneralMessages(YAMLConfig config);
+
+    YAMLConfig getItemMessages();
+
+    void setItemMessages(YAMLConfig config);
+
+    YAMLConfig getVoteOptionsMessages();
+
+    void setVoteOptionsMessages(YAMLConfig config);
 
     // Hooks
 

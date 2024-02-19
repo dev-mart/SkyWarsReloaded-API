@@ -19,22 +19,11 @@ public class MessageProperties {
     public static final String ERROR_NO_PERMISSION = "errors.no-permission";
     public static final String ERROR_GAME_KICK_UNKNOWN_REASON = "errors.game-kick-unknown-reason";
 
-    public static final String GAMES_VOTE_OPTIONS = "games.vote-options";
-
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
     public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
-
-    public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
-    public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
-    public static final String ITEMS_KITS_STATUS_LOCKED = "items.kits.status.locked";
-    public static final String ITEMS_KITS_SELECTED = "items.kits.selected";
-    public static final String ITEMS_KITS_LOCKED = "items.kits.locked";
-    public static final String ITEMS_KITS_UNLOCKED = "items.kits.unlocked";
-    public static final String ITEMS_KITS_CONFIRM_PURCHASE = "items.kits.confirm-purchase";
-    public static final String ITEMS_KITS_DENY_PURCHASE = "items.kits.deny-purchase";
 
     public static final String KITS_SELECTED = "kits.selected";
     public static final String KITS_CANNOT_AFFORD = "kits.cannot-afford";
