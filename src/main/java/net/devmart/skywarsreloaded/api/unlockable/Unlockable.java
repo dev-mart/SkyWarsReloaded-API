@@ -2,8 +2,11 @@ package net.devmart.skywarsreloaded.api.unlockable;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.PlayerStat;
 import net.devmart.skywarsreloaded.api.data.player.stats.UnlockableType;
+import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Map;
 
 public interface Unlockable {
@@ -143,5 +146,74 @@ public interface Unlockable {
      */
     void unlock(SWPlayer player, boolean free);
 
+    /**
+     * The display name of the unlockable
+     * @return The display name
+     */
+    String getDisplayName();
+
+    /**
+     * Set the display name of the unlockable.
+     *
+     * @param displayName The display name to set.
+     */
+    void setDisplayName(String displayName);
+
+    /**
+     * Get the icon to display when the unlockable is available to the player.
+     *
+     * @return The icon.
+     */
+    Item getIcon();
+
+    /**
+     * Set the icon to display when the unlockable is available to the player.
+     *
+     * @param icon The icon to set.
+     */
+    void setIcon(Item icon);
+
+    /**
+     * Get the icon to display when the unlockable is unavailable to the player.
+     *
+     * @return The icon.
+     */
+    @Nullable
+    Item getUnavailableIcon();
+
+    /**
+     * Set the icon to display when the unlockable is unavailable to the player.
+     *
+     * @param unavailableIcon The icon to set.
+     */
+    void setUnavailableIcon(@Nullable Item unavailableIcon);
+
+    /**
+     * Get the description for the unlockable.
+     *
+     * @return The description.
+     */
+    String getDescription();
+
+    /**
+     * Set the description for the unlockable.
+     *
+     * @param description The description to set.
+     */
+    void setDescription(String description);
+
+    /**
+     * Get the lore for the unlockable.
+     *
+     * @return The lore.
+     */
+    List<String> getLore();
+
+    /**
+     * Set the lore for the unlockable.
+     *
+     * @param lore The lore to set.
+     */
+    void setLore(List<String> lore);
 
 }

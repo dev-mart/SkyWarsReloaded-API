@@ -2,11 +2,6 @@ package net.devmart.skywarsreloaded.api.utils.properties;
 
 public class KitProperties {
 
-    public static final String DISPLAY_NAME = "display-name";
-    public static final String ICON = "icon";
-    public static final String UNAVAILABLE_ICON = "unavailable-icon";
-    public static final String DESCRIPTION = "description";
-    public static final String LORE = "lore";
     public static final String EFFECTS = "effects";
 
     public static final String CONTENTS = "contents";
