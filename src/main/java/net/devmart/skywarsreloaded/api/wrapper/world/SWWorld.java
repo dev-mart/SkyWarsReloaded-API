@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.wrapper.world;
 
 import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWDroppedItem;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.block.SWBlock;
 
@@ -126,5 +127,14 @@ public interface SWWorld {
      * @param thunder True if it is thundering, false otherwise
      */
     void setThundering(boolean thunder);
+
+    /**
+     * Drop an item naturally at a location
+     *
+     * @param location The location to drop the item
+     * @param item     The item to drop
+     * @return The dropped item entity
+     */
+    SWDroppedItem dropItemNaturally(SWCoord location, Item item);
 
 }
