@@ -18,6 +18,10 @@ public class MessageProperties {
     public static final String ERROR_INVALID_BOOLEAN = "errors.invalid-boolean";
     public static final String ERROR_NO_PERMISSION = "errors.no-permission";
     public static final String ERROR_GAME_KICK_UNKNOWN_REASON = "errors.game-kick-unknown-reason";
+    public static final String ERROR_CANNOT_AFFORD = "errors.cannot-afford";
+
+    public static final String GENERAL_PURCHASED = "general.purchased";
+
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
@@ -26,8 +30,6 @@ public class MessageProperties {
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
 
     public static final String KITS_SELECTED = "kits.selected";
-    public static final String KITS_CANNOT_AFFORD = "kits.cannot-afford";
-    public static final String KITS_PURCHASED = "kits.purchased";
     public static final String KITS_DESELECT = "kits.deselect";
     public static final String KITS_ENTER_NAME = "kits.enter-name";
     public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";
