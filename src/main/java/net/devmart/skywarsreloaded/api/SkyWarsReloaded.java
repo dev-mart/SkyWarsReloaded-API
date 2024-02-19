@@ -31,7 +31,7 @@ public interface SkyWarsReloaded {
 
     // Plugin
 
-    void onEnable();
+    void onEnable() throws ClassNotFoundException;
 
     void onDisable();
 
