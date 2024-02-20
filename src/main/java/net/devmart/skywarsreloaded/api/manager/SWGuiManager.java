@@ -24,6 +24,10 @@ public interface SWGuiManager {
 
     SWGui createKitGui(SWPlayer player);
 
+    SWGui createUnlockablesGui(SWPlayer player);
+
+    SWGui createCagesGui(SWPlayer player);
+
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
 
     void registerInventoryCreation(SWGui gui);

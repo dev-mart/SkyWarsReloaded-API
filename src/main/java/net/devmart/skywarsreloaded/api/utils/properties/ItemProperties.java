@@ -40,9 +40,12 @@ public class ItemProperties {
     public static final String UNLOCKABLES_SELECTED = "selected";
     public static final String UNLOCKABLES_LOCKED = "locked";
     public static final String UNLOCKABLES_UNLOCKED = "unlocked";
+    public static final String UNLOCKABLES_MENU = "menu";
 
     public static final String UNLOCKABLES_KITS = "kits";
     public static final String UNLOCKABLES_KITS_DESELECT = "deselect";
+
+    public static final String UNLOCKABLES_CAGES = "cages";
 
 
 }

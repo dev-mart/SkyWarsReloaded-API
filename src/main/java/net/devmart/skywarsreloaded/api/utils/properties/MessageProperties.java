@@ -28,6 +28,7 @@ public class MessageProperties {
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
     public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
+    public static final String MENUS_UNLOCKABLES_TITLE = "menus.unlockables.title";
 
     public static final String KITS_SELECTED = "kits.selected";
     public static final String KITS_DESELECT = "kits.deselect";

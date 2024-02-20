@@ -53,6 +53,9 @@ public class ConfigProperties {
 
     public static final String MENUS_GAME_OPTIONS_SIZE = "menus.game-options.size";
 
+    public static final String MENUS_UNLOCKABLES_SIZE = "menus.unlockables.size";
+    public static final String ITEMS_UNLOCKABLES_MENU_SLOT = "slot";
+
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
@@ -64,14 +67,6 @@ public class ConfigProperties {
     // sounds
     public static final String SOUNDS_GENERAL_ACTION_FORBIDDEN = "sounds.general.action-forbidden";
     public static final String SOUNDS_GAME_SELECT_TEAM = "sounds.game.select-team";
-
-    public static final String ITEMS_GAME_OPTIONS_MENU_CHEST_VOTING_SLOT = "items.game-options-menu.chest-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_HEALTH_VOTING_SLOT = "items.game-options-menu.health-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_TIME_VOTING_SLOT = "items.game-options-menu.time-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_WEATHER_VOTING_SLOT = "items.game-options-menu.weather-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_MODIFIER_VOTING_SLOT = "items.game-options-menu.modifier-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_PROJECTILE_VOTING_SLOT = "items.game-options-menu.projectile-voting.slot";
-
 
     // todo: messaging impl & auth
 
