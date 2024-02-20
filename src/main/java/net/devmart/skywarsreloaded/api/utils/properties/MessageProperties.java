@@ -21,6 +21,7 @@ public class MessageProperties {
     public static final String ERROR_CANNOT_AFFORD = "errors.cannot-afford";
 
     public static final String GENERAL_PURCHASED = "general.purchased";
+    public static final String GENERAL_SELECTED_UNLOCKABLE = "general.selected-unlockable";
 
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
@@ -28,9 +29,11 @@ public class MessageProperties {
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
     public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
-    public static final String MENUS_UNLOCKABLES_TITLE = "menus.unlockables.title";
 
-    public static final String KITS_SELECTED = "kits.selected";
+    public static final String MENUS_UNLOCKABLES_ROOT = "menus.unlockables";
+    public static final String MENUS_UNLOCKABLES_TITLE = "title";
+    public static final String MENUS_UNLOCKABLES_MAIN_MENU_TITLE = MENUS_UNLOCKABLES_ROOT + ".main-menu." + MENUS_UNLOCKABLES_TITLE;
+
     public static final String KITS_DESELECT = "kits.deselect";
     public static final String KITS_ENTER_NAME = "kits.enter-name";
     public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";
