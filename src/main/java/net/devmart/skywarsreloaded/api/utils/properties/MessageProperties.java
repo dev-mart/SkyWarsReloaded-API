@@ -18,8 +18,11 @@ public class MessageProperties {
     public static final String ERROR_INVALID_BOOLEAN = "errors.invalid-boolean";
     public static final String ERROR_NO_PERMISSION = "errors.no-permission";
     public static final String ERROR_GAME_KICK_UNKNOWN_REASON = "errors.game-kick-unknown-reason";
+    public static final String ERROR_CANNOT_AFFORD = "errors.cannot-afford";
 
-    public static final String GAMES_VOTE_OPTIONS = "games.vote-options";
+    public static final String GENERAL_PURCHASED = "general.purchased";
+    public static final String GENERAL_SELECTED_UNLOCKABLE = "general.selected-unlockable";
+
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
@@ -27,18 +30,10 @@ public class MessageProperties {
     public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
     public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
 
-    public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
-    public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
-    public static final String ITEMS_KITS_STATUS_LOCKED = "items.kits.status.locked";
-    public static final String ITEMS_KITS_SELECTED = "items.kits.selected";
-    public static final String ITEMS_KITS_LOCKED = "items.kits.locked";
-    public static final String ITEMS_KITS_UNLOCKED = "items.kits.unlocked";
-    public static final String ITEMS_KITS_CONFIRM_PURCHASE = "items.kits.confirm-purchase";
-    public static final String ITEMS_KITS_DENY_PURCHASE = "items.kits.deny-purchase";
+    public static final String MENUS_UNLOCKABLES_ROOT = "menus.unlockables";
+    public static final String MENUS_UNLOCKABLES_TITLE = "title";
+    public static final String MENUS_UNLOCKABLES_MAIN_MENU_TITLE = MENUS_UNLOCKABLES_ROOT + ".main-menu." + MENUS_UNLOCKABLES_TITLE;
 
-    public static final String KITS_SELECTED = "kits.selected";
-    public static final String KITS_CANNOT_AFFORD = "kits.cannot-afford";
-    public static final String KITS_PURCHASED = "kits.purchased";
     public static final String KITS_DESELECT = "kits.deselect";
     public static final String KITS_ENTER_NAME = "kits.enter-name";
     public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";

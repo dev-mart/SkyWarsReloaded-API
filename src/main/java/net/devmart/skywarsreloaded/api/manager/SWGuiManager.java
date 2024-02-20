@@ -3,8 +3,8 @@ package net.devmart.skywarsreloaded.api.manager;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 import net.devmart.skywarsreloaded.api.game.vote.VoteType;
-import net.devmart.skywarsreloaded.api.utils.gui.SWConfirmationGui;
-import net.devmart.skywarsreloaded.api.utils.gui.SWGui;
+import net.devmart.skywarsreloaded.api.gui.SWConfirmationGui;
+import net.devmart.skywarsreloaded.api.gui.SWGui;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
 
@@ -23,6 +23,10 @@ public interface SWGuiManager {
     SWGui createTeamSelectorGui(GamePlayer gamePlayer, LocalGameInstance gameInstance);
 
     SWGui createKitGui(SWPlayer player);
+
+    SWGui createUnlockablesGui(SWPlayer player);
+
+    SWGui createCagesGui(SWPlayer player);
 
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
 

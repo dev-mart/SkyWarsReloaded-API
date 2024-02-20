@@ -40,7 +40,7 @@ public interface SkyWarsReloaded {
      * This method can be overridden if you wish to disable the default SkyWars hooks.
      * <br><br>
      * If you want to register plugin hooks into SkyWars that can be hooked after the {@link #onEnable()}
-     * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(SWHook)}
+     * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(Class, SWHook)}
      * <br><br>
      * If you really need to register your own hooks into SkyWars that will run at enable time, we recommend
      * overriding this method in your own SkyWars implementation and calling super.
@@ -77,9 +77,17 @@ public interface SkyWarsReloaded {
 
     void setDataConfig(YAMLConfig data);
 
-    YAMLConfig getMessages();
+    YAMLConfig getGeneralMessages();
 
-    void setMessages(YAMLConfig config);
+    void setGeneralMessages(YAMLConfig config);
+
+    YAMLConfig getItemMessages();
+
+    void setItemMessages(YAMLConfig config);
+
+    YAMLConfig getVoteOptionsMessages();
+
+    void setVoteOptionsMessages(YAMLConfig config);
 
     // Hooks
 

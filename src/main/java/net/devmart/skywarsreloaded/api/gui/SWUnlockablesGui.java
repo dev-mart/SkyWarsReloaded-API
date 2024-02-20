@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.utils.gui;
+package net.devmart.skywarsreloaded.api.gui;
 
 import net.devmart.skywarsreloaded.api.unlockable.Unlockable;
 

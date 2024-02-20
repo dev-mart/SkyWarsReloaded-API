@@ -2,6 +2,8 @@ package net.devmart.skywarsreloaded.api.utils.properties;
 
 public class GameVoteOptionsProperties {
 
+    public static final String VOTE_OPTIONS_ROOT = "vote-options";
+
     public static final String ENABLED = "enable";
     public static final String MENU_SIZE = "menu-size";
     public static final String MENU_TITLE = "menu-title";

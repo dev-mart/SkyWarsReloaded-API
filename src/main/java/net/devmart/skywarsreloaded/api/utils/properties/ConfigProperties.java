@@ -42,7 +42,6 @@ public class ConfigProperties {
     public static final String MENUS_PAGINATION_ALLOW_GAPS_WITH_FIXED_POSITIONED_ITEMS = "menus.pagination.allow-gaps-with-fixed-positioned-items";
 
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
-    public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
 
     public static final String MENUS_TEAM_SELECTOR_LAYOUT = "menus.team-selector.layout";
     public static final String MENUS_TEAM_SELECTOR_ENCHANT_SELECTED_TEAM = "menus.team-selector.enchant-selected-team";
@@ -52,6 +51,14 @@ public class ConfigProperties {
     public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
 
     public static final String MENUS_GAME_OPTIONS_SIZE = "menus.game-options.size";
+
+    public static final String MENUS_UNLOCKABLES_ROOT = "menus.unlockables";
+    public static final String MENUS_UNLOCKABLES_LAYOUT = "layout";
+    public static final String MENUS_UNLOCKABLES_MAIN_MENU_SIZE = MENUS_UNLOCKABLES_ROOT + ".main-menu.size";
+    public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = MENUS_UNLOCKABLES_ROOT + ".kits.enchant-selected-kit";
+
+    public static final String ITEMS_UNLOCKABLES_SLOT = "slot";
+
 
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
@@ -64,14 +71,6 @@ public class ConfigProperties {
     // sounds
     public static final String SOUNDS_GENERAL_ACTION_FORBIDDEN = "sounds.general.action-forbidden";
     public static final String SOUNDS_GAME_SELECT_TEAM = "sounds.game.select-team";
-
-    public static final String ITEMS_GAME_OPTIONS_MENU_CHEST_VOTING_SLOT = "items.game-options-menu.chest-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_HEALTH_VOTING_SLOT = "items.game-options-menu.health-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_TIME_VOTING_SLOT = "items.game-options-menu.time-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_WEATHER_VOTING_SLOT = "items.game-options-menu.weather-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_MODIFIER_VOTING_SLOT = "items.game-options-menu.modifier-voting.slot";
-    public static final String ITEMS_GAME_OPTIONS_MENU_PROJECTILE_VOTING_SLOT = "items.game-options-menu.projectile-voting.slot";
-
 
     // todo: messaging impl & auth
 

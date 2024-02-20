@@ -10,9 +10,10 @@ public interface SWHookManager {
      * method is called, it will be automatically enabled. Otherwise, you will need to register this hook then
      * manually trigger its enable method.
      *
-     * @param hook The {@link SWHook} to register.
+     * @param clazz
+     * @param hook  The {@link SWHook} to register.
      */
-    void registerHook(SWHook hook);
+    <E extends SWHook> void registerHook(Class<E> clazz, E hook);
 
     <E extends SWHook> E getHook(Class<E> hookClass);
 
@@ -26,7 +27,7 @@ public interface SWHookManager {
 
     /**
      * Enables all the hooks in the registry. Do not call this to enable custom hooks, you will break the plugin.
-     * See {@link #registerHook(SWHook)}
+     * See {@link #registerHook(Class, SWHook)}
      */
     void enableAllHooks();
 
