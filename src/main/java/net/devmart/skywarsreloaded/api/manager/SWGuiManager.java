@@ -26,7 +26,9 @@ public interface SWGuiManager {
 
     SWGui createUnlockablesGui(SWPlayer player);
 
-    SWGui createCagesGui(SWPlayer player);
+    SWGui createCagesSelectorGui(SWPlayer player);
+
+    SWGui createKillMessagesSelectorGui(SWPlayer player);
 
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
 
