@@ -14,4 +14,6 @@ public class UnlockableProperties {
     public static final String REQUIREMENTS_COST = "requirements.cost";
     public static final String REQUIREMENTS_STATS = "requirements.stats";
 
+    public static final String KILL_MESSAGES = "messages";
+
 }
