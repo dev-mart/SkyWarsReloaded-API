@@ -16,4 +16,6 @@ public class UnlockableProperties {
 
     public static final String KILL_MESSAGES = "messages";
 
+    public static final String PROJECTILE_EFFECT_PARTICLES = "particles";
+
 }

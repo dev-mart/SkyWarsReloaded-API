@@ -3,8 +3,8 @@ package net.devmart.skywarsreloaded.api.command;
 import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.unlockable.kits.SWKit;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.Message;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 
 import java.util.function.Function;

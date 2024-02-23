@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.protocol;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.item.SWEnchantmentType;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWGameRule;

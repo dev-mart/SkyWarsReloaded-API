@@ -1,7 +1,8 @@
 package net.devmart.skywarsreloaded.api.wrapper.world;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWDroppedItem;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.block.SWBlock;
@@ -136,5 +137,7 @@ public interface SWWorld {
      * @return The dropped item entity
      */
     SWDroppedItem dropItemNaturally(SWCoord location, Item item);
+
+    void spawnParticle(SWCoord location, ParticleEffect particleEffect);
 
 }

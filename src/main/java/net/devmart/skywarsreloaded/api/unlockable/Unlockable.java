@@ -2,7 +2,7 @@ package net.devmart.skywarsreloaded.api.unlockable;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.PlayerStat;
 import net.devmart.skywarsreloaded.api.data.player.stats.UnlockableType;
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;
 

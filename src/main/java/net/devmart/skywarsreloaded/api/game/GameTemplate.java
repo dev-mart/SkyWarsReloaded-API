@@ -3,10 +3,10 @@ package net.devmart.skywarsreloaded.api.game;
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnAddResult;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnRemoveResult;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import org.jetbrains.annotations.Nullable;
 

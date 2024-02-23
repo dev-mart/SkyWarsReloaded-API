@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.utils;
+package net.devmart.skywarsreloaded.api.wrapper;
 
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;

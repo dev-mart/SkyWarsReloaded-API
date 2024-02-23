@@ -4,6 +4,7 @@ public enum UnlockableType {
 
     KIT,
     CAGE,
-    KILL_MESSAGE
+    KILL_MESSAGE,
+    PROJECTILE_EFFECT,
 
 }

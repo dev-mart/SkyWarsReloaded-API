@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.unlockable.kits;
 
 import net.devmart.skywarsreloaded.api.unlockable.Unlockable;
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import org.jetbrains.annotations.Nullable;
 

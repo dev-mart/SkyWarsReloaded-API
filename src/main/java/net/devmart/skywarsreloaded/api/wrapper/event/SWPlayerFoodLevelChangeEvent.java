@@ -1,6 +1,6 @@
 package net.devmart.skywarsreloaded.api.wrapper.event;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 public interface SWPlayerFoodLevelChangeEvent extends SWPlayerEvent, SWCancellable {
 
