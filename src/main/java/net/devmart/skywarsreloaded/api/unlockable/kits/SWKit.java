@@ -1,4 +1,4 @@
-package net.devmart.skywarsreloaded.api.game.kits;
+package net.devmart.skywarsreloaded.api.unlockable.kits;
 
 import net.devmart.skywarsreloaded.api.unlockable.Unlockable;
 import net.devmart.skywarsreloaded.api.utils.Item;
