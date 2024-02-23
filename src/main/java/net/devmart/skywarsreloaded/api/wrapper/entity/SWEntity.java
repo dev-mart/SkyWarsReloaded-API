@@ -32,4 +32,9 @@ public interface SWEntity {
     void setFireTicks(int ticks);
 
     String getType();
+
+    boolean isDead();
+
+    boolean isValid();
+
 }
