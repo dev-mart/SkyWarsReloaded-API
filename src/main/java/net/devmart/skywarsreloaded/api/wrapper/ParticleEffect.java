@@ -22,8 +22,12 @@ public interface ParticleEffect {
 
     void setCount(int count);
 
-    float getData();
+    String[] getRawData();
 
-    void setData(float data);
+    void setRawData(String[] data);
+
+    Object getFormattedData();
+
+    void setFormattedData(Object data);
 
 }
