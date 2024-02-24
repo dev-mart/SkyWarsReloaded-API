@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.manager.game;
 
-import net.devmart.skywarsreloaded.api.game.kits.SWKit;
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.unlockable.kits.SWKit;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;

@@ -2,9 +2,10 @@ package net.devmart.skywarsreloaded.api.wrapper.entity;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerData;
 import net.devmart.skywarsreloaded.api.party.SWParty;
-import net.devmart.skywarsreloaded.api.utils.Effect;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
+import net.devmart.skywarsreloaded.api.wrapper.PotionEffect;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
 import org.jetbrains.annotations.Nullable;
@@ -135,7 +136,9 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
 
     void removePotionEffect(String value);
 
-    List<Effect> getPotionEffects();
+    List<PotionEffect> getPotionEffects();
+
+    void spawnParticle(SWCoord location, ParticleEffect particleEffect);
 
     void clearPotionEffects();
 

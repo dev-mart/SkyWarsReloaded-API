@@ -1,6 +1,6 @@
 package net.devmart.skywarsreloaded.api.wrapper.world.block;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 public interface SWChest extends SWBlock {
 

@@ -2,9 +2,9 @@ package net.devmart.skywarsreloaded.api.data.config;
 
 import net.devmart.skywarsreloaded.api.manager.YAMLManager;
 import net.devmart.skywarsreloaded.api.unlockable.Unlockable;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 import java.io.File;
 import java.util.List;

@@ -2,6 +2,9 @@ package net.devmart.skywarsreloaded.api.utils;
 
 import com.sk89q.worldedit.world.World;
 import net.devmart.skywarsreloaded.api.utils.properties.options.GuiLayoutOptions;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
+import net.devmart.skywarsreloaded.api.wrapper.PotionEffect;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
@@ -45,7 +48,9 @@ public interface PlatformUtils {
 
     SWWorld getSWWorld(String worldName);
 
-    Effect getEffect(String effect);
+    PotionEffect getEffect(String effect);
+
+    ParticleEffect getParticleEffect(String effect);
 
     String centerMessage(String message);
 

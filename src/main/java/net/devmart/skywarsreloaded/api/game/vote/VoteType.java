@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.game.vote;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.Message;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.game.vote.options;
 
 import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
-import net.devmart.skywarsreloaded.api.utils.Effect;
+import net.devmart.skywarsreloaded.api.wrapper.PotionEffect;
 
 import java.util.List;
 
@@ -12,6 +12,6 @@ public interface ModifierVoteOption extends VoteOption {
      *
      * @return the effects
      */
-    List<Effect> getEffects();
+    List<PotionEffect> getEffects();
 
 }

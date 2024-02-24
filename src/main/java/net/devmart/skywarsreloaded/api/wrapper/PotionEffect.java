@@ -1,8 +1,8 @@
-package net.devmart.skywarsreloaded.api.utils;
+package net.devmart.skywarsreloaded.api.wrapper;
 
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 
-public interface Effect {
+public interface PotionEffect {
 
     String toString();
 

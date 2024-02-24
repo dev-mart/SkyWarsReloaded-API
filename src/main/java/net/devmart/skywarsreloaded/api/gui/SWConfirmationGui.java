@@ -2,7 +2,7 @@ package net.devmart.skywarsreloaded.api.gui;
 
 import net.devmart.skywarsreloaded.api.gui.handlers.SWGuiClickHandler;
 import net.devmart.skywarsreloaded.api.unlockable.Unlockable;
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 import java.util.function.Function;
 

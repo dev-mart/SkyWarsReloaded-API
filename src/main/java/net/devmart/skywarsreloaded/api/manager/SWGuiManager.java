@@ -30,6 +30,8 @@ public interface SWGuiManager {
 
     SWGui createKillMessagesSelectorGui(SWPlayer player);
 
+    SWGui createProjectileEffectSelectorGui(SWPlayer player);
+
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
 
     void registerInventoryCreation(SWGui gui);

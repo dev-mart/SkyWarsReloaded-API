@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.game.vote;
 
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 /**
  * Represents all the possible options that can be picked under a {@link VoteType}.
