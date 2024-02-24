@@ -47,6 +47,7 @@ public class ItemProperties {
 
     public static final String UNLOCKABLES_CAGES = "cages";
     public static final String UNLOCKABLES_KILL_MESSAGES = "kill-messages";
+    public static final String UNLOCKABLES_PROJECTILE_EFFECTS = "projectile-effects";
 
 
 }
