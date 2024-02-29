@@ -12,7 +12,10 @@ import net.devmart.skywarsreloaded.api.game.loader.GameWorldLoader;
 import net.devmart.skywarsreloaded.api.hook.SWHook;
 import net.devmart.skywarsreloaded.api.listener.PlatformSWEventListener;
 import net.devmart.skywarsreloaded.api.manager.*;
-import net.devmart.skywarsreloaded.api.manager.gameinstance.GameInstanceManager;
+import net.devmart.skywarsreloaded.api.manager.game.*;
+import net.devmart.skywarsreloaded.api.manager.game.instance.GameInstanceManager;
+import net.devmart.skywarsreloaded.api.manager.player.SWPlayerDataManager;
+import net.devmart.skywarsreloaded.api.manager.player.SWPlayerManager;
 import net.devmart.skywarsreloaded.api.utils.PlatformUtils;
 import net.devmart.skywarsreloaded.api.utils.SWLogger;
 import net.devmart.skywarsreloaded.api.utils.proxy.PluginMessaging;
@@ -29,7 +32,7 @@ public interface SkyWarsReloaded {
 
     // Plugin
 
-    void onEnable();
+    void onEnable() throws ClassNotFoundException;
 
     void onDisable();
 
@@ -38,10 +41,10 @@ public interface SkyWarsReloaded {
      * This method can be overridden if you wish to disable the default SkyWars hooks.
      * <br><br>
      * If you want to register plugin hooks into SkyWars that can be hooked after the {@link #onEnable()}
-     * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(SWHook)}
+     * is executed, we recommend using {@link #getHookManager()} then {@link SWHookManager#registerHook(Class, SWHook)}
      * <br><br>
      * If you really need to register your own hooks into SkyWars that will run at enable time, we recommend
-     * overriding this method in your own SkyWars implementation and calling super.{@link #registerDefaultHooks()}
+     * overriding this method in your own SkyWars implementation and calling super.
      * before registering your own.
      */
     void registerDefaultHooks();
@@ -75,9 +78,17 @@ public interface SkyWarsReloaded {
 
     void setDataConfig(YAMLConfig data);
 
-    YAMLConfig getMessages();
+    YAMLConfig getGeneralMessages();
 
-    void setMessages(YAMLConfig config);
+    void setGeneralMessages(YAMLConfig config);
+
+    YAMLConfig getItemMessages();
+
+    void setItemMessages(YAMLConfig config);
+
+    YAMLConfig getVoteOptionsMessages();
+
+    void setVoteOptionsMessages(YAMLConfig config);
 
     // Hooks
 
@@ -151,7 +162,15 @@ public interface SkyWarsReloaded {
 
     void setChestManager(SWChestManager chestManager);
 
-    SWMessagingManager getMessaging();
+    VoteOptionManager getVoteOptionManager();
+
+    void setVoteOptionManager(VoteOptionManager voteOptionManager);
+
+    DatabaseVersionManager getDatabaseVersionManager();
+
+    void setDatabaseVersionManager(DatabaseVersionManager databaseVersionManager);
+
+    SWMessaging getMessaging();
 
     void setMessaging(SWMessagingManager messaging);
 

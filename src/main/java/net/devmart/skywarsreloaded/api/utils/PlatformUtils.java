@@ -2,6 +2,10 @@ package net.devmart.skywarsreloaded.api.utils;
 
 import com.sk89q.worldedit.world.World;
 import net.devmart.skywarsreloaded.api.utils.properties.options.GuiLayoutOptions;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
+import net.devmart.skywarsreloaded.api.wrapper.PotionEffect;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
@@ -44,15 +48,27 @@ public interface PlatformUtils {
 
     SWWorld getSWWorld(String worldName);
 
+    PotionEffect getEffect(String effect);
+
+    ParticleEffect getParticleEffect(String effect);
+
     String centerMessage(String message);
 
     Item getItemFromMap(Map<String, Object> map);
 
     /**
      * Get the available slots for a given layout option.
+     *
      * @param layoutOption {@link GuiLayoutOptions} layout style
      * @return array of slots
      */
     int[] getLayoutSlots(String layoutOption, boolean withFooter);
+
+    /**
+     * Play an unformatted sound to a player (with volume and pitch).
+     * @param player player to play sound to
+     * @param rawSound raw sound string
+     */
+    void playSound(SWPlayer player, String rawSound);
 
 }

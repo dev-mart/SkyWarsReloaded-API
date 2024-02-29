@@ -1,7 +1,9 @@
 package net.devmart.skywarsreloaded.api.wrapper.world;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
+import net.devmart.skywarsreloaded.api.wrapper.entity.SWDroppedItem;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.block.SWBlock;
 
@@ -84,4 +86,58 @@ public interface SWWorld {
      * @param keepSpawnLoaded true if spawn chunk should always be loaded.
      */
     void setKeepSpawnLoaded(boolean keepSpawnLoaded);
+
+    /**
+     * Get the time of the world
+     *
+     * @return The time of the world
+     */
+    long getTime();
+
+    /**
+     * Set the time of the world
+     *
+     * @param time The time to set the world to
+     */
+    void setTime(long time);
+
+    /**
+     * Get whether it is currently raining in the world
+     *
+     * @return True if it is raining, false otherwise
+     */
+    boolean isRaining();
+
+    /**
+     * Set whether it is currently raining in the world
+     *
+     * @param raining True if it is raining, false otherwise
+     */
+    void setRaining(boolean raining);
+
+    /**
+     * Get whether it is currently thundering in the world
+     *
+     * @return True if it is thundering, false otherwise
+     */
+    boolean isThundering();
+
+    /**
+     * Set whether it is currently thundering in the world
+     *
+     * @param thunder True if it is thundering, false otherwise
+     */
+    void setThundering(boolean thunder);
+
+    /**
+     * Drop an item naturally at a location
+     *
+     * @param location The location to drop the item
+     * @param item     The item to drop
+     * @return The dropped item entity
+     */
+    SWDroppedItem dropItemNaturally(SWCoord location, Item item);
+
+    void spawnParticle(SWCoord location, ParticleEffect particleEffect);
+
 }

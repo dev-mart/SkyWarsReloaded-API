@@ -1,13 +1,16 @@
 package net.devmart.skywarsreloaded.api.wrapper.entity;
 
 import net.devmart.skywarsreloaded.api.data.player.stats.SWPlayerData;
-import net.devmart.skywarsreloaded.api.game.gameinstance.GameInstance;
 import net.devmart.skywarsreloaded.api.party.SWParty;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
+import net.devmart.skywarsreloaded.api.wrapper.ParticleEffect;
+import net.devmart.skywarsreloaded.api.wrapper.PotionEffect;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 /**
  * General data about a player that is independent of any running state of games or teams
@@ -17,12 +20,6 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
     SWPlayerData getPlayerData();
 
     void setPlayerData(SWPlayerData playerData);
-
-    GameInstance getGameInstance();
-
-    boolean canJoinGame();
-
-    void setGameWorld(GameInstance world);
 
     Item getItemInHand(boolean offHand);
 
@@ -138,6 +135,12 @@ public interface SWPlayer extends SWCommandSender, SWOfflinePlayer, SWEntity {
     void clearArmor();
 
     void removePotionEffect(String value);
+
+    List<PotionEffect> getPotionEffects();
+
+    void spawnParticle(SWCoord location, ParticleEffect particleEffect);
+
+    void clearPotionEffects();
 
     boolean hasBalance(int amount);
 

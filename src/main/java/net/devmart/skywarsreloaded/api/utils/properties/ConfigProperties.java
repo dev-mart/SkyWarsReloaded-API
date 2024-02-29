@@ -16,7 +16,6 @@ public class ConfigProperties {
     public static final String STORAGE_MYSQL_USERNAME = "storage.mysql.username";
     public static final String STORAGE_MYSQL_PASSWORD = "storage.mysql.password";
     public static final String STORAGE_MYSQL_DATABASE = "storage.mysql.database";
-    public static final String STORAGE_MYSQL_TABLE_PREFIX = "storage.mysql.table-prefix";
     public static final String STORAGE_MYSQL_USE_SSL = "storage.mysql.use-ssl";
 
     // General settings
@@ -43,17 +42,36 @@ public class ConfigProperties {
     public static final String MENUS_PAGINATION_ALLOW_GAPS_WITH_FIXED_POSITIONED_ITEMS = "menus.pagination.allow-gaps-with-fixed-positioned-items";
 
     public static final String MENUS_KITS_LAYOUT = "menus.kits.layout";
-    public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = "menus.kits.enchant-selected-kit";
+
+    public static final String MENUS_TEAM_SELECTOR_LAYOUT = "menus.team-selector.layout";
+    public static final String MENUS_TEAM_SELECTOR_ENCHANT_SELECTED_TEAM = "menus.team-selector.enchant-selected-team";
 
     public static final String MENUS_JOIN_SORT_BY = "menus.join.sort-by";
     public static final String MENUS_JOIN_SHOW_AVAILABLE_TEMPLATES_ONLY = "menus.join.show-available-templates-only";
     public static final String MENUS_JOIN_LAYOUT = "menus.join.layout";
 
+    public static final String MENUS_GAME_OPTIONS_SIZE = "menus.game-options.size";
+
+    public static final String MENUS_UNLOCKABLES_ROOT = "menus.unlockables";
+    public static final String MENUS_UNLOCKABLES_LAYOUT = "layout";
+    public static final String MENUS_UNLOCKABLES_MAIN_MENU_SIZE = MENUS_UNLOCKABLES_ROOT + ".main-menu.size";
+    public static final String MENUS_KITS_ENCHANT_SELECTED_KIT = MENUS_UNLOCKABLES_ROOT + ".kits.enchant-selected-kit";
+
+    public static final String ITEMS_UNLOCKABLES_SLOT = "slot";
+
+
     // items
     public static final String ITEMS_GAME_KIT_SELECTOR_SLOT = "items.game.kit-selector.slot";
     public static final String ITEMS_GAME_LEAVE_SLOT = "items.game.leave.slot";
+    public static final String ITEMS_GAME_OPTIONS_VOTING_SLOT = "items.game.options-voting.slot";
+    public static final String ITEMS_GAME_TEAM_SELECTOR_SLOT = "items.game.team-selector.slot";
     public static final String ITEMS_LOBBY_JOIN_SLOT = "items.lobby.join.slot";
     public static final String ITEMS_LOBBY_OPTIONS_SLOT = "items.lobby.options.slot";
+
+    // sounds
+    public static final String SOUNDS_GENERAL_ACTION_FORBIDDEN = "sounds.general.action-forbidden";
+    public static final String SOUNDS_GAME_SELECT_TEAM = "sounds.game.select-team";
+
     // todo: messaging impl & auth
 
     // Game instances
@@ -68,7 +86,12 @@ public class ConfigProperties {
     public static final String GAME_INSTANCES_PROXY_MODE_FIXED_TEMPLATES = "game-instances.proxy-mode.fixed-templates";
 
     // Game preferences
-    public static final String GAME_SOLO_WAITING_LOBBY = "game.solo-waiting-lobby";
+    public static final String GAME_WAITING_LOBBY_SOLO_GAMES = "game.waiting-lobby.solo-games-lobby";
+    public static final String GAME_WAITING_LOBBY_SCHEMATIC_MODE = "game.waiting-lobby.schematic-mode";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_ENABLED = "game.waiting-lobby.teleport-when-below.enable";
+    public static final String GAME_WAITING_LOBBY_BELOW_TELEPORT_DISTANCE = "game.waiting-lobby.teleport-when-below.distance";
+
+
     public static final String CAGE_SEPARATE_CAGES = "game.cages.separate-cages";
     // Game prefs - Timer
     public static final String GAME_TIMER_WAITING_LOBBY = "game.timers.waiting-lobby";
@@ -84,6 +107,15 @@ public class ConfigProperties {
     public static final String GAME_PVP_TIMER_ENABLED = "game.pvp-timer.enable";
     public static final String GAME_PVP_TIMER_TIME = "game.pvp-timer.time";
     public static final String GAME_PVP_TIMER_ONLY_DISABLE_FALL_DAMAGE = "game.pvp-timer.only-disable-fall-damage";
+
+    public static final String GAME_OPTIONS_VOTING_ENABLED = "game.options-voting.enable";
+    public static final String GAME_OPTIONS_CHEST_VOTING_ENABLED = "game.options-voting.chest-voting.enable";
+    public static final String GAME_OPTIONS_HEALTH_VOTING_ENABLED = "game.options-voting.health-voting.enable";
+    public static final String GAME_OPTIONS_TIME_VOTING_ENABLED = "game.options-voting.time-voting.enable";
+    public static final String GAME_OPTIONS_WEATHER_VOTING_ENABLED = "game.options-voting.weather-voting.enable";
+    public static final String GAME_OPTIONS_MODIFIER_VOTING_ENABLED = "game.options-voting.modifier-voting.enable";
+    public static final String GAME_OPTIONS_PROJECTILE_VOTING_ENABLED = "game.options-voting.projectile-voting.enable";
+
 
     // World loader
     public static final String ENABLE_SLIME_WORLD_MANAGER = "world-loader.enable-swm";

@@ -1,6 +1,6 @@
 package net.devmart.skywarsreloaded.api.wrapper.server;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 
 import java.util.List;

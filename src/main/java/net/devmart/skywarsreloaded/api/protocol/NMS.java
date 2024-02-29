@@ -1,7 +1,7 @@
 package net.devmart.skywarsreloaded.api.protocol;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.item.SWEnchantmentType;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWGameRule;
@@ -22,6 +22,8 @@ public interface NMS {
     void setChestOpen(SWCoord loc, boolean open);
 
     SWChunkGenerator getChunkGenerator();
+
+    SWChunkGenerator getChunkGenerator(String biome);
 
     void addPluginChunkTicket(SWChunk chunk);
 

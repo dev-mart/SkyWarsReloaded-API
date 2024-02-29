@@ -1,6 +1,6 @@
 package net.devmart.skywarsreloaded.api.manager;
 
-import net.devmart.skywarsreloaded.api.utils.Item;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 
 import java.util.Map;
 

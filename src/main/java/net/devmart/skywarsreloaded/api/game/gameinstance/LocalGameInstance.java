@@ -5,17 +5,30 @@ import net.devmart.skywarsreloaded.api.enums.GameLeaveReason;
 import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
-import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
+import net.devmart.skywarsreloaded.api.game.TeamSpawn;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
+import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
+import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
 import net.devmart.skywarsreloaded.api.utils.Message;
+import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.world.SWWorld;
 
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface LocalGameInstance extends GameInstance {
+
+    /**
+     * Get the vote options for this game.
+     *
+     * @return The vote option freezer
+     */
+    VoteOptionFreezer getVoteOptionFreezer();
 
     /**
      * Get a list of all the teams in the game.
@@ -27,10 +40,51 @@ public interface LocalGameInstance extends GameInstance {
     /**
      * Get the team of the player.
      *
+     * @param gamePlayer The player to get the team of
+     * @return The team of the player when assigned, null otherwise
+     */
+    GameTeam getTeam(GamePlayer gamePlayer);
+
+    /**
+     * Get the team of the player.
+     *
      * @param player The player to get the team of
      * @return The team of the player when assigned, null otherwise
      */
-    GameTeam getTeam(GamePlayer player);
+    GameTeam getTeam(SWPlayer player);
+
+    /**
+     * Find the preferred team for the given player.
+     * This will take into account the player's party and the team sizes.
+     *
+     * @param player    The player to find the preferred team for
+     * @param gameTeams The teams to choose from (see {@link #getJoinableTeamsSortedByPlayerCount()})
+     * @return The preferred team for the player
+     */
+    GameTeam findPreferredTeam(SWPlayer player, List<GameTeam> gameTeams);
+
+    /**
+     * Get a list of all the teams in the game that are joinable, sorted by player count (descending).
+     *
+     * @return A list of all joinable teams, sorted by player count (descending).
+     */
+    List<GameTeam> getJoinableTeamsSortedByPlayerCount();
+
+    /**
+     * Teleport the player to the game. This will choose whether the player should be placed
+     * in the waiting lobby or directly in the cage automatically.
+     *
+     * @param swPlayer The player to teleport.
+     * @param spawn    The spawn to teleport the player to if the player shouldn't be sent to the map's lobby
+     */
+    SWCompletableFuture<Boolean> teleportPlayerToLobbyOrTeamSpawn(SWPlayer swPlayer, TeamSpawn spawn);
+
+    /**
+     * Prepare the waiting lobby for the cages stage.
+     * This will assign all players to a team and teleport them to their team spawn.
+     * This will also place all cages.
+     */
+    void prepareWaitingLobbyForCages();
 
     /**
      * Get the game player instance associated with the given player.
@@ -80,9 +134,28 @@ public interface LocalGameInstance extends GameInstance {
     void startGame();
 
     /**
+     * Calculate the final votes for the game.
+     */
+    void calculateFinalVotes();
+
+    /**
+     * Apply the final votes to the game.
+     */
+    void applyFinalVotes();
+
+    /**
      * End the current game.
+     * This will stop the scheduler and set the state to ENDING.
+     * If you want to delete the game instance, use {@link #delete()} instead.
      */
     void endGame();
+
+    /**
+     * Delete the current game instance and all associated data.
+     * This will remove the world from the server.
+     * If you want to end the game, use {@link #endGame()} instead.
+     */
+    void delete();
 
     /**
      * Turns the game into idle mode.
@@ -105,25 +178,11 @@ public interface LocalGameInstance extends GameInstance {
     GameScheduler getScheduler();
 
     /**
-     * Get the voted chest tiers per player.
-     *
-     * @return The voted chest tiers per player
-     */
-    Map<UUID, SWChestTier> getVotedChestTiers();
-
-    /**
      * Get the chest types that players are using during their edit session.
      *
      * @return The selected chest types per player.
      */
     Map<UUID, ChestType> getSelectedEditingChestTypes();
-
-    /**
-     * Get the voted chest tier of the game.
-     *
-     * @return The voted chest tier
-     */
-    SWChestTier getChestTier();
 
     /**
      * Announces a message to all players in the game.
@@ -158,14 +217,6 @@ public interface LocalGameInstance extends GameInstance {
     void announceTitle(Message message, int fadeIn, int stay, int fadeOut);
 
     /**
-     * Sets what chest tier the player is using for editing the game template.
-     *
-     * @param player The player that is editing.
-     * @param type   The chest tier to set.
-     */
-    void setChestTypeSelected(UUID player, SWChestTier type);
-
-    /**
      * This method is to be run async since it could perform long operations
      *
      * @param uuid                  UUID of the player to add
@@ -187,8 +238,9 @@ public interface LocalGameInstance extends GameInstance {
      * Remove a player from the game.
      *
      * @param player      Player to remove
-     * @param deathCause
-     * @param leaveReason
+     * @param deathCause  The cause of death (aka damage source)
+     * @param leaveReason The reason the player left the game. Set to something other than {@link GameLeaveReason#DEATH} to prevent the player from becoming a spectator.
+     *                    All {@link GameLeaveReason#isSelfInflicted()} reasons will cause the player's death stats to be incremented.
      */
     void removePlayer(GamePlayer player, DeathCause deathCause, GameLeaveReason leaveReason);
 
@@ -280,8 +332,10 @@ public interface LocalGameInstance extends GameInstance {
     /**
      * Make the game ready for players to join.
      * Starts the schedulers and sets the state to WAITING.
+     *
+     * @return A future that completes when the game is ready for players to join
      */
-    void makeReadyForGame();
+    CompletableFuture<Void> makeReadyForGame();
 
     /**
      * Get the winning team.
@@ -295,6 +349,36 @@ public interface LocalGameInstance extends GameInstance {
      */
     void determineWinner();
 
+    /**
+     * Handle the death of a player.
+     *
+     * @param player The player that died
+     * @param reason The reason of death
+     */
     void handlePlayerDeath(GamePlayer player, DeathCause reason);
+
+    /**
+     * Cast a vote for a vote option.
+     *
+     * @param player The player that is voting
+     * @param option The option that is being voted for
+     */
+    void addPlayerVote(GamePlayer player, VoteOption option);
+
+    /**
+     * Get the votes for a vote type.
+     *
+     * @param voteType The vote type to get the votes for
+     * @return A list of player votes
+     */
+    List<PlayerVote> getPlayerVotes(VoteType voteType);
+
+    /**
+     * Get the votes for a vote option.
+     *
+     * @param voteOption The vote option to get the votes for
+     * @return The number of votes for the vote option
+     */
+    int getPlayerVotesCount(VoteOption voteOption);
 
 }

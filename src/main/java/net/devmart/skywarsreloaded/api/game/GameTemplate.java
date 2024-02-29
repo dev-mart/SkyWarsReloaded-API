@@ -3,10 +3,10 @@ package net.devmart.skywarsreloaded.api.game;
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
-import net.devmart.skywarsreloaded.api.utils.Item;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnAddResult;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnRemoveResult;
+import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.sender.SWCommandSender;
 import org.jetbrains.annotations.Nullable;
 
@@ -242,10 +242,10 @@ public interface GameTemplate {
      * Run a check through all possible things to set up for the arena to see if anything is left.
      * This method will send a message to the target player with the next thing to do on the list.
      *
-     * @param player Player to send the messages to.
+     * @param player Optional player to send the messages to. Set to {@link null} to not send any messages.
      * @return true if all checks passed, false if there's things left to set up.
      */
-    boolean checkToDoList(SWCommandSender player);
+    boolean checkToDoList(@Nullable SWCommandSender player);
 
     /**
      * Get the maximum amount of players that can join this game.
@@ -271,8 +271,51 @@ public interface GameTemplate {
 
     /**
      * Set the template icon item.
+     *
      * @param item the new template icon item
      */
     void setIcon(Item item);
+
+    /**
+     * Get the world biome of the template.
+     *
+     * @return the world biome of the template
+     */
+    String getBiome();
+
+    /**
+     * Set the world biome of the template.
+     *
+     * @param biome the new world biome of the template
+     */
+    void setBiome(String biome);
+
+    /**
+     * Get the schematic file name of the template.
+     *
+     * @return the schematic file name of the template
+     */
+    String getSchematic();
+
+    /**
+     * Set the schematic file name of the template.
+     *
+     * @param schematic the new schematic file name of the template (without the .schem extension)
+     */
+    void setSchematic(String schematic);
+
+    /**
+     * Get the schematic file name of the waiting lobby.
+     *
+     * @return the schematic file name of the waiting lobby
+     */
+    String getWaitingLobbySchematic();
+
+    /**
+     * Set the schematic file name of the waiting lobby.
+     *
+     * @param schematic the new schematic file name of the waiting lobby (without the .schem extension)
+     */
+    void setWaitingLobbySchematic(String schematic);
 
 }

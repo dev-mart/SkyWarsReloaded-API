@@ -1,9 +1,14 @@
 package net.devmart.skywarsreloaded.api.manager;
 
-import net.devmart.skywarsreloaded.api.utils.gui.SWConfirmationGui;
-import net.devmart.skywarsreloaded.api.utils.gui.SWGui;
+import net.devmart.skywarsreloaded.api.game.GamePlayer;
+import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
+import net.devmart.skywarsreloaded.api.game.vote.VoteType;
+import net.devmart.skywarsreloaded.api.gui.SWConfirmationGui;
+import net.devmart.skywarsreloaded.api.gui.SWGui;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 import net.devmart.skywarsreloaded.api.wrapper.server.SWInventory;
+
+import java.util.HashMap;
 
 public interface SWGuiManager {
 
@@ -11,11 +16,21 @@ public interface SWGuiManager {
 
     SWGui createJoinGameGui(SWPlayer player);
 
-    SWGui createOptionsGui(SWPlayer player);
+    SWGui createVotingOptionsGui(GamePlayer gamePlayer, LocalGameInstance gameInstance, VoteType voteType);
 
-    SWGui createVotingGui(SWPlayer player);
+    SWGui createVotingGui(GamePlayer gamePlayer, LocalGameInstance gameInstance);
+
+    SWGui createTeamSelectorGui(GamePlayer gamePlayer, LocalGameInstance gameInstance);
 
     SWGui createKitGui(SWPlayer player);
+
+    SWGui createUnlockablesGui(SWPlayer player);
+
+    SWGui createCagesSelectorGui(SWPlayer player);
+
+    SWGui createKillMessagesSelectorGui(SWPlayer player);
+
+    SWGui createProjectileEffectSelectorGui(SWPlayer player);
 
     SWConfirmationGui createConfirmationGui(SWPlayer player, String title);
 
@@ -26,5 +41,7 @@ public interface SWGuiManager {
     void unregisterGui(SWGui gui);
 
     SWGui getActiveGui(SWInventory inventory);
+
+    <T extends SWGui> HashMap<SWInventory, T> getInventoryMap(Class<T> gui);
 
 }

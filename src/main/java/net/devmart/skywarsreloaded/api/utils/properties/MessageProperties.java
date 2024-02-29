@@ -9,7 +9,6 @@ public class MessageProperties {
     public static final String ERROR_WORLD_NOT_RECOGNIZED = "errors.world-not-recognized";
     public static final String ERROR_MUST_HOLD_ITEM = "errors.must-hold-item";
     public static final String ERROR_LOBBY_SPAWN_NOT_SET = "errors.lobby-spawn-not-set";
-    public static final String ERROR_NO_TEMPLATE_WORLD_FOUND = "errors.no-template-world-found";
     public static final String ERROR_ACTION_NOT_FOR_LOBBY_SERVERS = "errors.action-not-for-lobby-servers";
     public static final String ERROR_ACTION_NOT_FOR_GAME_SERVERS = "errors.action-not-for-game-servers";
     public static final String ERROR_NUMBER_MUST_BE_GREATER = "errors.number-must-be-greater";
@@ -17,23 +16,24 @@ public class MessageProperties {
     public static final String ERROR_NUMBER_MUST_BE_BETWEEN = "errors.number-must-be-between";
     public static final String ERROR_INVALID_NUMBER = "errors.invalid-number";
     public static final String ERROR_INVALID_BOOLEAN = "errors.invalid-boolean";
+    public static final String ERROR_NO_PERMISSION = "errors.no-permission";
+    public static final String ERROR_GAME_KICK_UNKNOWN_REASON = "errors.game-kick-unknown-reason";
+    public static final String ERROR_CANNOT_AFFORD = "errors.cannot-afford";
+
+    public static final String GENERAL_PURCHASED = "general.purchased";
+    public static final String GENERAL_SELECTED_UNLOCKABLE = "general.selected-unlockable";
+
 
     public static final String MENUS_KITS_TITLE = "menus.kits.title";
     public static final String MENUS_CONFIRM_PURCHASE_TITLE = "menus.confirm-purchase.title";
     public static final String MENUS_JOIN_TITLE = "menus.join.title";
+    public static final String MENUS_TEAM_SELECTOR_TITLE = "menus.team-selector.title";
+    public static final String MENUS_GAME_OPTIONS_TITLE = "menus.game-options.title";
 
-    public static final String ITEMS_KITS_STATUS_SELECTED = "items.kits.status.selected";
-    public static final String ITEMS_KITS_STATUS_UNLOCKED = "items.kits.status.unlocked";
-    public static final String ITEMS_KITS_STATUS_LOCKED = "items.kits.status.locked";
-    public static final String ITEMS_KITS_SELECTED = "items.kits.selected";
-    public static final String ITEMS_KITS_LOCKED = "items.kits.locked";
-    public static final String ITEMS_KITS_UNLOCKED = "items.kits.unlocked";
-    public static final String ITEMS_KITS_CONFIRM_PURCHASE = "items.kits.confirm-purchase";
-    public static final String ITEMS_KITS_DENY_PURCHASE = "items.kits.deny-purchase";
+    public static final String MENUS_UNLOCKABLES_ROOT = "menus.unlockables";
+    public static final String MENUS_UNLOCKABLES_TITLE = "title";
+    public static final String MENUS_UNLOCKABLES_MAIN_MENU_TITLE = MENUS_UNLOCKABLES_ROOT + ".main-menu." + MENUS_UNLOCKABLES_TITLE;
 
-    public static final String KITS_SELECTED = "kits.selected";
-    public static final String KITS_CANNOT_AFFORD = "kits.cannot-afford";
-    public static final String KITS_PURCHASED = "kits.purchased";
     public static final String KITS_DESELECT = "kits.deselect";
     public static final String KITS_ENTER_NAME = "kits.enter-name";
     public static final String KITS_ENTER_DESCRIPTION = "kits.enter-description";
@@ -84,13 +84,14 @@ public class MessageProperties {
     public static final String MAPS_ENABLED = "maps.enabled";
     public static final String MAPS_NOT_ENABLED = "maps.not-enabled";
     public static final String MAPS_EDIT_EXISTING_WORLD = "maps.edit-existing-world";
-    public static final String MAPS_CANNOT_EDIT_GAME_RUNNING = "maps.cannot-edit-game-running";
+    public static final String MAPS_NO_TEMPLATE_WORLD_FOUND = "maps.no-template-world-found";
+    public static final String MAPS_NOT_EDITING = "maps.not-editing";
     public static final String MAPS_CANNOT_ENABLE_INCOMPLETE_SETUP = "maps.cannot-enable-incomplete-setup";
     public static final String MAPS_LIST_HEADER = "maps.maps-list-header";
     public static final String MAPS_LIST_LINE = "maps.maps-list-line";
     public static final String MAPS_LIST_EMPTY = "maps.maps-list-empty";
     public static final String MAPS_WORLD_SAVED = "maps.world-saved";
-    public static final String MAPS_WORLD_SAVED_FAIL = "maps.saved-fail";
+    public static final String MAPS_WORLD_SAVED_FAIL = "maps.world-saved-fail";
     public static final String MAPS_SAVING_START = "maps.saving-start";
     public static final String MAPS_SAVED = "maps.saved";
     public static final String MAPS_SET_CREATOR = "maps.set-creator";
@@ -118,7 +119,11 @@ public class MessageProperties {
     public static final String GAMES_PLAYER_LEAVE = "games.player-leave";
     public static final String GAMES_JOIN_FAILED = "games.join-failed";
     public static final String GAMES_PVP_TIMER_ENDED = "games.pvp-timer-ended";
+    public static final String GAMES_TEAM_SELECTED = "games.team-selected";
 
+    public static final String GAMES_PLAYER_VOTED_DEFAULT = "games.player-voted";
+
+    public static final String GAMES_START_MESSAGE = "games.start-message";
     public static final String GAMES_SUMMARY = "games.summary";
     public static final String GAMES_TEAM_SUMMARY = "games.team-summary";
 
