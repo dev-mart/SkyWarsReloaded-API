@@ -31,5 +31,14 @@ public class MapDataProperties {
 
     public static final String ALLOW_DISPERSED_PARTIES = "allow-dispersed-parties";
 
+    public static final String EVENT_ENABLED = "enabled";
+    public static final String EVENT_REPEATABLE_ENABLED = "repeatable.enabled";
+    public static final String EVENT_REPEATABLE_INTERVAL = "repeatable.interval";
+    public static final String EVENT_MAX_REPEATS = "repeatability.max-repeats";
+    public static final String EVENT_START_TIME_MIN = "start-time-range.min";
+    public static final String EVENT_START_TIME_MAX = "start-time-range.max";
+    public static final String EVENT_DURATION = "duration";
+    public static final String EVENT_CHANCE = "chance";
+
 }
 
