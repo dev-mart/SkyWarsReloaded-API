@@ -138,6 +138,8 @@ public interface YAMLConfig {
 
     <E extends Enum<E>> E getEnum(Class<E> enumClass, String property, String def);
 
+    YAMLConfig getSection(String path);
+
     /**
      * Set a value to a key in the yaml config
      *
