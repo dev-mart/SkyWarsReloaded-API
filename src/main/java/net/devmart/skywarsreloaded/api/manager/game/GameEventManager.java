@@ -1,17 +1,18 @@
 package net.devmart.skywarsreloaded.api.manager.game;
 
 import net.devmart.skywarsreloaded.api.game.event.GameEvent;
-
-import java.util.List;
+import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 
 public interface GameEventManager {
 
-    void registerGameEvent(GameEvent event);
+    void registerGameEvent(String id, Class<? extends GameEvent> eventClass);
 
-    void unregisterGameEvent(GameEvent event);
+    void unregisterGameEvent(String id);
 
-    GameEvent getGameEvent(String id);
+    void unregisterGameEvent(Class<? extends GameEvent> eventClass);
 
-    List<GameEvent> getGameEvents();
+    Class<? extends GameEvent> getGameEvent(String id);
+
+    GameEvent createGameInstanceEvent(String eventId, LocalGameInstance gameInstance);
 
 }
