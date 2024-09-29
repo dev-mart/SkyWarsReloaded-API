@@ -1,13 +1,14 @@
 package net.devmart.skywarsreloaded.api.game.event;
 
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
+import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 
 public interface GameEvent {
 
     void loadConfig(YAMLConfig config);
 
-    LocalGameInstance getGameInstance();
+    GameTemplate getGameTemplate();
 
     boolean isEnabled();
 
@@ -41,10 +42,10 @@ public interface GameEvent {
 
     void setMaxStartTime(int maxStartTime);
 
-    void onStart();
+    void onStart(LocalGameInstance gameInstance);
 
-    void onStop();
+    void onStop(LocalGameInstance gameInstance);
 
-    void onTick();
+    void onTick(LocalGameInstance gameInstance);
 
 }

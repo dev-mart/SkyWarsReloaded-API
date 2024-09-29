@@ -2,6 +2,7 @@ package net.devmart.skywarsreloaded.api.game;
 
 import net.devmart.skywarsreloaded.api.data.config.YAMLConfig;
 import net.devmart.skywarsreloaded.api.game.chest.SWChestTier;
+import net.devmart.skywarsreloaded.api.game.event.GameEvent;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
 import net.devmart.skywarsreloaded.api.utils.SWCoord;
 import net.devmart.skywarsreloaded.api.utils.results.SpawnAddResult;
@@ -317,5 +318,17 @@ public interface GameTemplate {
      * @param schematic the new schematic file name of the waiting lobby (without the .schem extension)
      */
     void setWaitingLobbySchematic(String schematic);
+
+    /**
+     * Get the game events that are configured for this template.
+     * @return The game events
+     */
+    List<GameEvent> getGameEvents();
+
+    /**
+     * Set the game events that are configured for this template.
+     * @param gameEvents The game events to set
+     */
+    void setGameEvents(List<GameEvent> gameEvents);
 
 }

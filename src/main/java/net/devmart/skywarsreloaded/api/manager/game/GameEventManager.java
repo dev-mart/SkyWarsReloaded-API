@@ -1,5 +1,6 @@
 package net.devmart.skywarsreloaded.api.manager.game;
 
+import net.devmart.skywarsreloaded.api.game.GameTemplate;
 import net.devmart.skywarsreloaded.api.game.event.GameEvent;
 import net.devmart.skywarsreloaded.api.game.gameinstance.LocalGameInstance;
 
@@ -13,6 +14,6 @@ public interface GameEventManager {
 
     Class<? extends GameEvent> getGameEvent(String id);
 
-    GameEvent createGameInstanceEvent(String eventId, LocalGameInstance gameInstance);
+    GameEvent createGameInstanceEvent(String eventId, GameTemplate gameTemplate);
 
 }
