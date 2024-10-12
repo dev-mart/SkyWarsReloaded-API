@@ -40,6 +40,10 @@ public class MapDataProperties {
     public static final String EVENT_START_TIME_MAX = "start-time-range.max";
     public static final String EVENT_DURATION = "duration";
     public static final String EVENT_CHANCE = "chance";
+    public static final String EVENTS_START_TITLE = "start-title";
+    public static final String EVENTS_START_MESSAGE = "start-message";
+    public static final String EVENTS_END_TITLE = "end-title";
+    public static final String EVENTS_END_MESSAGE = "end-message";
 
 }
 
