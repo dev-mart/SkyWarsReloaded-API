@@ -26,6 +26,12 @@ public interface GameInstanceEventManager {
     void removeEvent(GameInstanceEvent event);
 
     /**
+     * Gets the list of game instance events.
+     * @return a list of events
+     */
+    List<GameInstanceEvent> getEvents();
+
+    /**
      * Populates the list of events for this game instance based on the event settings as configured in the game template
      */
     void populateEvents();
