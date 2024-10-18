@@ -169,6 +169,10 @@ public interface SkyWarsReloaded {
 
     void setDatabaseVersionManager(DatabaseVersionManager databaseVersionManager);
 
+    GameEventManager getGameEventManager();
+
+    void setGameEventManager(GameEventManager gameEventManager);
+
     SWMessaging getMessaging();
 
     void setMessaging(SWMessaging messaging);

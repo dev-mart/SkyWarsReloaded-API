@@ -1,5 +1,6 @@
 package net.devmart.skywarsreloaded.api.wrapper.server;
 
+import net.devmart.skywarsreloaded.api.utils.SWCoord;
 import net.devmart.skywarsreloaded.api.wrapper.Item;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
 
@@ -32,5 +33,7 @@ public interface SWInventory {
     int getHeldItemSlot();
 
     int first(Item item);
+
+    SWCoord getLocation();
 
 }

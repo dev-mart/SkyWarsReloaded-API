@@ -6,11 +6,13 @@ import net.devmart.skywarsreloaded.api.game.GamePlayer;
 import net.devmart.skywarsreloaded.api.game.GameScheduler;
 import net.devmart.skywarsreloaded.api.game.GameTeam;
 import net.devmart.skywarsreloaded.api.game.TeamSpawn;
+import net.devmart.skywarsreloaded.api.game.event.GameInstanceEvent;
 import net.devmart.skywarsreloaded.api.game.types.ChestType;
 import net.devmart.skywarsreloaded.api.game.vote.PlayerVote;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOption;
 import net.devmart.skywarsreloaded.api.game.vote.VoteOptionFreezer;
 import net.devmart.skywarsreloaded.api.game.vote.VoteType;
+import net.devmart.skywarsreloaded.api.manager.game.GameInstanceEventManager;
 import net.devmart.skywarsreloaded.api.utils.Message;
 import net.devmart.skywarsreloaded.api.utils.SWCompletableFuture;
 import net.devmart.skywarsreloaded.api.wrapper.entity.SWPlayer;
@@ -381,4 +383,5 @@ public interface LocalGameInstance extends GameInstance {
      */
     int getPlayerVotesCount(VoteOption voteOption);
 
+    GameInstanceEventManager getEventManager();
 }
