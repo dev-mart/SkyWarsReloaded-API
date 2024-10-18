@@ -3,6 +3,7 @@ package net.devmart.skywarsreloaded.api.manager.game;
 import net.devmart.skywarsreloaded.api.event.SWEvent;
 import net.devmart.skywarsreloaded.api.game.event.GameEvent;
 import net.devmart.skywarsreloaded.api.game.event.GameInstanceEvent;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public interface GameInstanceEventManager {
 
     /**
      * Gets the list of game instance events.
+     *
      * @return a list of events
      */
     List<GameInstanceEvent> getEvents();
@@ -59,11 +61,16 @@ public interface GameInstanceEventManager {
     void tickEvents();
 
     /**
-     * Gets the next game instance event.
+     * Gets the next game instance events.
+     * This will return a list of events that will be called next in line.
+     * <p>
+     * <i>Note: The list will generally only contain one event, but it is possible
+     * that multiple events are scheduled to run at the exact same second.</i>
      *
-     * @return the next event
+     * @return List of next events to be called (at the same second) or null if there are no events planned
      */
-    GameInstanceEvent getNextEvent();
+    @Nullable
+    List<GameInstanceEvent> getNextEvent();
 
     /**
      * Checks if there are any events.
